@@ -32,4 +32,11 @@ public class BinaryExpression extends Expression {
                 throw new RuntimeException("Invalid operator");
         }
     }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
+        lhs.dump(indent + 1);
+        rhs.dump(indent + 1);
+    }
 }

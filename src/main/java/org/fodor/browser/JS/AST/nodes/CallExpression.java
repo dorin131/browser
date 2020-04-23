@@ -26,4 +26,10 @@ public class CallExpression extends Expression {
     public String name() {
         return this.name;
     }
+
+    @Override
+    public void dump(int indent) {
+        printIndent(indent);
+        System.out.printf("%s \"%s\"\n", this.getClass().getSimpleName(), name());
+    }
 }

@@ -1,20 +1,12 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.JSObject;
+import org.fodor.browser.JS.AST.ScopeFrame;
 import org.fodor.browser.JS.AST.nodes.ASTNode;
-import org.fodor.browser.JS.AST.nodes.Program;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.AST.nodes.ScopeNode;
 
 import java.util.ArrayList;
-
-class ScopeFrame {
-    ScopeNode scopeNode;
-
-    public ScopeFrame(ScopeNode scopeNode) {
-        this.scopeNode = scopeNode;
-    }
-}
 
 public class Interpreter {
     private JSObject global;

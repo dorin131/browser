@@ -20,4 +20,10 @@ public class ReturnStatement extends ASTNode {
         i.doReturn();
         return value;
     }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
+        getArgument().dump(indent + 1);
+    }
 }

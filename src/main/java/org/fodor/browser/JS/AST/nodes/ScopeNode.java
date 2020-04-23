@@ -29,4 +29,12 @@ public class ScopeNode extends ASTNode {
     public Value execute(Interpreter i) {
         return i.run(this);
     }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
+        for (ASTNode child : getChildren()) {
+            child.dump(indent + 1);
+        }
+    }
 }

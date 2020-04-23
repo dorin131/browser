@@ -21,21 +21,6 @@ public class Value<T> {
         this.value = value;
     }
 
-//    public Double getAsDouble() {
-//        if (value instanceof Double) {
-//            return (Double) value;
-//        }
-//        throw new RuntimeException("Value is not a Double");
-//    }
-//
-//    public Boolean getAsBoolean() {
-//        if (value instanceof Boolean) {
-//            return (Boolean) value;
-//        }
-//        throw new RuntimeException("Value is not a Boolean");
-//    }
-
-
     public T getValue() {
         return value;
     }

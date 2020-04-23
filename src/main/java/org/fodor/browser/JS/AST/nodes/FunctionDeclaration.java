@@ -21,11 +21,21 @@ public class FunctionDeclaration extends ASTNode {
         return this.name;
     }
 
+    public ScopeNode getBody() {
+        return body;
+    }
+
     public Value execute(Interpreter interpreter) {
         Function function = new Function(name, body);
         Value value = new Value<>(function);
         interpreter.getGlobal().put(name, value);
 
         return value;
+    }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
+        getBody().dump(indent + 1);
     }
 }

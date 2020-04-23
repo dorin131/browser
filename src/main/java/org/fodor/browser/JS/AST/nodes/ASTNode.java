@@ -7,4 +7,15 @@ public class ASTNode {
     public Value execute(Interpreter i) {
         return null;
     }
+
+    public void printIndent(int indent) {
+        for (int i = 0; i < indent; i++) {
+            System.out.print("  ");
+        }
+    }
+
+    public void dump(int indent) {
+        printIndent(indent);
+        System.out.println(this.getClass().getSimpleName());
+    }
 }

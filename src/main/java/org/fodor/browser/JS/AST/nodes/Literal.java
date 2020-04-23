@@ -13,4 +13,10 @@ public class Literal extends Expression {
     public Value execute(Interpreter interpreter) {
         return value;
     }
+
+    @Override
+    public void dump(int indent) {
+        printIndent(indent);
+        System.out.println(value.getValue());
+    }
 }
