@@ -82,11 +82,11 @@ class InterpreterTest {
         ReturnStatement returnStatement = new ReturnStatement(
                 new BinaryExpression(
                         BinaryExpression.Op.Plus,
-                        new Literal(new Value(3)),
+                        new Literal(new Value("3")),
                         new BinaryExpression(
                                 BinaryExpression.Op.Plus,
-                                new Literal(new Value(1)),
-                                new Literal(new Value(2))
+                                new Literal(new Value("100")),
+                                new Literal(new Value("2"))
                         )
                 )
         );
@@ -99,8 +99,6 @@ class InterpreterTest {
 
         Value result = new Interpreter().run(program);
 
-        program.dump(0);
-
-        assertEquals(6, result.getValue());
+        assertTrue("105".equals(result.getValue()));
     }
 }

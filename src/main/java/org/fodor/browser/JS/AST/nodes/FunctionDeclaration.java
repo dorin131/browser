@@ -27,7 +27,7 @@ public class FunctionDeclaration extends ASTNode {
 
     public Value execute(Interpreter interpreter) {
         Function function = new Function(name, body);
-        Value value = new Value<>(function);
+        Value value = new Value(function);
         interpreter.getGlobal().put(name, value);
 
         return value;

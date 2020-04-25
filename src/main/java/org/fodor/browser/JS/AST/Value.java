@@ -36,4 +36,9 @@ public class Value<T> {
     static public Value jsNull() {
         return new Value(Type.Null);
     }
+
+    @Override
+    public String toString() {
+        return String.format("{ Type: %s, Value: %s }", type, value);
+    }
 }

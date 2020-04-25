@@ -10,10 +10,22 @@ public class BinaryExpression extends Expression {
     }
 
     private Op op;
-    private Expression lhs;
-    private Expression rhs;
+    private ASTNode lhs;
+    private ASTNode rhs;
 
-    public BinaryExpression(Op op, Expression lhs, Expression rhs) {
+    public Op getOp() {
+        return op;
+    }
+
+    public ASTNode getLhs() {
+        return lhs;
+    }
+
+    public ASTNode getRhs() {
+        return rhs;
+    }
+
+    public BinaryExpression(Op op, ASTNode lhs, ASTNode rhs) {
         this.op = op;
         this.lhs = lhs;
         this.rhs = rhs;
@@ -21,13 +33,16 @@ public class BinaryExpression extends Expression {
 
     @Override
     public Value execute(Interpreter i) {
-        Value<Integer> left = lhs.execute(i);
-        Value<Integer> right = rhs.execute(i);
+        Value<String> left = lhs.execute(i);
+        Value<String> right = rhs.execute(i);
+        int leftValue = Integer.parseInt(left.getValue());
+        int rightValue = Integer.parseInt(right.getValue());
+
         switch (op) {
             case Plus:
-                return new Value(left.getValue() + right.getValue());
+                return new Value(String.valueOf(leftValue + rightValue));
             case Minus:
-                return new Value(left.getValue() - right.getValue());
+                return new Value(String.valueOf(leftValue - rightValue));
             default:
                 throw new RuntimeException("Invalid operator");
         }

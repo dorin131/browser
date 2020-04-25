@@ -20,7 +20,7 @@ public class CallExpression extends Expression {
         if (callee.getValue() instanceof Function) {
             return interpreter.run(((Function) callee.getValue()).body());
         }
-        throw new RuntimeException("Value not Function");
+        throw new RuntimeException("Not Function: " + callee);
     }
 
     public String name() {

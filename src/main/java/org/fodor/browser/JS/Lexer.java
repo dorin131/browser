@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class Lexer {
     private String code;
-    private List<Character> specialChars = Arrays.asList(';', '(', ')', '{', '}', '+', '-', '/', '%', '=', '*');
+    private List<Character> specialChars = Arrays.asList(';', '(', ')', '{', '}', '+', '-', '/', '%', '=', '*', '<', '>');
     private List<Character> ignoredChars = Arrays.asList(' ', '\n', '\t');
 
     public Lexer(String code) {
@@ -41,7 +41,8 @@ public class Lexer {
                 if (isAlphanumeric(next)) {
                     continue;
                 } else {
-                    result.add(new Token(getType(tokenValue), tokenValue));
+                    Token.Type type = getType(tokenValue);
+                    result.add(new Token(type, tokenValue));
                     tokenValue = "";
                     continue;
                 }

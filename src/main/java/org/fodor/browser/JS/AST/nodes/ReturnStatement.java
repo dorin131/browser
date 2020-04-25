@@ -4,20 +4,19 @@ import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
 public class ReturnStatement extends ASTNode {
-    Expression argument;
+    ASTNode argument;
 
-    public ReturnStatement(Expression node) {
-        this.argument = node;
+    public ReturnStatement(ASTNode argument) {
+        this.argument = argument;
     }
 
-    public Expression getArgument() {
+    public ASTNode getArgument() {
         return argument;
     }
 
     @Override
     public Value execute(Interpreter i) {
         Value value = getArgument().execute(i);
-        i.doReturn();
         return value;
     }
 

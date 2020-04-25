@@ -39,8 +39,4 @@ public class Interpreter {
     public JSObject getGlobal() {
         return global;
     }
-
-    public void doReturn() {
-        System.out.println("FIXME: Implement doReturn()");
-    }
 }
