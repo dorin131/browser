@@ -1,6 +1,7 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Value;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class JSTest {
 
     @Test
-    void eval() {
+    void evalFunctionWithReturnValue() {
         String input = "function test() {\n" +
                 "\treturn 1 + 2 + 3;\n" +
                 "}\n" +
@@ -16,6 +17,18 @@ class JSTest {
                 "test();";
         Value result = new JS().eval(input);
         assertEquals(6, result.getValue());
+    }
+
+    @Test
+    @Ignore("this test is not ready yet")
+    void evalFunctionWithReturnUndefined() {
+        String input = "function test() {\n" +
+                "\t1 + 2 + 3;\n" +
+                "}\n" +
+                "\n" +
+                "test();";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Undefined, result.getType());
     }
 
     // 1 + 2 + 3 + 4;

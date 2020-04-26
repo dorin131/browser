@@ -4,6 +4,8 @@ import org.fodor.browser.JS.AST.JSObject;
 import org.fodor.browser.JS.AST.ScopeFrame;
 import org.fodor.browser.JS.AST.nodes.ASTNode;
 import org.fodor.browser.JS.AST.Value;
+import org.fodor.browser.JS.AST.nodes.BlockStatement;
+import org.fodor.browser.JS.AST.nodes.ReturnStatement;
 import org.fodor.browser.JS.AST.nodes.ScopeNode;
 
 import java.util.ArrayList;
@@ -16,15 +18,24 @@ public class Interpreter {
         this.global = new JSObject();
     }
 
-    public Value run(ScopeNode program) {
-        enterScope(program);
+    public Value run(ScopeNode scopeNode) {
+        boolean hasReturned = false;
+        enterScope(scopeNode);
 
         Value lastValue = Value.jsUndefined();
-        for (ASTNode node : program.getChildren()) {
+        for (ASTNode node : scopeNode.getChildren()) {
             lastValue = node.execute(this);
+            if (scopeNode instanceof BlockStatement && node instanceof ReturnStatement) {
+                hasReturned = true;
+                break;
+            }
         }
 
-        exitScope(program);
+        exitScope(scopeNode);
+
+        if (scopeNode instanceof BlockStatement && !hasReturned) {
+            return Value.jsUndefined();
+        }
         return lastValue;
     }
 
