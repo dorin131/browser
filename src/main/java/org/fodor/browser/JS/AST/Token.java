@@ -9,6 +9,7 @@ public class Token {
         Identifier,
         Punctuator,
         Numeric,
+        String
     }
 
     public enum Keyword {

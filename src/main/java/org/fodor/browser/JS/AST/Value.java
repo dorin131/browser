@@ -8,6 +8,7 @@ public class Value<T> {
         String,
         Object,
         Boolean,
+        Function
     }
 
     private Type type = Type.Undefined;
@@ -17,7 +18,8 @@ public class Value<T> {
         this.type = type;
     }
 
-    public Value(T value) {
+    public Value(Type type, T value) {
+        this.type = type;
         this.value = value;
     }
 

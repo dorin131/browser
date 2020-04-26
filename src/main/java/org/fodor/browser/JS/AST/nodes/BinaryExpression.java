@@ -33,16 +33,18 @@ public class BinaryExpression extends Expression {
 
     @Override
     public Value execute(Interpreter i) {
-        Value<String> left = lhs.execute(i);
-        Value<String> right = rhs.execute(i);
-        int leftValue = Integer.parseInt(left.getValue());
-        int rightValue = Integer.parseInt(right.getValue());
+        Value left = lhs.execute(i);
+        Value right = rhs.execute(i);
+        // TODO: if one is string, make both strings
+        // right now we just assume we always get numbers
+        int leftValue = (Integer) left.getValue();
+        int rightValue = (Integer) right.getValue();
 
         switch (op) {
             case Plus:
-                return new Value(String.valueOf(leftValue + rightValue));
+                return new Value(Value.Type.Number, leftValue + rightValue);
             case Minus:
-                return new Value(String.valueOf(leftValue - rightValue));
+                return new Value(Value.Type.Number, leftValue - rightValue);
             default:
                 throw new RuntimeException("Invalid operator");
         }

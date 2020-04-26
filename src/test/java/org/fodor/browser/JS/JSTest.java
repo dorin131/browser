@@ -15,7 +15,7 @@ class JSTest {
                 "\n" +
                 "test();";
         Value result = new JS().eval(input);
-        assertTrue(result.getValue().equals("6"));
+        assertEquals(6, result.getValue());
     }
 
     // 1 + 2 + 3 + 4;

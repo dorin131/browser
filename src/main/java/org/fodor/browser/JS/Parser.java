@@ -41,14 +41,16 @@ public class Parser {
         }
         if (isBinaryExpression(cursor)) {
             BinaryExpression.Op op = BinaryExpression.Op.Plus;
-            Expression leftExpression = new Literal(new Value(tokens.get(cursor).getValue()));
+            // Assuming it's a number
+            Expression leftExpression = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
             cursor += 2;
             BinaryExpression binaryExpression = new BinaryExpression(op, leftExpression, walk());
 
             return binaryExpression;
         }
         if (isLiteral(cursor)) {
-            Literal literal = new Literal(new Value(tokens.get(cursor).getValue()));
+            // Assuming it's a number
+            Literal literal = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
             cursor++;
             return literal;
         }
@@ -67,6 +69,7 @@ public class Parser {
     }
 
     private boolean isCallExpression(int index) {
+        // return matchTokenPattern(Ident, Punc, (, ))....
         if (
                 (index + 3) < tokens.size() &&
                         tokens.get(index).getType() == Token.Type.Identifier &&

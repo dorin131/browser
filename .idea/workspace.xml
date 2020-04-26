@@ -3,11 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/InterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/InterpreterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/JSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/JSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/MainWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Token$Keyword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Token$Keyword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Token$Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Token$Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Value$Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Value$Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Value.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/InterpreterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/InterpreterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/JSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/JSTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +68,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Browser">
+  <component name="RunManager" selected="JUnit.All in browser">
     <configuration name="Browser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.fodor.browser.Browser" />
       <module name="browser" />
@@ -93,7 +106,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTest.eval" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexerTest.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +115,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.JSTest" />
-      <option name="METHOD_NAME" value="eval" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.LexerTest" />
+      <option name="METHOD_NAME" value="run" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Browser" />
         <item itemvalue="JUnit.All in browser" />
-        <item itemvalue="JUnit.InterpreterTest.run" />
-        <item itemvalue="JUnit.JSTest.eval" />
         <item itemvalue="JUnit.ParserTest.parse" />
+        <item itemvalue="JUnit.LexerTest.run" />
+        <item itemvalue="JUnit.InterpreterTest.run" />
+        <item itemvalue="Application.Browser" />
       </list>
     </recent_temporary>
   </component>
@@ -169,22 +182,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587412968543" />
-    <state width="1874" height="420" key="GridCell.Tab.0.bottom" timestamp="1587913670564">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1587928787140">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1587913670564" />
-    <state width="1874" height="420" key="GridCell.Tab.0.center" timestamp="1587913670564">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1587928787140" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1587928787139">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1587913670564" />
-    <state width="1874" height="420" key="GridCell.Tab.0.left" timestamp="1587913670563">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1587928787139" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1587928787139">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1587913670563" />
-    <state width="1874" height="420" key="GridCell.Tab.0.right" timestamp="1587913670564">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1587928787139" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1587928787140">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1587913670564" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1587928787140" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1587840438602">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -209,9 +222,9 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="734" y="240" width="442" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587835506766" />
-    <state x="646" y="141" width="628" height="756" key="find.popup" timestamp="1587675506606">
+    <state x="646" y="141" width="628" height="756" key="find.popup" timestamp="1587928323009">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="646" y="141" width="628" height="756" key="find.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1587675506606" />
+    <state x="646" y="141" width="628" height="756" key="find.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1587928323009" />
   </component>
 </project>
