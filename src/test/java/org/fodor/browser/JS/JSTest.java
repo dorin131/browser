@@ -17,4 +17,26 @@ class JSTest {
         Value result = new JS().eval(input);
         assertTrue(result.getValue().equals("6"));
     }
+
+    // 1 + 2 + 3 + 4;
+    // result: 10
+
+    // var x = 1;
+    // x;
+    // result: 1
+
+    // var x = 10 + 20;
+    // x;
+    // result: 30
+
+    // var a = 1;
+    // var b = a;
+    // b;
+    // result: 1
+
+    // var a = 1;
+    // var b = 2;
+    // var c = a + b;
+    // c;
+    // result: 3
 }
