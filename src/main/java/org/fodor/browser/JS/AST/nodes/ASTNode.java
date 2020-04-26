@@ -5,7 +5,7 @@ import org.fodor.browser.JS.Interpreter;
 
 public class ASTNode {
     public Value execute(Interpreter i) {
-        return null;
+        return Value.jsUndefined();
     }
 
     public void printIndent(int indent) {

@@ -16,8 +16,7 @@ public class ReturnStatement extends ASTNode {
 
     @Override
     public Value execute(Interpreter i) {
-        Value value = getArgument().execute(i);
-        return value;
+        return getArgument().execute(i);
     }
 
     @Override

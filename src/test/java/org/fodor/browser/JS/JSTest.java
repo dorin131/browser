@@ -20,7 +20,6 @@ class JSTest {
     }
 
     @Test
-    @Ignore("this test is not ready yet")
     void evalFunctionWithReturnUndefined() {
         String input = "function test() {\n" +
                 "\t1 + 2 + 3;\n" +
@@ -31,8 +30,13 @@ class JSTest {
         assertEquals(Value.Type.Undefined, result.getType());
     }
 
-    // 1 + 2 + 3 + 4;
-    // result: 10
+//    @Test
+//    void evalExpression() {
+//        String input = "1 + 2 + 3;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Number, result.getType());
+//        assertEquals(6, result.getValue());
+//    }
 
     // var x = 1;
     // x;

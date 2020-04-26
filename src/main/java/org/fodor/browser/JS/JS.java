@@ -10,6 +10,7 @@ public class JS {
     public Value eval(String code) {
         ArrayList<Token> tokens = new Lexer(code).parse();
         Program program = new Parser(tokens).parse();
+        //program.dump(0);
         Value result = new Interpreter().run(program);
 
         return result;
