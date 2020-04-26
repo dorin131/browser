@@ -49,8 +49,13 @@ public class Parser {
             return binaryExpression;
         }
         if (isLiteral(cursor)) {
-            // Assuming it's a number
-            Literal literal = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
+            Literal literal;
+            if (tokens.get(cursor).getType() == Token.Type.String) {
+                literal = new Literal(new Value(Value.Type.String, tokens.get(cursor)));
+            } else {
+                literal = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
+            }
+
             cursor++;
             return literal;
         }
@@ -86,7 +91,10 @@ public class Parser {
     }
 
     private boolean isLiteral(int index) {
-        if (tokens.get(index).getType() == Token.Type.Numeric) {
+        if (
+                tokens.get(index).getType() == Token.Type.Numeric ||
+                        tokens.get(index).getType() == Token.Type.String
+        ) {
             return true;
         }
         return false;
