@@ -30,13 +30,13 @@ class JSTest {
         assertEquals(Value.Type.Undefined, result.getType());
     }
 
-//    @Test
-//    void evalExpression() {
-//        String input = "1 + 2 + 3;";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Number, result.getType());
-//        assertEquals(6, result.getValue());
-//    }
+    @Test
+    void evalExpression() {
+        String input = "1 + 2 + 3;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(6, result.getValue());
+    }
 
     // var x = 1;
     // x;

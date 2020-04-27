@@ -16,7 +16,9 @@ public class ScopeNode extends ASTNode {
      */
     public ASTNode append(ASTNode ...nodes) {
         for (ASTNode node : nodes) {
-            children.add(node);
+            if (node != null) {
+                children.add(node);
+            }
         }
         return children.get(children.size() - 1);
     }

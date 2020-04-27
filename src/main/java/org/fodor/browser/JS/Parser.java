@@ -18,13 +18,13 @@ public class Parser {
 
     private ASTNode walk() {
         if (cursor >= tokens.size()) {
-            return new ASTNode();
+            return null;
         }
         if (isNamedFunctionDeclaration(cursor)) {
             String functionName = tokens.get(cursor + 1).getValue();
             cursor += 5;
             BlockStatement blockStatement = new BlockStatement();
-            blockStatement.append(walk());
+            blockStatement.append(walkExpression());
             FunctionDeclaration functionDeclaration = new FunctionDeclaration(functionName, blockStatement);
             return functionDeclaration;
         }
@@ -35,16 +35,27 @@ public class Parser {
         }
         if (isReturnStatement(cursor)) {
             cursor++;
-            ReturnStatement returnStatement;
-            returnStatement = new ReturnStatement(walk());
-            return returnStatement;
+            return new ReturnStatement(walkExpression());
+        }
+        if (isExpressionStatement(cursor)) {
+            return new ExpressionStatement(walkExpression());
+        }
+
+        cursor++;
+        return walk();
+    }
+
+    private ASTNode walkExpression() {
+        if (tokens.get(cursor).getType() == Token.Type.Punctuator && tokens.get(cursor).getValue().equals(";")) {
+            cursor++;
+            return walk();
         }
         if (isBinaryExpression(cursor)) {
             BinaryExpression.Op op = BinaryExpression.Op.Plus;
             // Assuming it's a number
             Expression leftExpression = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
             cursor += 2;
-            BinaryExpression binaryExpression = new BinaryExpression(op, leftExpression, walk());
+            BinaryExpression binaryExpression = new BinaryExpression(op, leftExpression, walkExpression());
 
             return binaryExpression;
         }
@@ -59,7 +70,6 @@ public class Parser {
             cursor++;
             return literal;
         }
-        cursor++;
         return walk();
     }
 
@@ -91,10 +101,7 @@ public class Parser {
     }
 
     private boolean isLiteral(int index) {
-        if (
-                tokens.get(index).getType() == Token.Type.Numeric ||
-                        tokens.get(index).getType() == Token.Type.String
-        ) {
+        if (tokens.get(index).getType() == Token.Type.Numeric || tokens.get(index).getType() == Token.Type.String) {
             return true;
         }
         return false;
@@ -131,11 +138,19 @@ public class Parser {
         return false;
     }
 
-    private boolean isReturnStatement(int index) {
+    private boolean isExpressionStatement(int index) {
         if (
-                tokens.get(index).getType() == Token.Type.Keyword &&
-                        tokens.get(index).getValue().equals("return")
+                tokens.get(index).getType() == Token.Type.Identifier ||
+                        tokens.get(index).getType() == Token.Type.Numeric ||
+                        tokens.get(index).getType() == Token.Type.String
         ) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isReturnStatement(int index) {
+        if (tokens.get(index).getType() == Token.Type.Keyword && tokens.get(index).getValue().equals("return")) {
             return true;
         }
         return false;

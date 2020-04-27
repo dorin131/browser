@@ -18,4 +18,10 @@ public class ExpressionStatement extends ASTNode {
     public Value execute(Interpreter i) {
         return getExpression().execute(i);
     }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
+        getExpression().dump(indent + 1);
+    }
 }
