@@ -31,11 +31,19 @@ class JSTest {
     }
 
     @Test
-    void evalExpression() {
+    void evalExpressionAddition() {
         String input = "1 + 2 + 3;";
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(6, result.getValue());
+    }
+
+    @Test
+    void evalExpressionMixed() {
+        String input = "10 + 2 - 3;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(9, result.getValue());
     }
 
     // var x = 1;

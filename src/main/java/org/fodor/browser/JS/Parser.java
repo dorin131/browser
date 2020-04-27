@@ -51,7 +51,13 @@ public class Parser {
             return walk();
         }
         if (isBinaryExpression(cursor)) {
-            BinaryExpression.Op op = BinaryExpression.Op.Plus;
+            BinaryExpression.Op op = null;
+            String opValue = tokens.get(cursor + 1).getValue();
+            if (opValue.equals("+")) {
+                op = BinaryExpression.Op.Add;
+            } else if (opValue.equals("-")) {
+                op = BinaryExpression.Op.Sub;
+            }
             // Assuming it's a number
             Expression leftExpression = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
             cursor += 2;

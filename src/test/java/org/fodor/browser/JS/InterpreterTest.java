@@ -81,10 +81,10 @@ class InterpreterTest {
         BlockStatement blockStatement = new BlockStatement();
         ReturnStatement returnStatement = new ReturnStatement(
                 new BinaryExpression(
-                        BinaryExpression.Op.Plus,
+                        BinaryExpression.Op.Add,
                         new Literal(new Value(Value.Type.Number, 3)),
                         new BinaryExpression(
-                                BinaryExpression.Op.Plus,
+                                BinaryExpression.Op.Sub,
                                 new Literal(new Value(Value.Type.Number, 100)),
                                 new Literal(new Value(Value.Type.Number, 2))
                         )
@@ -100,6 +100,6 @@ class InterpreterTest {
         Value result = new Interpreter().run(program);
 
         assertEquals(Value.Type.Number, result.getType());
-        assertEquals(105, result.getValue());
+        assertEquals(101, result.getValue());
     }
 }

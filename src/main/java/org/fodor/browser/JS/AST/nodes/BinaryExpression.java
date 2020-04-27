@@ -5,8 +5,15 @@ import org.fodor.browser.JS.Interpreter;
 
 public class BinaryExpression extends Expression {
     public enum Op {
-        Plus,
-        Minus,
+        Add,
+        Sub,
+        Mul,
+        Div,
+        Gr,
+        Geq,
+        Le,
+        Leq,
+        Mod
     }
 
     private Op op;
@@ -41,9 +48,9 @@ public class BinaryExpression extends Expression {
         int rightValue = (Integer) right.getValue();
 
         switch (op) {
-            case Plus:
+            case Add:
                 return new Value(Value.Type.Number, leftValue + rightValue);
-            case Minus:
+            case Sub:
                 return new Value(Value.Type.Number, leftValue - rightValue);
             default:
                 throw new RuntimeException("Invalid operator");

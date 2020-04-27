@@ -46,11 +46,11 @@ class ParserTest {
         assertEquals("ReturnStatement", sub1_1_1.getClass().getSimpleName());
         ASTNode sub1_1_1_1 = ((ReturnStatement) sub1_1_1).getArgument();
         assertEquals("BinaryExpression", sub1_1_1_1.getClass().getSimpleName());
-        assertEquals("Plus", ((BinaryExpression) sub1_1_1_1).getOp().toString());
+        assertEquals("Add", ((BinaryExpression) sub1_1_1_1).getOp().toString());
         assertEquals("Literal", ((BinaryExpression) sub1_1_1_1).getLhs().getClass().getSimpleName());
         assertEquals("BinaryExpression", ((BinaryExpression) sub1_1_1_1).getRhs().getClass().getSimpleName());
         BinaryExpression sub1_1_1_1_1 = (BinaryExpression) ((BinaryExpression) sub1_1_1_1).getRhs();
-        assertEquals("Plus", sub1_1_1_1_1.getOp().toString());
+        assertEquals("Add", sub1_1_1_1_1.getOp().toString());
         assertEquals("Literal", sub1_1_1_1_1.getLhs().getClass().getSimpleName());
         assertEquals("Literal", sub1_1_1_1_1.getRhs().getClass().getSimpleName());
     }
