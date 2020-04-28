@@ -90,16 +90,14 @@ public class Parser {
     }
 
     private boolean isCallExpression(int index) {
-        // return matchTokenPattern(Ident, Punc, (, ))....
         if (
-                (index + 3) < tokens.size() &&
+                (index + 2) < tokens.size() &&
                         tokens.get(index).getType() == Token.Type.Identifier &&
                         tokens.get(index + 1).getType() == Token.Type.Punctuator &&
                         tokens.get(index + 1).getValue().equals("(") &&
                         tokens.get(index + 2).getType() == Token.Type.Punctuator &&
                         tokens.get(index + 2).getValue().equals(")") &&
-                        tokens.get(index + 3).getType() == Token.Type.Punctuator &&
-                        tokens.get(index + 3).getValue().equals(";")
+                        ((index + 3) < tokens.size() ? !tokens.get(index + 3).getValue().equals("{") : true)
         ) {
             return true;
         }

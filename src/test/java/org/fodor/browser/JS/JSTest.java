@@ -20,9 +20,31 @@ class JSTest {
     }
 
     @Test
+    void evalFunctionWithReturnValueWithoutSemicolons() {
+        String input = "function test() {\n" +
+                "\treturn 1 + 2 + 3\n" +
+                "}\n" +
+                "\n" +
+                "test()";
+        Value result = new JS().eval(input);
+        assertEquals(6, result.getValue());
+    }
+
+    @Test
     void evalFunctionWithReturnUndefined() {
         String input = "function test() {\n" +
                 "\t1 + 2 + 3;\n" +
+                "}\n" +
+                "\n" +
+                "test();";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Undefined, result.getType());
+    }
+
+    @Test
+    void evalFunctionWithReturnUndefinedWithoutSemicolon() {
+        String input = "function test() {\n" +
+                "\t1 + 2 + 3\n" +
                 "}\n" +
                 "\n" +
                 "test();";
@@ -45,6 +67,32 @@ class JSTest {
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(9, result.getValue());
     }
+
+    @Test
+    void evalExpressionWithoutSemicolon1() {
+        String input = "777";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        // TODO: should be 601 - incorrect order
+        assertEquals(777, result.getValue());
+    }
+
+    @Test
+    void evalExpressionWithoutSemicolon2() {
+        String input = "777 + 1000";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        // TODO: should be 601 - incorrect order
+        assertEquals(1777, result.getValue());
+    }
+
+//    @Test
+//    void evalExpressionWithoutSemicolon3() {
+//        String input = "666 - 66 + 1";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Number, result.getType());
+//        assertEquals(601, result.getValue());
+//    }
 
     // var x = 1;
     // x;
