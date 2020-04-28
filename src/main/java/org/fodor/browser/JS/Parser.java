@@ -46,10 +46,6 @@ public class Parser {
     }
 
     private ASTNode walkExpression() {
-        if (tokens.get(cursor).getType() == Token.Type.Punctuator && tokens.get(cursor).getValue().equals(";")) {
-            cursor++;
-            return walk();
-        }
         if (isBinaryExpression(cursor)) {
             BinaryExpression.Op op = null;
             String opValue = tokens.get(cursor + 1).getValue();
