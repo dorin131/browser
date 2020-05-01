@@ -1,8 +1,8 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
-import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.AST.nodes.*;
+import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +24,7 @@ public class Parser {
             String functionName = tokens.get(cursor + 1).getValue();
             cursor += 5;
             BlockStatement blockStatement = new BlockStatement();
-            blockStatement.append(walkExpression());
+            blockStatement.append(walk());
             FunctionDeclaration functionDeclaration = new FunctionDeclaration(functionName, blockStatement);
             return functionDeclaration;
         }
@@ -45,34 +45,17 @@ public class Parser {
         return walk();
     }
 
+    /*
+    Gather all tokens of an expression and evaluate it.
+    Will return the root node of the expression tree.
+     */
     private ASTNode walkExpression() {
-        if (isBinaryExpression(cursor)) {
-            BinaryExpression.Op op = null;
-            String opValue = tokens.get(cursor + 1).getValue();
-            if (opValue.equals("+")) {
-                op = BinaryExpression.Op.Add;
-            } else if (opValue.equals("-")) {
-                op = BinaryExpression.Op.Sub;
-            }
-            // Assuming it's a number
-            Expression leftExpression = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
-            cursor += 2;
-            BinaryExpression binaryExpression = new BinaryExpression(op, leftExpression, walkExpression());
-
-            return binaryExpression;
-        }
-        if (isLiteral(cursor)) {
-            Literal literal;
-            if (tokens.get(cursor).getType() == Token.Type.String) {
-                literal = new Literal(new Value(Value.Type.String, tokens.get(cursor)));
-            } else {
-                literal = new Literal(new Value(Value.Type.Number, Integer.parseInt(tokens.get(cursor).getValue())));
-            }
-
+        ArrayList<Token> expressionTokens = new ArrayList<>();
+        while (cursor < tokens.size() && !tokens.get(cursor).getValue().equals(";") && !tokens.get(cursor).getValue().equals("}")) {
+            expressionTokens.add(tokens.get(cursor));
             cursor++;
-            return literal;
         }
-        return walk();
+        return ExpressionEvaluator.eval(expressionTokens);
     }
 
     public Program parse() {

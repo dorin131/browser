@@ -19,6 +19,42 @@ class JSTest {
         assertEquals(6, result.getValue());
     }
 
+//    @Test
+//    void evalFunctionWithReturnValue2() {
+//        String input = "function test() {\n" +
+//                "\treturn 1 + 2 + 3;\n" +
+//                "}\n" +
+//                "\n" +
+//                "1 + test();";
+//        Value result = new JS().eval(input);
+//        assertEquals(7, result.getValue());
+//    }
+
+//    @Test
+//    void evalFunctionWithReturnValue3() {
+//        String input = "function test() {\n" +
+//                "\treturn 1 + 2 + 3;\n" +
+//                "}\n" +
+//                "\n" +
+//                "function test2() {\n" +
+//                "\treturn 4;\n" +
+//                "}\n" +
+//                "\n" +
+//                "test2() + test();";
+//        Value result = new JS().eval(input);
+//        assertEquals(10, result.getValue());
+//    }
+
+//    @Test
+//    void evalFunctionWithReturnValue4() {
+//        String input = "function test() {\n" +
+//                "}\n" +
+//                "\n" +
+//                "test();";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.jsUndefined(), result.getValue());
+//    }
+
     @Test
     void evalFunctionWithReturnValueWithoutSemicolons() {
         String input = "function test() {\n" +
@@ -86,13 +122,13 @@ class JSTest {
         assertEquals(1777, result.getValue());
     }
 
-//    @Test
-//    void evalExpressionWithoutSemicolon3() {
-//        String input = "666 - 66 + 1";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Number, result.getType());
-//        assertEquals(601, result.getValue());
-//    }
+    @Test
+    void evalExpressionWithoutSemicolon3() {
+        String input = "666 - 66 + 1";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(601, result.getValue());
+    }
 
     // var x = 1;
     // x;

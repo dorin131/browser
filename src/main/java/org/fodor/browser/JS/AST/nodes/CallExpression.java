@@ -1,13 +1,10 @@
 package org.fodor.browser.JS.AST.nodes;
 
 import org.fodor.browser.JS.AST.Function;
-import org.fodor.browser.JS.AST.JSObject;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-import javax.swing.*;
-
-public class CallExpression extends Expression {
+public class CallExpression extends ExpressionNode {
     private String name;
 
     public CallExpression(String name) {

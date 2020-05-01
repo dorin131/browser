@@ -1,26 +1,15 @@
 package org.fodor.browser.JS.AST.nodes;
 
+import org.fodor.browser.JS.AST.Operator;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class BinaryExpression extends Expression {
-    public enum Op {
-        Add,
-        Sub,
-        Mul,
-        Div,
-        Gr,
-        Geq,
-        Le,
-        Leq,
-        Mod
-    }
-
-    private Op op;
+public class BinaryExpression extends ExpressionNode {
+    private Operator op;
     private ASTNode lhs;
     private ASTNode rhs;
 
-    public Op getOp() {
+    public Operator getOp() {
         return op;
     }
 
@@ -32,7 +21,7 @@ public class BinaryExpression extends Expression {
         return rhs;
     }
 
-    public BinaryExpression(Op op, ASTNode lhs, ASTNode rhs) {
+    public BinaryExpression(Operator op, ASTNode lhs, ASTNode rhs) {
         this.op = op;
         this.lhs = lhs;
         this.rhs = rhs;
@@ -42,10 +31,19 @@ public class BinaryExpression extends Expression {
     public Value execute(Interpreter i) {
         Value left = lhs.execute(i);
         Value right = rhs.execute(i);
-        // TODO: if one is string, make both strings
-        // right now we just assume we always get numbers
-        int leftValue = (Integer) left.getValue();
-        int rightValue = (Integer) right.getValue();
+        int leftValue;
+        int rightValue;
+
+        if (left.getValue() instanceof Integer) {
+            leftValue = (Integer) left.getValue();
+        } else {
+            leftValue = Integer.parseInt((String) left.getValue());
+        }
+        if (right.getValue() instanceof Integer) {
+            rightValue = (Integer) right.getValue();
+        } else {
+            rightValue = Integer.parseInt((String) right.getValue());
+        }
 
         switch (op) {
             case Add:

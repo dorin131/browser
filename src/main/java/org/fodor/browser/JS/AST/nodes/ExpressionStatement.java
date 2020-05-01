@@ -3,7 +3,7 @@ package org.fodor.browser.JS.AST.nodes;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class ExpressionStatement extends ASTNode {
+public class ExpressionStatement extends ExpressionNode {
     ASTNode expression;
 
     public ExpressionStatement(ASTNode node) {

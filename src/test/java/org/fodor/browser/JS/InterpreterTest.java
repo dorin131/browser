@@ -2,6 +2,7 @@ package org.fodor.browser.JS;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.fodor.browser.JS.AST.Operator;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.fodor.browser.JS.AST.Value;
 import org.junit.jupiter.api.Test;
@@ -81,10 +82,10 @@ class InterpreterTest {
         BlockStatement blockStatement = new BlockStatement();
         ReturnStatement returnStatement = new ReturnStatement(
                 new BinaryExpression(
-                        BinaryExpression.Op.Add,
+                        Operator.Add,
                         new Literal(new Value(Value.Type.Number, 3)),
                         new BinaryExpression(
-                                BinaryExpression.Op.Sub,
+                                Operator.Sub,
                                 new Literal(new Value(Value.Type.Number, 100)),
                                 new Literal(new Value(Value.Type.Number, 2))
                         )
