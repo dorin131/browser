@@ -45,15 +45,15 @@ class JSTest {
 //        assertEquals(10, result.getValue());
 //    }
 
-//    @Test
-//    void evalFunctionWithReturnValue4() {
-//        String input = "function test() {\n" +
-//                "}\n" +
-//                "\n" +
-//                "test();";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.jsUndefined(), result.getValue());
-//    }
+    @Test
+    void evalFunctionWithReturnValue4() {
+        String input = "function test() {\n" +
+                "}\n" +
+                "\n" +
+                "test();";
+        Value result = new JS().eval(input);
+        assertEquals(Value.jsUndefined(), result);
+    }
 
     @Test
     void evalFunctionWithReturnValueWithoutSemicolons() {

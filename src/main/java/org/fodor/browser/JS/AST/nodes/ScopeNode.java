@@ -20,7 +20,10 @@ public class ScopeNode extends ASTNode {
                 children.add(node);
             }
         }
-        return children.get(children.size() - 1);
+        if (children.size() > 0) {
+            return children.get(children.size() - 1);
+        }
+        return null;
     }
 
     public ArrayList<ASTNode> getChildren() {

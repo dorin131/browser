@@ -1,6 +1,7 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
+import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
 
@@ -17,7 +18,13 @@ public class Parser {
     }
 
     private ASTNode walk() {
+        // Stop walking when no more tokens
         if (cursor >= tokens.size()) {
+            return null;
+        }
+        // Stop walking this child/branch when reached close curly brace
+        if (tokens.get(cursor).getValue().equals("}")) {
+            cursor++;
             return null;
         }
         if (isNamedFunctionDeclaration(cursor)) {

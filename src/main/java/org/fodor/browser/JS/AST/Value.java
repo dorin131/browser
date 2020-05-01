@@ -40,6 +40,20 @@ public class Value<T> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (o instanceof Value) {
+            if (((Value) o).value != null && value != null) {
+                return ((Value) o).type.toString().equals(type.toString()) &&
+                        ((Value) o).value.equals(value);
+            } else if (((Value) o).value == null && value == null) {
+                return ((Value) o).type.toString().equals(type.toString());
+            }
+            return false;
+        }
+        return false;
+    }
+
+    @Override
     public String toString() {
         return String.format("{ Type: %s, Value: %s }", type, value);
     }
