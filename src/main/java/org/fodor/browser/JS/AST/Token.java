@@ -1,15 +1,41 @@
 package org.fodor.browser.JS.AST;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Token {
     private Type type;
     private String value;
 
+    private static final Map<String, Type> keywords = new HashMap<>() {
+        {
+            put("function", Token.Type.Function);
+            put("let", Token.Type.Let);
+            put("return", Token.Type.Return);
+        }
+    };
+
     public enum Type {
-        Keyword,
         Identifier,
         Punctuator,
         Numeric,
-        String
+        String,
+
+        Illegal,
+
+        Function,
+        Let,
+        Return,
+
+        Assign,
+        Semicolon,
+        LParen,
+        RParen,
+        Comma,
+        Plus,
+        LBrace,
+        RBrace,
+        EOF
     }
 
     public enum Keyword {
@@ -33,12 +59,25 @@ public class Token {
         this.value = value;
     }
 
+    public Token(Type type, char value) {
+        this.type = type;
+        this.value = Character.toString(value);
+    }
+
     public Type getType() {
         return type;
     }
 
     public String getValue() {
         return value;
+    }
+
+    public static Token.Type lookupIdent(String value) {
+        if (keywords.containsKey(value)) {
+            return keywords.get(value);
+        }
+        // a user defined identifier
+        return Token.Type.Identifier;
     }
 
     @Override

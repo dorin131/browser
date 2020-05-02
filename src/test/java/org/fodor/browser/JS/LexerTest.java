@@ -2,10 +2,8 @@ package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 class LexerTest {
     @Test
@@ -15,29 +13,34 @@ class LexerTest {
                 "}\n" +
                 "\n" +
                 "test();";
-        ArrayList<Token> expected = new ArrayList<>();
-        expected.add(new Token(Token.Type.Keyword, Token.Keyword.function.toString()));
-        expected.add(new Token(Token.Type.Identifier, "test"));
-        expected.add(new Token(Token.Type.Punctuator, "("));
-        expected.add(new Token(Token.Type.Punctuator, ")"));
-        expected.add(new Token(Token.Type.Punctuator, "{"));
-        expected.add(new Token(Token.Type.Keyword, Token.Keyword.returns.toString()));
-        expected.add(new Token(Token.Type.Punctuator, "("));
-        expected.add(new Token(Token.Type.Numeric, "1"));
-        expected.add(new Token(Token.Type.Punctuator, "+"));
-        expected.add(new Token(Token.Type.Numeric, "2"));
-        expected.add(new Token(Token.Type.Punctuator, ")"));
-        expected.add(new Token(Token.Type.Punctuator, "+"));
-        expected.add(new Token(Token.Type.Numeric, "3"));
-        expected.add(new Token(Token.Type.Punctuator, ";"));
-        expected.add(new Token(Token.Type.Punctuator, "}"));
-        expected.add(new Token(Token.Type.Identifier, "test"));
-        expected.add(new Token(Token.Type.Punctuator, "("));
-        expected.add(new Token(Token.Type.Punctuator, ")"));
-        expected.add(new Token(Token.Type.Punctuator, ";"));
 
-        ArrayList<Token> result = new Lexer(input).parse();
+        Token[] expected = {
+                new Token(Token.Type.Function, "function"),
+                new Token(Token.Type.Identifier, "test"),
+                new Token(Token.Type.LParen, "("),
+                new Token(Token.Type.RParen, ")"),
+                new Token(Token.Type.LBrace, "{"),
+                new Token(Token.Type.Return, "return"),
+                new Token(Token.Type.LParen, "("),
+                new Token(Token.Type.Numeric, "1"),
+                new Token(Token.Type.Plus, "+"),
+                new Token(Token.Type.Numeric, "2"),
+                new Token(Token.Type.RParen, ")"),
+                new Token(Token.Type.Plus, "+"),
+                new Token(Token.Type.Numeric, "3"),
+                new Token(Token.Type.Semicolon, ";"),
+                new Token(Token.Type.RBrace, "}"),
+                new Token(Token.Type.Identifier, "test"),
+                new Token(Token.Type.LParen, "("),
+                new Token(Token.Type.RParen, ")"),
+                new Token(Token.Type.Semicolon, ";"),
+        };
 
-        assertArrayEquals(expected.toArray(), result.toArray());
+        Lexer l = new Lexer(input);
+        Token token;
+
+        for (int i = 0; (token = l.nextToken()).getType() != Token.Type.EOF; i++) {
+            assertEquals(expected[i], token);
+        }
     }
 }

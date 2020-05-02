@@ -1,6 +1,5 @@
 package org.fodor.browser.JS;
 
-import org.fodor.browser.JS.AST.Token;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.junit.jupiter.api.Test;
 
@@ -12,28 +11,15 @@ class ParserTest {
 
     @Test
     void parse() {
-        ArrayList<Token> input = new ArrayList<>();
-        input.add(new Token(Token.Type.Keyword, Token.Keyword.function.toString()));
-        input.add(new Token(Token.Type.Identifier, "test"));
-        input.add(new Token(Token.Type.Punctuator, "("));
-        input.add(new Token(Token.Type.Punctuator, ")"));
-        input.add(new Token(Token.Type.Punctuator, "{"));
-        input.add(new Token(Token.Type.Keyword, Token.Keyword.returns.toString()));
-//        input.add(new Token(Token.Type.Punctuator, "("));
-        input.add(new Token(Token.Type.Numeric, "1"));
-        input.add(new Token(Token.Type.Punctuator, "+"));
-        input.add(new Token(Token.Type.Numeric, "2"));
-//        input.add(new Token(Token.Type.Punctuator, ")"));
-        input.add(new Token(Token.Type.Punctuator, "+"));
-        input.add(new Token(Token.Type.Numeric, "3"));
-        input.add(new Token(Token.Type.Punctuator, ";"));
-        input.add(new Token(Token.Type.Punctuator, "}"));
-        input.add(new Token(Token.Type.Identifier, "test"));
-        input.add(new Token(Token.Type.Punctuator, "("));
-        input.add(new Token(Token.Type.Punctuator, ")"));
-        input.add(new Token(Token.Type.Punctuator, ";"));
+        String input = "function test() {\n" +
+                "\treturn 1 + 2 + 3;\n" +
+                "}\n" +
+                "\n" +
+                "test();";
 
-        Program result = new Parser(input).parse();
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser().parse(lexer);
 
         assertEquals(2, result.getChildren().size());
         ASTNode sub1 = result.getChildren().get(0);
