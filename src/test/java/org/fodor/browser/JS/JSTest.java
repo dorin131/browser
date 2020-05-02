@@ -55,6 +55,17 @@ class JSTest {
         assertEquals(Value.jsUndefined(), result);
     }
 
+//    @Test
+//    void evalFunctionWithMixedPrecedence1() {
+//        String input = "function test() {\n" +
+//                "\treturn 1 + 2 * 3;\n" +
+//                "}\n" +
+//                "\n" +
+//                "test();";
+//        Value result = new JS().eval(input);
+//        assertEquals(7, result.getValue());
+//    }
+
     @Test
     void evalFunctionWithReturnValueWithoutSemicolons() {
         String input = "function test() {\n" +

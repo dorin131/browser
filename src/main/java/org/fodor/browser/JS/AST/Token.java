@@ -17,9 +17,11 @@ public class Token {
         returns("return");
 
         public final String label;
-        private Keyword(String label) {
+
+        Keyword(String label) {
             this.label = label;
         }
+
         @Override
         public String toString() {
             return this.label;

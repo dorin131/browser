@@ -82,7 +82,6 @@ public class Lexer {
     }
 
     private boolean isAlphanumeric(char c) {
-        Pattern alphanumeric = Pattern.compile("^[a-zA-Z0-9]+$");
-        return alphanumeric.matcher("" + c).matches();
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c == '_') || (c >= '0' && c <= '9');
     }
 }
