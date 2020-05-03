@@ -73,4 +73,22 @@ class ParserTest {
         ASTNode identifier = ((ExpressionStatement) expressionStatement).getExpression();
         assertEquals("Identifier", identifier.getClass().getSimpleName());
     }
+
+    @Test
+    void parseProgram3() {
+        String input = "7;";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("Literal", literal.getClass().getSimpleName());
+        assertEquals(7, ((Literal) literal).execute(null).getValue());
+    }
 }

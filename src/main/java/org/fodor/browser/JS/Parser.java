@@ -1,6 +1,7 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
+import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.AST.enums.Precedence;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
@@ -70,6 +71,10 @@ public class Parser {
         switch (currentToken.getType()) {
             case IDENT:
                 return parseIdentifier();
+            case NUM:
+                return parseIntegerLiteral();
+            case STR:
+                return parseStringLiteral();
             default:
                 return null;
         }
@@ -77,6 +82,14 @@ public class Parser {
 
     private ASTNode parseIdentifier() {
         return new Identifier(currentToken);
+    }
+
+    private ASTNode parseIntegerLiteral() {
+        return new Literal(new Value(Value.Type.Number, Integer.parseInt(currentToken.getValue())));
+    }
+
+    private ASTNode parseStringLiteral() {
+        return new Literal(new Value(Value.Type.String, currentToken.getValue()));
     }
 
     private ReturnStatement parseReturnStatement() {
