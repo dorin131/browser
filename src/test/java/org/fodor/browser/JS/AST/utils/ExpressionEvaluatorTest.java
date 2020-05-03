@@ -19,9 +19,9 @@ class ExpressionEvaluatorTest {
     void eval() {
         ArrayList<Token> tokens = new ArrayList<>();
         tokens.add(new Token(Token.Type.NUM, "1"));
-        tokens.add(new Token(Token.Type.ADD, "+"));
+        tokens.add(new Token(Token.Type.PLUS, "+"));
         tokens.add(new Token(Token.Type.NUM, "2"));
-        tokens.add(new Token(Token.Type.ADD, "+"));
+        tokens.add(new Token(Token.Type.PLUS, "+"));
         tokens.add(new Token(Token.Type.NUM, "3"));
 
         ASTNode result = ExpressionEvaluator.eval(tokens);

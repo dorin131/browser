@@ -30,11 +30,11 @@ class ParserTest {
         assertEquals("ReturnStatement", sub1_1_1.getClass().getSimpleName());
         ASTNode sub1_1_1_1 = ((ReturnStatement) sub1_1_1).getExpression();
         assertEquals("BinaryExpression", sub1_1_1_1.getClass().getSimpleName());
-        assertEquals("Add", ((BinaryExpression) sub1_1_1_1).getOp().toString());
+        assertEquals("+", ((BinaryExpression) sub1_1_1_1).getOp().toString());
         assertEquals("Literal", ((BinaryExpression) sub1_1_1_1).getRhs().getClass().getSimpleName());
         assertEquals("BinaryExpression", ((BinaryExpression) sub1_1_1_1).getLhs().getClass().getSimpleName());
         BinaryExpression sub1_1_1_1_1 = (BinaryExpression) ((BinaryExpression) sub1_1_1_1).getLhs();
-        assertEquals("Add", sub1_1_1_1_1.getOp().toString());
+        assertEquals("+", sub1_1_1_1_1.getOp().toString());
         assertEquals("Literal", sub1_1_1_1_1.getRhs().getClass().getSimpleName());
         assertEquals("Literal", sub1_1_1_1_1.getLhs().getClass().getSimpleName());
     }
@@ -65,8 +65,6 @@ class ParserTest {
 
         Program result = new Parser(lexer).parseProgram();
 
-        result.dump(0);
-
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
         assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
@@ -82,13 +80,90 @@ class ParserTest {
 
         Program result = new Parser(lexer).parseProgram();
 
-        result.dump(0);
-
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
         assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
         ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
         assertEquals("Literal", literal.getClass().getSimpleName());
         assertEquals(7, ((Literal) literal).execute(null).getValue());
+    }
+
+    @Test
+    void parseProgram4() {
+        String input = "-888;";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("PrefixExpression", literal.getClass().getSimpleName());
+    }
+
+    @Test
+    void parseProgram5() {
+        String input = "1 + 2;";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("BinaryExpression", literal.getClass().getSimpleName());
+    }
+
+    @Test
+    void parseProgram6() {
+        String input = "1 + 2";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("BinaryExpression", literal.getClass().getSimpleName());
+    }
+
+    @Test
+    void parseProgram7() {
+        String input = "1 + 2 * 3";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode binaryExpression = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("BinaryExpression", binaryExpression.getClass().getSimpleName());
+        assertEquals("Literal", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
+        assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
+    }
+
+    @Test
+    void parseProgram8() {
+        String input = "1 + 2 * 3 - 2";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode binaryExpression = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("BinaryExpression", binaryExpression.getClass().getSimpleName());
+        assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
+        assertEquals("Literal", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
     }
 }

@@ -5,11 +5,11 @@ import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
 public class BinaryExpression extends Expression {
-    private Operator op;
+    private String op;
     private ASTNode lhs;
     private ASTNode rhs;
 
-    public Operator getOp() {
+    public String getOp() {
         return op;
     }
 
@@ -21,7 +21,7 @@ public class BinaryExpression extends Expression {
         return rhs;
     }
 
-    public BinaryExpression(Operator op, ASTNode lhs, ASTNode rhs) {
+    public BinaryExpression(String op, ASTNode lhs, ASTNode rhs) {
         this.op = op;
         this.lhs = lhs;
         this.rhs = rhs;
@@ -46,10 +46,14 @@ public class BinaryExpression extends Expression {
         }
 
         switch (op) {
-            case Add:
+            case "+":
                 return new Value(Value.Type.Number, leftValue + rightValue);
-            case Sub:
+            case "-":
                 return new Value(Value.Type.Number, leftValue - rightValue);
+            case "*":
+                return new Value(Value.Type.Number, leftValue * rightValue);
+            case "/":
+                return new Value(Value.Type.Number, leftValue / rightValue);
             default:
                 throw new RuntimeException("Invalid operator");
         }

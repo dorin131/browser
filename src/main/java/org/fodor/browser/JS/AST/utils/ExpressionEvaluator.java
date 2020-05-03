@@ -20,16 +20,17 @@ public class ExpressionEvaluator {
         final ASTNode right = stack.pop();
         final ASTNode left = stack.pop();
 
-        switch (operator) {
-            case "+":
-                stack.push(new BinaryExpression(Operator.Add, left, right));
-                break;
-            case "-":
-                stack.push(new BinaryExpression(Operator.Sub, left, right));
-                break;
-            default:
-                throw new RuntimeException("Unknown operator");
-        }
+//        switch (operator) {
+//            case "+":
+//                stack.push(new BinaryExpression(Operator.Add, left, right));
+//                break;
+//            case "-":
+//                stack.push(new BinaryExpression(Operator.Sub, left, right));
+//                break;
+//            default:
+//                throw new RuntimeException("Unknown operator");
+//        }
+        stack.push(new BinaryExpression(operator, left, right));
 
     }
 

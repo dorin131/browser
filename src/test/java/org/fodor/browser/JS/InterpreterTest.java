@@ -82,10 +82,10 @@ class InterpreterTest {
         BlockStatement blockStatement = new BlockStatement();
         ReturnStatement returnStatement = new ReturnStatement(
                 new BinaryExpression(
-                        Operator.Add,
+                        "+",
                         new Literal(new Value(Value.Type.Number, 3)),
                         new BinaryExpression(
-                                Operator.Sub,
+                                "-",
                                 new Literal(new Value(Value.Type.Number, 100)),
                                 new Literal(new Value(Value.Type.Number, 2))
                         )

@@ -2,6 +2,7 @@ package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
 import org.fodor.browser.JS.AST.Value;
+import org.fodor.browser.JS.AST.enums.Operator;
 import org.fodor.browser.JS.AST.enums.Precedence;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
@@ -13,6 +14,19 @@ public class Parser {
     private Token peekToken;
     private Lexer lexer;
     private ArrayList<String> errors;
+    private HashMap<Token.Type, Precedence> precedences = new HashMap<>() {
+        {
+            put(Token.Type.EQ, Precedence.EQUALS);
+            put(Token.Type.NEQ, Precedence.EQUALS);
+            put(Token.Type.LT, Precedence.LESSGREATER);
+            put(Token.Type.GT, Precedence.LESSGREATER);
+            put(Token.Type.PLUS, Precedence.SUM);
+            put(Token.Type.MINUS, Precedence.SUM);
+            put(Token.Type.SLASH, Precedence.PRODUCT);
+            put(Token.Type.ASTERISK, Precedence.PRODUCT);
+        }
+    };
+
 
     private ArrayList<Token> tokens;
     private int cursor = 0;
@@ -22,6 +36,20 @@ public class Parser {
         this.lexer = lexer;
         nextToken();
         nextToken();
+    }
+
+    private Precedence peekPrecedence() {
+        if (precedences.containsKey(peekToken.getType())) {
+            return precedences.get(peekToken.getType());
+        }
+        return Precedence.LOWEST;
+    }
+
+    private Precedence curPrecedence() {
+        if (precedences.containsKey(currentToken.getType())) {
+            return precedences.get(currentToken.getType());
+        }
+        return Precedence.LOWEST;
     }
 
     private void nextToken() {
@@ -67,28 +95,73 @@ public class Parser {
         return expressionStatement;
     }
 
-    private ASTNode parseExpression(Precedence p) {
+    private ASTNode parseExpression(Precedence precedence) {
+        ASTNode left;
         switch (currentToken.getType()) {
             case IDENT:
-                return parseIdentifier();
+                left = parseIdentifier();
+                break;
             case NUM:
-                return parseIntegerLiteral();
+                left = parseIntegerLiteral();
+                break;
             case STR:
-                return parseStringLiteral();
+                left = parseStringLiteral();
+                break;
+            case BANG:
+            case MINUS:
+                left = parsePrefixExpression();
+                break;
             default:
-                return null;
+                left = null;
         }
+
+        while (!peekTokenIs(Token.Type.SEMICOLON) && precedence.ordinal() < peekPrecedence().ordinal()) {
+            ASTNode infix;
+            switch (peekToken.getType()) {
+                case PLUS:
+                case MINUS:
+                case SLASH:
+                case ASTERISK:
+                case EQ:
+                case NEQ:
+                case GT:
+                case LT:
+                    nextToken();
+                    left = parseInfixExpression(left);
+                    break;
+                default:
+                    return left;
+            }
+        }
+
+        return left;
     }
 
-    private ASTNode parseIdentifier() {
+    private PrefixExpression parsePrefixExpression() {
+        PrefixExpression prefixExpression = new PrefixExpression(currentToken.getValue());
+        nextToken();
+        prefixExpression.setRight(parseExpression(Precedence.PREFIX));
+        return prefixExpression;
+    }
+
+    private BinaryExpression parseInfixExpression(ASTNode left) {
+        Token token = currentToken;
+        Precedence precedence = curPrecedence();
+
+        nextToken();
+
+        return new BinaryExpression(token.getValue(), left, parseExpression(precedence));
+    }
+
+    private Identifier parseIdentifier() {
         return new Identifier(currentToken);
     }
 
-    private ASTNode parseIntegerLiteral() {
+    private Literal parseIntegerLiteral() {
         return new Literal(new Value(Value.Type.Number, Integer.parseInt(currentToken.getValue())));
     }
 
-    private ASTNode parseStringLiteral() {
+    private Literal parseStringLiteral() {
         return new Literal(new Value(Value.Type.String, currentToken.getValue()));
     }
 
