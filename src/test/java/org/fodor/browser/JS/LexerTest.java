@@ -10,6 +10,7 @@ class LexerTest {
     void run() {
         String input = "function test() {\n" +
                 "\treturn (1 + 2) - 3 * 10 / 3 > 1 < 2;\n" +
+                "\t== != <= >=" +
                 "}\n" +
                 "\n" +
                 "test();";
@@ -37,6 +38,10 @@ class LexerTest {
                 new Token(Token.Type.LT, "<"),
                 new Token(Token.Type.NUM, "2"),
                 new Token(Token.Type.SEMICOLON, ";"),
+                new Token(Token.Type.EQ, "=="),
+                new Token(Token.Type.NEQ, "!="),
+                new Token(Token.Type.LE, "<="),
+                new Token(Token.Type.GE, ">="),
                 new Token(Token.Type.RBRACE, "}"),
                 new Token(Token.Type.IDENT, "test"),
                 new Token(Token.Type.LPAREN, "("),

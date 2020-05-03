@@ -12,6 +12,10 @@ public class Token {
             put("function", Token.Type.FUNCTION);
             put("let", Token.Type.LET);
             put("return", Token.Type.RETURN);
+            put("true", Token.Type.TRUE);
+            put("false", Token.Type.FALSE);
+            put("if", Token.Type.IF);
+            put("else", Token.Type.ELSE);
         }
     };
 
@@ -27,6 +31,10 @@ public class Token {
         FUNCTION,
         LET,
         RETURN,
+        TRUE,
+        FALSE,
+        IF,
+        ELSE,
 
         /* Operators */
         ASSIGN,
@@ -36,6 +44,11 @@ public class Token {
         MUL,
         GT,
         LT,
+        GE,
+        LE,
+        EQ,
+        NEQ,
+        BANG,
 
         /* Separators */
         SEMICOLON,
@@ -69,8 +82,9 @@ public class Token {
     }
 
     public static Token.Type lookupIdent(String value) {
-        if (KEYWORDS.containsKey(value)) {
-            return KEYWORDS.get(value);
+        String key = value.toLowerCase();
+        if (KEYWORDS.containsKey(key)) {
+            return KEYWORDS.get(key);
         }
         // a user defined identifier
         return Token.Type.IDENT;
