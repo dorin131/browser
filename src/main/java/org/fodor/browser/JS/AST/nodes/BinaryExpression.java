@@ -1,10 +1,10 @@
 package org.fodor.browser.JS.AST.nodes;
 
-import org.fodor.browser.JS.AST.Operator;
+import org.fodor.browser.JS.AST.enums.Operator;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class BinaryExpression extends ExpressionNode {
+public class BinaryExpression extends Expression {
     private Operator op;
     private ASTNode lhs;
     private ASTNode rhs;

@@ -1,6 +1,6 @@
 package org.fodor.browser.JS.AST.utils;
 
-import org.fodor.browser.JS.AST.Operator;
+import org.fodor.browser.JS.AST.enums.Operator;
 import org.fodor.browser.JS.AST.Token;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.AST.nodes.ASTNode;

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ParserTest {
 
     @Test
-    void parse() {
+    void parse1() {
         String input = "function test() {\n" +
                 "\treturn 1 + 2 + 3;\n" +
                 "}\n" +
@@ -21,7 +21,7 @@ class ParserTest {
 
         assertEquals(2, result.getChildren().size());
         ASTNode sub1 = result.getChildren().get(0);
-        ExpressionNode sub2 = (ExpressionNode) result.getChildren().get(1);
+        Expression sub2 = (Expression) result.getChildren().get(1);
         assertEquals("FunctionDeclaration", sub1.getClass().getSimpleName());
         assertEquals("CallExpression", sub2.getClass().getSimpleName());
         ScopeNode sub1_1 = ((FunctionDeclaration) sub1).getBody();
@@ -37,5 +37,23 @@ class ParserTest {
         assertEquals("Add", sub1_1_1_1_1.getOp().toString());
         assertEquals("Literal", sub1_1_1_1_1.getRhs().getClass().getSimpleName());
         assertEquals("Literal", sub1_1_1_1_1.getLhs().getClass().getSimpleName());
+    }
+
+    @Test
+    void Parse2() {
+        String input = "var dorin = 1;\n" +
+                "var browser = 777;";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(2, result.getChildren().size());
+        ASTNode sub1 = result.getChildren().get(0);
+        ASTNode sub2 = result.getChildren().get(1);
+        assertEquals("VariableDeclaration", sub1.getClass().getSimpleName());
+        assertEquals("VariableDeclaration", sub2.getClass().getSimpleName());
+        assertEquals("dorin", ((VariableDeclaration) sub1).getName());
+        assertEquals("browser", ((VariableDeclaration) sub2).getName());
     }
 }

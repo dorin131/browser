@@ -4,7 +4,7 @@ import org.fodor.browser.JS.AST.Function;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class CallExpression extends ExpressionNode {
+public class CallExpression extends Expression {
     private String name;
 
     public CallExpression(String name) {

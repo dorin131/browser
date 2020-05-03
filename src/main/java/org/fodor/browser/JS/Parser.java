@@ -7,8 +7,119 @@ import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
 import java.util.ArrayList;
 
 public class Parser {
+    private Token currentToken;
+    private Token peekToken;
+    private Lexer lexer;
+    private ArrayList<String> errors;
+
     private ArrayList<Token> tokens;
     private int cursor = 0;
+
+    public Parser(Lexer lexer) {
+        this.errors = new ArrayList<>();
+        this.lexer = lexer;
+        nextToken();
+        nextToken();
+    }
+
+    private void nextToken() {
+        this.currentToken = this.peekToken;
+        this.peekToken = lexer.nextToken();
+    }
+
+    public Program parseProgram() {
+        Program program = new Program();
+
+        while (!currentTokenIs(Token.Type.EOF)) {
+            ASTNode statement = parseStatement();
+            if (statement != null) {
+                program.append(statement);
+            }
+            nextToken();
+        }
+
+        return program;
+    }
+
+    private ASTNode parseStatement() {
+        switch (currentToken.getType()) {
+            case VAR:
+                return parseVarStatement();
+            case RETURN:
+                return parseReturnStatement();
+            default:
+                return null;
+        }
+    }
+
+    private ReturnStatement parseReturnStatement() {
+        ReturnStatement returnStatement = new ReturnStatement();
+
+        nextToken();
+
+        // TODO: skipping expression
+
+        while (!currentTokenIs(Token.Type.SEMICOLON)) {
+            nextToken();
+        }
+
+        return returnStatement;
+    }
+
+    private VariableDeclaration parseVarStatement() {
+        VariableDeclaration declaration = new VariableDeclaration(currentToken);
+
+        if (!expectPeek(Token.Type.IDENT)) {
+            return null;
+        }
+
+        declaration.setName(currentToken);
+
+        if (!expectPeek(Token.Type.ASSIGN)) {
+            return null;
+        }
+
+        // TODO: skipping expression
+
+        while (!currentTokenIs(Token.Type.SEMICOLON)) {
+            nextToken();
+        }
+        
+        return declaration;
+    }
+
+    private boolean currentTokenIs(Token.Type type) {
+        return currentToken.getType() == type;
+    }
+
+    private boolean expectPeek(Token.Type type) {
+        if (peekTokenIs(type)) {
+            nextToken();
+            return true;
+        }
+        peekError(type);
+        return false;
+    }
+
+    private boolean peekTokenIs(Token.Type type) {
+        return peekToken.getType() == type;
+    }
+
+    private ArrayList<String> getErrors() {
+        return this.errors;
+    }
+
+    private void peekError(Token.Type type) {
+        String msg = String.format("Expected next token to be %s, got %s instead", type, peekToken.getType());
+        System.out.println(msg);
+        this.errors.add(msg);
+    }
+
+
+    // ---------------------------------------
+    public Parser() {
+
+    }
 
     private ASTNode walk() {
         // Stop walking when no more tokens
