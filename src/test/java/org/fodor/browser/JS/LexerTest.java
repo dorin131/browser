@@ -9,31 +9,39 @@ class LexerTest {
     @Test
     void run() {
         String input = "function test() {\n" +
-                "\treturn (1 + 2) + 3;\n" +
+                "\treturn (1 + 2) - 3 * 10 / 3 > 1 < 2;\n" +
                 "}\n" +
                 "\n" +
                 "test();";
 
         Token[] expected = {
-                new Token(Token.Type.Function, "function"),
-                new Token(Token.Type.Identifier, "test"),
-                new Token(Token.Type.LParen, "("),
-                new Token(Token.Type.RParen, ")"),
-                new Token(Token.Type.LBrace, "{"),
-                new Token(Token.Type.Return, "return"),
-                new Token(Token.Type.LParen, "("),
-                new Token(Token.Type.Numeric, "1"),
-                new Token(Token.Type.Plus, "+"),
-                new Token(Token.Type.Numeric, "2"),
-                new Token(Token.Type.RParen, ")"),
-                new Token(Token.Type.Plus, "+"),
-                new Token(Token.Type.Numeric, "3"),
-                new Token(Token.Type.Semicolon, ";"),
-                new Token(Token.Type.RBrace, "}"),
-                new Token(Token.Type.Identifier, "test"),
-                new Token(Token.Type.LParen, "("),
-                new Token(Token.Type.RParen, ")"),
-                new Token(Token.Type.Semicolon, ";"),
+                new Token(Token.Type.FUNCTION, "function"),
+                new Token(Token.Type.IDENT, "test"),
+                new Token(Token.Type.LPAREN, "("),
+                new Token(Token.Type.RPAREN, ")"),
+                new Token(Token.Type.LBRACE, "{"),
+                new Token(Token.Type.RETURN, "return"),
+                new Token(Token.Type.LPAREN, "("),
+                new Token(Token.Type.NUM, "1"),
+                new Token(Token.Type.ADD, "+"),
+                new Token(Token.Type.NUM, "2"),
+                new Token(Token.Type.RPAREN, ")"),
+                new Token(Token.Type.SUB, "-"),
+                new Token(Token.Type.NUM, "3"),
+                new Token(Token.Type.MUL, "*"),
+                new Token(Token.Type.NUM, "10"),
+                new Token(Token.Type.DIV, "/"),
+                new Token(Token.Type.NUM, "3"),
+                new Token(Token.Type.GT, ">"),
+                new Token(Token.Type.NUM, "1"),
+                new Token(Token.Type.LT, "<"),
+                new Token(Token.Type.NUM, "2"),
+                new Token(Token.Type.SEMICOLON, ";"),
+                new Token(Token.Type.RBRACE, "}"),
+                new Token(Token.Type.IDENT, "test"),
+                new Token(Token.Type.LPAREN, "("),
+                new Token(Token.Type.RPAREN, ")"),
+                new Token(Token.Type.SEMICOLON, ";"),
         };
 
         Lexer l = new Lexer(input);

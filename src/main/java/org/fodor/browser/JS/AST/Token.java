@@ -7,51 +7,47 @@ public class Token {
     private Type type;
     private String value;
 
-    private static final Map<String, Type> keywords = new HashMap<>() {
+    private static final Map<String, Type> KEYWORDS = new HashMap<>() {
         {
-            put("function", Token.Type.Function);
-            put("let", Token.Type.Let);
-            put("return", Token.Type.Return);
+            put("function", Token.Type.FUNCTION);
+            put("let", Token.Type.LET);
+            put("return", Token.Type.RETURN);
         }
     };
 
     public enum Type {
-        Identifier,
-        Punctuator,
-        Numeric,
-        String,
+        /* Identifiers */
+        IDENT,
 
-        Illegal,
+        /* Literals */
+        NUM,
+        STR,
 
-        Function,
-        Let,
-        Return,
+        /* Keywords */
+        FUNCTION,
+        LET,
+        RETURN,
 
-        Assign,
-        Semicolon,
-        LParen,
-        RParen,
-        Comma,
-        Plus,
-        LBrace,
-        RBrace,
+        /* Operators */
+        ASSIGN,
+        ADD,
+        SUB,
+        DIV,
+        MUL,
+        GT,
+        LT,
+
+        /* Separators */
+        SEMICOLON,
+        LPAREN,
+        RPAREN,
+        COMMA,
+        LBRACE,
+        RBRACE,
+
+        /* Special */
+        ILLEGAL,
         EOF
-    }
-
-    public enum Keyword {
-        function("function"),
-        returns("return");
-
-        public final String label;
-
-        Keyword(String label) {
-            this.label = label;
-        }
-
-        @Override
-        public String toString() {
-            return this.label;
-        }
     }
 
     public Token(Type type, String value) {
@@ -73,11 +69,11 @@ public class Token {
     }
 
     public static Token.Type lookupIdent(String value) {
-        if (keywords.containsKey(value)) {
-            return keywords.get(value);
+        if (KEYWORDS.containsKey(value)) {
+            return KEYWORDS.get(value);
         }
         // a user defined identifier
-        return Token.Type.Identifier;
+        return Token.Type.IDENT;
     }
 
     @Override

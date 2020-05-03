@@ -16,7 +16,7 @@ public class Parser {
             return null;
         }
         // Stop walking this child/branch when reached close curly brace
-        if (tokens.get(cursor).getType() == Token.Type.RBrace) {
+        if (tokens.get(cursor).getType() == Token.Type.RBRACE) {
             cursor++;
             return null;
         }
@@ -53,8 +53,8 @@ public class Parser {
         ArrayList<Token> expressionTokens = new ArrayList<>();
         while (
                 cursor < tokens.size() &&
-                        tokens.get(cursor).getType() != Token.Type.Semicolon &&
-                        tokens.get(cursor).getType() != Token.Type.RBrace
+                        tokens.get(cursor).getType() != Token.Type.SEMICOLON &&
+                        tokens.get(cursor).getType() != Token.Type.RBRACE
         ) {
             expressionTokens.add(tokens.get(cursor));
             cursor++;
@@ -82,28 +82,28 @@ public class Parser {
 
     private boolean isCallExpression(int index) {
         return (index + 2) < tokens.size() &&
-                        tokens.get(index).getType() == Token.Type.Identifier &&
-                        tokens.get(index + 1).getType() == Token.Type.LParen &&
-                        tokens.get(index + 2).getType() == Token.Type.RParen &&
-                        ((index + 3) < tokens.size() ? (tokens.get(index + 3).getType() != Token.Type.LBrace) : true);
+                        tokens.get(index).getType() == Token.Type.IDENT &&
+                        tokens.get(index + 1).getType() == Token.Type.LPAREN &&
+                        tokens.get(index + 2).getType() == Token.Type.RPAREN &&
+                        ((index + 3) < tokens.size() ? (tokens.get(index + 3).getType() != Token.Type.LBRACE) : true);
     }
 
     private boolean isNamedFunctionDeclaration(int index) {
         return (index + 4) < tokens.size() &&
-                tokens.get(index).getType() == Token.Type.Function &&
-                        tokens.get(index + 1).getType() == Token.Type.Identifier &&
-                        tokens.get(index + 2).getType() == Token.Type.LParen &&
-                        tokens.get(index + 3).getType() == Token.Type.RParen &&
-                        tokens.get(index + 4).getType() == Token.Type.LBrace;
+                tokens.get(index).getType() == Token.Type.FUNCTION &&
+                        tokens.get(index + 1).getType() == Token.Type.IDENT &&
+                        tokens.get(index + 2).getType() == Token.Type.LPAREN &&
+                        tokens.get(index + 3).getType() == Token.Type.RPAREN &&
+                        tokens.get(index + 4).getType() == Token.Type.LBRACE;
     }
 
     private boolean isExpressionStatement(int index) {
-        return tokens.get(index).getType() == Token.Type.Identifier ||
-                        tokens.get(index).getType() == Token.Type.Numeric ||
-                        tokens.get(index).getType() == Token.Type.String;
+        return tokens.get(index).getType() == Token.Type.IDENT ||
+                        tokens.get(index).getType() == Token.Type.NUM ||
+                        tokens.get(index).getType() == Token.Type.STR;
     }
 
     private boolean isReturnStatement(int index) {
-        return tokens.get(index).getType() == Token.Type.Return;
+        return tokens.get(index).getType() == Token.Type.RETURN;
     }
 }

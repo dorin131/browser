@@ -37,28 +37,43 @@ public class Lexer {
 
         switch (ch) {
             case '=':
-                t = new Token(Token.Type.Assign, ch);
+                t = new Token(Token.Type.ASSIGN, ch);
                 break;
             case ';':
-                t = new Token(Token.Type.Semicolon, ch);
+                t = new Token(Token.Type.SEMICOLON, ch);
                 break;
             case '(':
-                t = new Token(Token.Type.LParen, ch);
+                t = new Token(Token.Type.LPAREN, ch);
                 break;
             case ')':
-                t = new Token(Token.Type.RParen, ch);
+                t = new Token(Token.Type.RPAREN, ch);
                 break;
             case ',':
-                t = new Token(Token.Type.Comma, ch);
+                t = new Token(Token.Type.COMMA, ch);
                 break;
             case '+':
-                t = new Token(Token.Type.Plus, ch);
+                t = new Token(Token.Type.ADD, ch);
+                break;
+            case '-':
+                t = new Token(Token.Type.SUB, ch);
+                break;
+            case '*':
+                t = new Token(Token.Type.MUL, ch);
+                break;
+            case '/':
+                t = new Token(Token.Type.DIV, ch);
+                break;
+            case '<':
+                t = new Token(Token.Type.LT, ch);
+                break;
+            case '>':
+                t = new Token(Token.Type.GT, ch);
                 break;
             case '{':
-                t = new Token(Token.Type.LBrace, ch);
+                t = new Token(Token.Type.LBRACE, ch);
                 break;
             case '}':
-                t = new Token(Token.Type.RBrace, ch);
+                t = new Token(Token.Type.RBRACE, ch);
                 break;
             case 0:
                 t = new Token(Token.Type.EOF, ch);
@@ -69,9 +84,9 @@ public class Lexer {
                     Token.Type type = Token.lookupIdent(value);
                     return new Token(type, value);
                 } else if (isDigit(ch)) {
-                    return new Token(Token.Type.Numeric, readNumber());
+                    return new Token(Token.Type.NUM, readNumber());
                 }
-                t = new Token(Token.Type.Illegal, ch);
+                t = new Token(Token.Type.ILLEGAL, ch);
         }
 
         readChar();
