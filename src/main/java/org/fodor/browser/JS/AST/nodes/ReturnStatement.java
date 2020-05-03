@@ -3,25 +3,25 @@ package org.fodor.browser.JS.AST.nodes;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class ReturnStatement extends ASTNode {
-    ASTNode argument;
+public class ReturnStatement extends Statement {
+    ASTNode expression;
 
-    public ReturnStatement(ASTNode argument) {
-        this.argument = argument;
+    public ReturnStatement(ASTNode expression) {
+        this.expression = expression;
     }
 
-    public ASTNode getArgument() {
-        return argument;
+    public ASTNode getExpression() {
+        return expression;
     }
 
     @Override
     public Value execute(Interpreter i) {
-        return getArgument().execute(i);
+        return getExpression().execute(i);
     }
 
     @Override
     public void dump(int indent) {
         super.dump(indent);
-        getArgument().dump(indent + 1);
+        getExpression().dump(indent + 1);
     }
 }

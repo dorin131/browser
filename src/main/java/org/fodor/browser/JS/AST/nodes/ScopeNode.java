@@ -11,14 +11,9 @@ A node that has children, basically a shell or {}
 public class ScopeNode extends ASTNode {
     private ArrayList<ASTNode> children = new ArrayList<>();
 
-    /*
-    Adds a node to the block scope and return last
-     */
-    public ASTNode append(ASTNode ...nodes) {
-        for (ASTNode node : nodes) {
-            if (node != null) {
-                children.add(node);
-            }
+    public ASTNode append(ASTNode node) {
+        if (node != null) {
+            children.add(node);
         }
         if (children.size() > 0) {
             return children.get(children.size() - 1);

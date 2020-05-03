@@ -10,7 +10,7 @@ public class Token {
     private static final Map<String, Type> KEYWORDS = new HashMap<>() {
         {
             put("function", Token.Type.FUNCTION);
-            put("let", Token.Type.LET);
+            put("var", Token.Type.VAR);
             put("return", Token.Type.RETURN);
             put("true", Token.Type.TRUE);
             put("false", Token.Type.FALSE);
@@ -29,7 +29,7 @@ public class Token {
 
         /* Keywords */
         FUNCTION,
-        LET,
+        VAR,
         RETURN,
         TRUE,
         FALSE,

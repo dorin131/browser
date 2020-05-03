@@ -3,8 +3,6 @@ package org.fodor.browser.JS;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParserTest {
@@ -30,7 +28,7 @@ class ParserTest {
         assertEquals("BlockStatement", sub1_1.getClass().getSimpleName());
         ASTNode sub1_1_1 = (ASTNode) sub1_1.getChildren().get(0);
         assertEquals("ReturnStatement", sub1_1_1.getClass().getSimpleName());
-        ASTNode sub1_1_1_1 = ((ReturnStatement) sub1_1_1).getArgument();
+        ASTNode sub1_1_1_1 = ((ReturnStatement) sub1_1_1).getExpression();
         assertEquals("BinaryExpression", sub1_1_1_1.getClass().getSimpleName());
         assertEquals("Add", ((BinaryExpression) sub1_1_1_1).getOp().toString());
         assertEquals("Literal", ((BinaryExpression) sub1_1_1_1).getRhs().getClass().getSimpleName());

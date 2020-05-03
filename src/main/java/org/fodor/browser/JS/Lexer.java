@@ -44,6 +44,30 @@ public class Lexer {
                     t = new Token(Token.Type.ASSIGN, ch);
                 }
                 break;
+            case '<':
+                if (peekChar() == '=') {
+                    readChar();
+                    t = new Token(Token.Type.LE, "<=");
+                } else {
+                    t = new Token(Token.Type.LT, ch);
+                }
+                break;
+            case '>':
+                if (peekChar() == '=') {
+                    readChar();
+                    t = new Token(Token.Type.GE, ">=");
+                } else {
+                    t = new Token(Token.Type.GT, ch);
+                }
+                break;
+            case '!':
+                if (peekChar() == '=') {
+                    readChar();
+                    t = new Token(Token.Type.NEQ, "!=");
+                } else {
+                    t = new Token(Token.Type.BANG, ch);
+                }
+                break;
             case ';':
                 t = new Token(Token.Type.SEMICOLON, ch);
                 break;
@@ -68,35 +92,11 @@ public class Lexer {
             case '/':
                 t = new Token(Token.Type.DIV, ch);
                 break;
-            case '<':
-                if (peekChar() == '=') {
-                    readChar();
-                    t = new Token(Token.Type.LE, "<=");
-                } else {
-                    t = new Token(Token.Type.LT, ch);
-                }
-                break;
-            case '>':
-                if (peekChar() == '=') {
-                    readChar();
-                    t = new Token(Token.Type.GE, ">=");
-                } else {
-                    t = new Token(Token.Type.GT, ch);
-                }
-                break;
             case '{':
                 t = new Token(Token.Type.LBRACE, ch);
                 break;
             case '}':
                 t = new Token(Token.Type.RBRACE, ch);
-                break;
-            case '!':
-                if (peekChar() == '=') {
-                    readChar();
-                    t = new Token(Token.Type.NEQ, "!=");
-                } else {
-                    t = new Token(Token.Type.BANG, ch);
-                }
                 break;
             case 0:
                 t = new Token(Token.Type.EOF, ch);
