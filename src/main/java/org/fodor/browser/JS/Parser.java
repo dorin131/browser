@@ -1,10 +1,11 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
+import org.fodor.browser.JS.AST.enums.Precedence;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Parser {
     private Token currentToken;
@@ -48,8 +49,34 @@ public class Parser {
             case RETURN:
                 return parseReturnStatement();
             default:
+                return parseExpressionStatement();
+        }
+    }
+
+    private ExpressionStatement parseExpressionStatement() {
+        ExpressionStatement expressionStatement = new ExpressionStatement();
+
+        ASTNode expression = parseExpression(Precedence.LOWEST);
+
+        expressionStatement.setExpression(expression);
+
+        if (peekTokenIs(Token.Type.SEMICOLON)) {
+            nextToken();
+        }
+        return expressionStatement;
+    }
+
+    private ASTNode parseExpression(Precedence p) {
+        switch (currentToken.getType()) {
+            case IDENT:
+                return parseIdentifier();
+            default:
                 return null;
         }
+    }
+
+    private ASTNode parseIdentifier() {
+        return new Identifier(currentToken);
     }
 
     private ReturnStatement parseReturnStatement() {
@@ -113,6 +140,14 @@ public class Parser {
         String msg = String.format("Expected next token to be %s, got %s instead", type, peekToken.getType());
         System.out.println(msg);
         this.errors.add(msg);
+    }
+
+    private Expression prefixParseFn() {
+        return null;
+    }
+
+    private Expression infixParseFn(Expression exp) {
+        return null;
     }
 
 

@@ -3,32 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/enums/Operator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BinaryExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionNode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Literal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ReturnStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ReturnStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/utils/ExpressionEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/utils/ExpressionEvaluator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/InterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/InterpreterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Operator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BinaryExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/CallExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/CallExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Expression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Expression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/ExpressionNode.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/ExpressionStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/ExpressionStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Literal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Literal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/ReturnStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/ReturnStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/utils/ExpressionEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/utils/ExpressionEvaluator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/InterpreterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/InterpreterTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/ParserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +59,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in browser">
+  <component name="RunManager" selected="JUnit.ParserTest.parseProgram2">
     <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <option name="PACKAGE_NAME" value="" />
@@ -136,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest.parse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParserTest.parseProgram2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +126,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
       <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
-      <option name="METHOD_NAME" value="parse" />
+      <option name="METHOD_NAME" value="parseProgram2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParserTest.parseProgram2" />
         <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.ParserTest.Parse2" />
         <item itemvalue="JUnit.LexerTest.run" />
         <item itemvalue="JUnit.ExpressionEvaluatorTest.eval" />
-        <item itemvalue="JUnit.ParserTest.parse" />
       </list>
     </recent_temporary>
   </component>
@@ -188,10 +168,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587833963779" />
-    <state x="768" y="238" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1588520868251">
+    <state x="768" y="238" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1588522761516">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="768" y="238" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1588520868251" />
+    <state x="768" y="238" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1588522761516" />
     <state x="712" y="149" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588513762735">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -200,22 +180,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587412968543" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588521894946">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588531523109">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588521894946" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588521894945">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588531523109" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588531523108">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588521894945" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588521894945">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588531523108" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588531523106">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588521894945" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588521894946">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588531523106" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588531523108">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588521894946" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588531523108" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588518120271">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

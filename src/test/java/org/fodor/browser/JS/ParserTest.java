@@ -40,7 +40,7 @@ class ParserTest {
     }
 
     @Test
-    void Parse2() {
+    void parseProgram1() {
         String input = "var dorin = 1;\n" +
                 "var browser = 777;";
 
@@ -55,5 +55,22 @@ class ParserTest {
         assertEquals("VariableDeclaration", sub2.getClass().getSimpleName());
         assertEquals("dorin", ((VariableDeclaration) sub1).getName());
         assertEquals("browser", ((VariableDeclaration) sub2).getName());
+    }
+
+    @Test
+    void parseProgram2() {
+        String input = "dorin;";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode identifier = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("Identifier", identifier.getClass().getSimpleName());
     }
 }

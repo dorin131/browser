@@ -6,12 +6,18 @@ import org.fodor.browser.JS.Interpreter;
 public class ExpressionStatement extends Expression {
     ASTNode expression;
 
+    public ExpressionStatement() {}
+
     public ExpressionStatement(ASTNode node) {
         this.expression = node;
     }
 
     public ASTNode getExpression() {
         return expression;
+    }
+
+    public void setExpression(ASTNode expression) {
+        this.expression = expression;
     }
 
     @Override
