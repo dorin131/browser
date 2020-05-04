@@ -107,6 +107,10 @@ public class Parser {
             case STR:
                 left = parseStringLiteral();
                 break;
+            case TRUE:
+            case FALSE:
+                left = parseBoolean();
+                break;
             case BANG:
             case MINUS:
                 left = parsePrefixExpression();
@@ -163,6 +167,10 @@ public class Parser {
 
     private Literal parseStringLiteral() {
         return new Literal(new Value(Value.Type.String, currentToken.getValue()));
+    }
+
+    private Literal parseBoolean() {
+        return new Literal(new Value(Value.Type.Boolean, currentTokenIs(Token.Type.TRUE)));
     }
 
     private ReturnStatement parseReturnStatement() {

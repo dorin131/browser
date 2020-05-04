@@ -166,4 +166,22 @@ class ParserTest {
         assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
         assertEquals("Literal", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
     }
+
+    @Test
+    void parseProgram9() {
+        String input = "5 > 2 == false";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode binaryExpression = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("BinaryExpression", binaryExpression.getClass().getSimpleName());
+        assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
+        assertEquals("Literal", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
+        assertEquals(false, ((BinaryExpression) binaryExpression).getRhs().execute(null).getValue());
+    }
 }
