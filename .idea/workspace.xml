@@ -4,10 +4,8 @@
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/ParserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParserTest.parseProgram10">
+  <component name="RunManager" selected="JUnit.All in browser">
     <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <option name="PACKAGE_NAME" value="" />
@@ -132,9 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.ParserTest.parseProgram10" />
         <item itemvalue="JUnit.ParserTest.parseProgram7" />
-        <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.ParserTest.parseProgram9" />
         <item itemvalue="JUnit.ParserTest.parse1" />
       </list>
@@ -178,38 +176,42 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587412968543" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588616940650">
+    <state width="436" height="485" key="DebuggerActiveHint" timestamp="1588619437414">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940650" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588616940647">
+    <state width="436" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1588619437414" />
+    <state width="1874" height="340" key="GridCell.Tab.0.bottom" timestamp="1588619124092">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940647" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588616940646">
+    <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588619124092" />
+    <state width="1874" height="340" key="GridCell.Tab.0.center" timestamp="1588619124087">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940646" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588616940648">
+    <state width="1874" height="340" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588619124087" />
+    <state width="1874" height="340" key="GridCell.Tab.0.left" timestamp="1588619124084">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940648" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588518120271">
+    <state width="1874" height="340" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588619124084" />
+    <state width="1874" height="340" key="GridCell.Tab.0.right" timestamp="1588619124088">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588518120271" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1588518120270">
+    <state width="1874" height="340" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588619124088" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588619125768">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588518120270" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1588518120270">
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588619125768" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1588619125767">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588518120270" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1588518120271">
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588619125767" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1588619125766">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588518120271" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588619125766" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1588619125767">
+      <screen x="0" y="0" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588619125767" />
     <state x="750" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587583136581">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

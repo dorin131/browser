@@ -2,7 +2,6 @@ package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Token;
 import org.fodor.browser.JS.AST.Value;
-import org.fodor.browser.JS.AST.enums.Operator;
 import org.fodor.browser.JS.AST.enums.Precedence;
 import org.fodor.browser.JS.AST.nodes.*;
 import org.fodor.browser.JS.AST.utils.ExpressionEvaluator;
@@ -26,7 +25,36 @@ public class Parser {
             put(Token.Type.ASTERISK, Precedence.PRODUCT);
         }
     };
-
+    private interface parsePrefixFunction {
+        ASTNode parse();
+    }
+    private interface parseInfixFunction {
+        ASTNode parse(ASTNode expression);
+    }
+    HashMap<Token.Type, parsePrefixFunction> parsePrefixFunctions = new HashMap<>() {
+        {
+            put(Token.Type.IDENT, () -> parseIdentifier());
+            put(Token.Type.NUM, () -> parseIntegerLiteral());
+            put(Token.Type.STR, () -> parseStringLiteral());
+            put(Token.Type.TRUE, () -> parseBoolean());
+            put(Token.Type.FALSE, () -> parseBoolean());
+            put(Token.Type.LPAREN, () -> parseGroupedExpression());
+            put(Token.Type.BANG, () -> parsePrefixExpression());
+            put(Token.Type.MINUS, () -> parsePrefixExpression());
+        }
+    };
+    HashMap<Token.Type, parseInfixFunction> parseInfixFunctions = new HashMap<>() {
+        {
+            put(Token.Type.PLUS, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.MINUS, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.SLASH, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.ASTERISK, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.EQ, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.NEQ, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.GT, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.LT, (exp) -> parseInfixExpression(exp));
+        }
+    };
 
     private ArrayList<Token> tokens;
     private int cursor = 0;
@@ -96,49 +124,19 @@ public class Parser {
     }
 
     private ASTNode parseExpression(Precedence precedence) {
-        ASTNode left;
-        switch (currentToken.getType()) {
-            case IDENT:
-                left = parseIdentifier();
-                break;
-            case NUM:
-                left = parseIntegerLiteral();
-                break;
-            case STR:
-                left = parseStringLiteral();
-                break;
-            case TRUE:
-            case FALSE:
-                left = parseBoolean();
-                break;
-            case LPAREN:
-                left = parseGroupedExpression();
-                break;
-            case BANG:
-            case MINUS:
-                left = parsePrefixExpression();
-                break;
-            default:
-                left = null;
+        parsePrefixFunction prefixFn = parsePrefixFunctions.get(currentToken.getType());
+        if (prefixFn == null) {
+            return null;
         }
+        ASTNode left = prefixFn.parse();
 
         while (!peekTokenIs(Token.Type.SEMICOLON) && precedence.ordinal() < peekPrecedence().ordinal()) {
-            ASTNode infix;
-            switch (peekToken.getType()) {
-                case PLUS:
-                case MINUS:
-                case SLASH:
-                case ASTERISK:
-                case EQ:
-                case NEQ:
-                case GT:
-                case LT:
-                    nextToken();
-                    left = parseInfixExpression(left);
-                    break;
-                default:
-                    return left;
+            parseInfixFunction infixFn = parseInfixFunctions.get(peekToken.getType());
+            if (infixFn == null) {
+                return left;
             }
+            nextToken();
+            left = infixFn.parse(left);
         }
 
         return left;
@@ -247,15 +245,6 @@ public class Parser {
         System.out.println(msg);
         this.errors.add(msg);
     }
-
-    private Expression prefixParseFn() {
-        return null;
-    }
-
-    private Expression infixParseFn(Expression exp) {
-        return null;
-    }
-
 
     // ---------------------------------------
     public Parser() {
