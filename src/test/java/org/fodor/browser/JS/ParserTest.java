@@ -206,4 +206,50 @@ class ParserTest {
         assertEquals(1, ((BinaryExpression) ((BinaryExpression) binaryExpression).getLhs()).getLhs().execute(null).getValue());
         assertEquals(2, ((BinaryExpression) ((BinaryExpression) binaryExpression).getLhs()).getRhs().execute(null).getValue());
     }
+
+    @Test
+    void parseProgram11() {
+        String input = "if (a > b) {\n" +
+                "\t2;\n" +
+                "}";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("IfStatement", expressionStatement.getClass().getSimpleName());
+        IfStatement ifStatement = ((IfStatement) expressionStatement);
+        assertEquals("BinaryExpression", ifStatement.getTest().getClass().getSimpleName());
+        assertEquals("BlockStatement", ifStatement.getConsequent().getClass().getSimpleName());
+        assertEquals("ExpressionStatement", ((BlockStatement) ifStatement.getConsequent()).getChildren().get(0).getClass().getSimpleName());
+    }
+
+    @Test
+    void parseProgram12() {
+        String input = "if (a > b) {\n" +
+                "\t2;\n" +
+                "} else {\n" +
+                "\t1;\n" +
+                "}";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("IfStatement", expressionStatement.getClass().getSimpleName());
+        IfStatement ifStatement = ((IfStatement) expressionStatement);
+        assertEquals("BinaryExpression", ifStatement.getTest().getClass().getSimpleName());
+        assertEquals("BlockStatement", ifStatement.getConsequent().getClass().getSimpleName());
+        assertEquals("ExpressionStatement", ((BlockStatement) ifStatement.getConsequent()).getChildren().get(0).getClass().getSimpleName());
+        assertEquals(2, ((ExpressionStatement)((BlockStatement) ifStatement.getConsequent()).getChildren().get(0)).execute(null).getValue());
+        assertEquals("BlockStatement", ifStatement.getAlternate().getClass().getSimpleName());
+        assertEquals("ExpressionStatement", ((BlockStatement) ifStatement.getAlternate()).getChildren().get(0).getClass().getSimpleName());
+        assertEquals(1, ((ExpressionStatement)((BlockStatement) ifStatement.getAlternate()).getChildren().get(0)).execute(null).getValue());
+    }
 }

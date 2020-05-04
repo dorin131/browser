@@ -41,8 +41,10 @@ public class Parser {
             put(Token.Type.LPAREN, () -> parseGroupedExpression());
             put(Token.Type.BANG, () -> parsePrefixExpression());
             put(Token.Type.MINUS, () -> parsePrefixExpression());
+            put(Token.Type.IF, () -> parseIfStatement());
         }
     };
+
     HashMap<Token.Type, parseInfixFunction> parseInfixFunctions = new HashMap<>() {
         {
             put(Token.Type.PLUS, (exp) -> parseInfixExpression(exp));
@@ -105,6 +107,8 @@ public class Parser {
                 return parseVarStatement();
             case RETURN:
                 return parseReturnStatement();
+            case IF:
+                return parseIfStatement();
             default:
                 return parseExpressionStatement();
         }
@@ -181,6 +185,47 @@ public class Parser {
 
     private Literal parseBoolean() {
         return new Literal(new Value(Value.Type.Boolean, currentTokenIs(Token.Type.TRUE)));
+    }
+
+    private IfStatement parseIfStatement() {
+        IfStatement ifStatement = new IfStatement();
+
+        if (!expectPeek(Token.Type.LPAREN)) {
+            return null;
+        }
+        nextToken();
+        ifStatement.setTest(parseExpression(Precedence.LOWEST));
+        if (!expectPeek(Token.Type.RPAREN)) {
+            return null;
+        }
+        if (!expectPeek(Token.Type.LBRACE)) {
+            return null;
+        }
+        ifStatement.setConsequent(parseBlockStatement());
+
+        if (peekTokenIs(Token.Type.ELSE)) {
+            nextToken();
+            if (!expectPeek(Token.Type.LBRACE)) {
+                return null;
+            }
+            ifStatement.setAlternate(parseBlockStatement());
+        }
+
+        return ifStatement;
+    }
+
+    private BlockStatement parseBlockStatement() {
+        BlockStatement block = new BlockStatement();
+        nextToken();
+
+        while (!currentTokenIs(Token.Type.RBRACE)) {
+            ASTNode stmt = parseStatement();
+            if (stmt != null) {
+                block.append(stmt);
+            }
+            nextToken();
+        }
+        return block;
     }
 
     private ReturnStatement parseReturnStatement() {
