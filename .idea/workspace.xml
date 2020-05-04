@@ -57,7 +57,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in browser">
+  <component name="RunManager" selected="JUnit.ParserTest.parseProgram10">
     <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,6 +82,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParserTest.parseProgram10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="browser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fodor.browser.JS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
+      <option name="METHOD_NAME" value="parseProgram10" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ParserTest.parseProgram7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
@@ -93,22 +109,6 @@
       <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
       <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
       <option name="METHOD_NAME" value="parseProgram7" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParserTest.parseProgram8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="browser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fodor.browser.JS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
-      <option name="METHOD_NAME" value="parseProgram8" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParserTest.parseProgram10" />
+        <item itemvalue="JUnit.ParserTest.parseProgram7" />
         <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.ParserTest.parseProgram9" />
         <item itemvalue="JUnit.ParserTest.parse1" />
-        <item itemvalue="JUnit.ParserTest.parseProgram8" />
-        <item itemvalue="JUnit.ParserTest.parseProgram7" />
       </list>
     </recent_temporary>
   </component>
@@ -178,22 +178,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587412968543" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588616268349">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588616940650">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588616268349" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588616268348">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940650" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588616940647">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588616268348" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588616268338">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940647" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588616940646">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588616268338" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588616268349">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940646" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588616940648">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588616268349" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588616940648" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588518120271">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

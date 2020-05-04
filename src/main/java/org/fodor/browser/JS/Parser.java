@@ -111,6 +111,9 @@ public class Parser {
             case FALSE:
                 left = parseBoolean();
                 break;
+            case LPAREN:
+                left = parseGroupedExpression();
+                break;
             case BANG:
             case MINUS:
                 left = parsePrefixExpression();
@@ -139,6 +142,15 @@ public class Parser {
         }
 
         return left;
+    }
+
+    private ASTNode parseGroupedExpression() {
+        nextToken();
+        ASTNode exp = parseExpression(Precedence.LOWEST);
+        if (!expectPeek(Token.Type.RPAREN)) {
+            return null;
+        }
+        return exp;
     }
 
     private PrefixExpression parsePrefixExpression() {

@@ -148,6 +148,8 @@ class ParserTest {
         assertEquals("BinaryExpression", binaryExpression.getClass().getSimpleName());
         assertEquals("Literal", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
         assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
+        assertEquals(2, ((BinaryExpression) ((BinaryExpression) binaryExpression).getRhs()).getLhs().execute(null).getValue());
+        assertEquals(3, ((BinaryExpression) ((BinaryExpression) binaryExpression).getRhs()).getRhs().execute(null).getValue());
     }
 
     @Test
@@ -183,5 +185,25 @@ class ParserTest {
         assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
         assertEquals("Literal", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
         assertEquals(false, ((BinaryExpression) binaryExpression).getRhs().execute(null).getValue());
+    }
+
+    @Test
+    void parseProgram10() {
+        String input = "(1 + 2) * 3";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode binaryExpression = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("BinaryExpression", binaryExpression.getClass().getSimpleName());
+        assertEquals("Literal", ((BinaryExpression) binaryExpression).getRhs().getClass().getSimpleName());
+        assertEquals("BinaryExpression", ((BinaryExpression) binaryExpression).getLhs().getClass().getSimpleName());
+        assertEquals(1, ((BinaryExpression) ((BinaryExpression) binaryExpression).getLhs()).getLhs().execute(null).getValue());
+        assertEquals(2, ((BinaryExpression) ((BinaryExpression) binaryExpression).getLhs()).getRhs().execute(null).getValue());
     }
 }
