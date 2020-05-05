@@ -298,11 +298,9 @@ public class Parser {
     }
 
     private ReturnStatement parseReturnStatement() {
-        ReturnStatement returnStatement = new ReturnStatement();
-
         nextToken();
 
-        // TODO: skipping expression
+        ReturnStatement returnStatement = new ReturnStatement(parseExpression(Precedence.LOWEST));
 
         while (!currentTokenIs(Token.Type.SEMICOLON)) {
             nextToken();
@@ -324,7 +322,8 @@ public class Parser {
             return null;
         }
 
-        // TODO: skipping expression
+        nextToken();
+        declaration.setValue(currentToken);
 
         while (!currentTokenIs(Token.Type.SEMICOLON)) {
             nextToken();

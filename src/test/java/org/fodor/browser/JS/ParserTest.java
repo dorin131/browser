@@ -47,6 +47,7 @@ class ParserTest {
         Lexer lexer = new Lexer(input);
 
         Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
 
         assertEquals(2, result.getChildren().size());
         ASTNode sub1 = result.getChildren().get(0);
