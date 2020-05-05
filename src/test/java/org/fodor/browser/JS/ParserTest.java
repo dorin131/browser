@@ -252,4 +252,19 @@ class ParserTest {
         assertEquals("ExpressionStatement", ((BlockStatement) ifStatement.getAlternate()).getChildren().get(0).getClass().getSimpleName());
         assertEquals(1, ((ExpressionStatement)((BlockStatement) ifStatement.getAlternate()).getChildren().get(0)).execute(null).getValue());
     }
+
+    @Test
+    void parseProgram13() {
+        String input = "function(x,y) { x + y; };";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        assertEquals("FunctionDeclaration", ((ExpressionStatement) expressionStatement).getExpression().getClass().getSimpleName());
+    }
 }

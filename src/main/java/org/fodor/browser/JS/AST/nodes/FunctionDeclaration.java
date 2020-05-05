@@ -4,8 +4,11 @@ import org.fodor.browser.JS.AST.Function;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
+import java.util.ArrayList;
+
 public class FunctionDeclaration extends ASTNode {
     private String name = "anonymous";
+    private ArrayList<ASTNode> parameters = new ArrayList<>();
     private ScopeNode body;
 
     public FunctionDeclaration(ScopeNode body) {
@@ -15,6 +18,11 @@ public class FunctionDeclaration extends ASTNode {
     public FunctionDeclaration(String name, ScopeNode body) {
         this.name = name;
         this.body = body;
+    }
+
+    public FunctionDeclaration(ScopeNode body, ArrayList<ASTNode> parameters) {
+        this.body = body;
+        this.parameters = parameters;
     }
 
     public String getName() {

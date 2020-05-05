@@ -42,6 +42,7 @@ public class Parser {
             put(Token.Type.BANG, () -> parsePrefixExpression());
             put(Token.Type.MINUS, () -> parsePrefixExpression());
             put(Token.Type.IF, () -> parseIfStatement());
+            put(Token.Type.FUNCTION, () -> parseFunctionDeclaration());
         }
     };
 
@@ -169,6 +170,49 @@ public class Parser {
         nextToken();
 
         return new BinaryExpression(token.getValue(), left, parseExpression(precedence));
+    }
+
+    private FunctionDeclaration parseFunctionDeclaration() {
+        if (!expectPeek(Token.Type.LPAREN)) {
+            return null;
+        }
+
+        ArrayList<ASTNode> parameters = parseFunctionParameters();
+
+        if (!expectPeek(Token.Type.LBRACE)) {
+            return null;
+        }
+
+        ScopeNode body = parseBlockStatement();
+
+        return new FunctionDeclaration(body, parameters);
+    }
+
+    private ArrayList<ASTNode> parseFunctionParameters() {
+        ArrayList<ASTNode> identifiers = new ArrayList<>();
+
+        if (peekTokenIs(Token.Type.RPAREN)) {
+            nextToken();
+            return identifiers;
+        }
+
+        nextToken();
+
+        ASTNode ident = new Identifier(currentToken);
+        identifiers.add(ident);
+
+        while (peekTokenIs(Token.Type.COMMA)) {
+            nextToken();
+            nextToken();
+            ident = new Identifier(currentToken);
+            identifiers.add(ident);
+        }
+
+        if (!expectPeek(Token.Type.RPAREN)) {
+            return null;
+        }
+
+        return identifiers;
     }
 
     private Identifier parseIdentifier() {
