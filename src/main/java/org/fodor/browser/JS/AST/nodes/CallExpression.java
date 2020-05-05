@@ -37,9 +37,11 @@ public class CallExpression extends Expression {
         printIndent(indent);
         System.out.printf("%s \"%s\"\n", this.getClass().getSimpleName(), name());
         printIndent(indent + 1);
-        System.out.println("Arguments");
-        for (ASTNode p : parameters) {
-            p.dump(indent + 2);
+        if (parameters != null && parameters.size() > 0) {
+            System.out.println("Arguments");
+            for (ASTNode p : parameters) {
+                p.dump(indent + 2);
+            }
         }
     }
 }

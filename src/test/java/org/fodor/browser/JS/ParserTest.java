@@ -7,38 +7,40 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ParserTest {
 
-//    @Test
-//    void parse1() {
-//        String input = "var test = function() {\n" +
-//                "\treturn 1 + 2 + 3;\n" +
-//                "}\n" +
-//                "\n" +
-//                "test();";
-//
-//        Lexer lexer = new Lexer(input);
-//
-//        Program result = new Parser(lexer).parseProgram();
-//        result.dump(0);
-//
-//        assertEquals(2, result.getChildren().size());
-//        ASTNode sub1 = result.getChildren().get(0);
-//        Expression sub2 = (Expression) result.getChildren().get(1);
-//        assertEquals("FunctionDeclaration", sub1.getClass().getSimpleName());
-//        assertEquals("CallExpression", sub2.getClass().getSimpleName());
-//        ScopeNode sub1_1 = ((FunctionDeclaration) sub1).getBody();
-//        assertEquals("BlockStatement", sub1_1.getClass().getSimpleName());
-//        ASTNode sub1_1_1 = (ASTNode) sub1_1.getChildren().get(0);
-//        assertEquals("ReturnStatement", sub1_1_1.getClass().getSimpleName());
-//        ASTNode sub1_1_1_1 = ((ReturnStatement) sub1_1_1).getExpression();
-//        assertEquals("BinaryExpression", sub1_1_1_1.getClass().getSimpleName());
-//        assertEquals("+", ((BinaryExpression) sub1_1_1_1).getOp().toString());
-//        assertEquals("Literal", ((BinaryExpression) sub1_1_1_1).getRhs().getClass().getSimpleName());
-//        assertEquals("BinaryExpression", ((BinaryExpression) sub1_1_1_1).getLhs().getClass().getSimpleName());
-//        BinaryExpression sub1_1_1_1_1 = (BinaryExpression) ((BinaryExpression) sub1_1_1_1).getLhs();
-//        assertEquals("+", sub1_1_1_1_1.getOp().toString());
-//        assertEquals("Literal", sub1_1_1_1_1.getRhs().getClass().getSimpleName());
-//        assertEquals("Literal", sub1_1_1_1_1.getLhs().getClass().getSimpleName());
-//    }
+    @Test
+    void parse1() {
+        String input = "var test = function() {\n" +
+                "\treturn 1 + 2 + 3;\n" +
+                "};\n" +
+                "\n" +
+                "test();";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
+
+        assertEquals(2, result.getChildren().size());
+        ASTNode sub1 = result.getChildren().get(0);
+        Expression sub2 = (Expression) result.getChildren().get(1);
+        assertEquals("VariableDeclaration", sub1.getClass().getSimpleName());
+        assertEquals("ExpressionStatement", sub2.getClass().getSimpleName());
+        assertEquals("CallExpression", ((ExpressionStatement) sub2).getExpression().getClass().getSimpleName());
+        ASTNode sub1_1 = ((VariableDeclaration) sub1).getValue();
+        assertEquals("FunctionDeclaration", sub1_1.getClass().getSimpleName());
+        ASTNode sub1_1_1 = ((FunctionDeclaration) sub1_1).getBody();
+        assertEquals("BlockStatement", sub1_1_1.getClass().getSimpleName());
+        ASTNode sub1_1_1_1 = ((BlockStatement) sub1_1_1).getChildren().get(0);
+        assertEquals("ReturnStatement", sub1_1_1_1.getClass().getSimpleName());
+        assertEquals("BinaryExpression", ((ReturnStatement) sub1_1_1_1).getExpression().getClass().getSimpleName());
+        assertEquals("+", ((BinaryExpression) ((ReturnStatement) sub1_1_1_1).getExpression()).getOp());
+        assertEquals("Literal", ((BinaryExpression) ((ReturnStatement) sub1_1_1_1).getExpression()).getRhs().getClass().getSimpleName());
+        assertEquals("BinaryExpression", ((BinaryExpression) ((ReturnStatement) sub1_1_1_1).getExpression()).getLhs().getClass().getSimpleName());
+        BinaryExpression sub1_1_1_1_1 = (BinaryExpression) ((BinaryExpression) ((ReturnStatement) sub1_1_1_1).getExpression()).getLhs();
+        assertEquals("+", sub1_1_1_1_1.getOp());
+        assertEquals("Literal", sub1_1_1_1_1.getRhs().getClass().getSimpleName());
+        assertEquals("Literal", sub1_1_1_1_1.getLhs().getClass().getSimpleName());
+    }
 
     @Test
     void parseProgram1() {

@@ -19,6 +19,10 @@ public class VariableDeclaration extends ASTNode {
         this.value = value;
     }
 
+    public ASTNode getValue() {
+        return value;
+    }
+
     public String getName() {
         return this.name;
     }
