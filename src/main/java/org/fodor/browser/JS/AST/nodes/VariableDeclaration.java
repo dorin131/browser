@@ -5,7 +5,7 @@ import org.fodor.browser.JS.AST.Token;
 public class VariableDeclaration extends ASTNode {
     private Token.Type type;
     private String name;
-    private String value;
+    private ASTNode value;
 
     public VariableDeclaration(Token token) {
         this.type = token.getType();
@@ -15,8 +15,8 @@ public class VariableDeclaration extends ASTNode {
         this.name = token.getValue();
     }
 
-    public void setValue(Token value) {
-        this.value = value.getValue();
+    public void setValue(ASTNode value) {
+        this.value = value;
     }
 
     public String getName() {
@@ -27,6 +27,7 @@ public class VariableDeclaration extends ASTNode {
     public void dump(int indent) {
         super.dump(indent);
         printIndent(indent + 1);
-        System.out.printf("\"%s = %s\"\n", name, value);
+        System.out.println(name);
+        value.dump(indent + 1);
     }
 }
