@@ -11,6 +11,10 @@ public class Identifier extends ASTNode {
         this.name = token.getValue();
     }
 
+    public String getName() {
+        return name;
+    }
+
     // TODO: implement
     public Value execute(Interpreter interpreter) {
         return null;

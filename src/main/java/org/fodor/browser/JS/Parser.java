@@ -23,6 +23,7 @@ public class Parser {
             put(Token.Type.MINUS, Precedence.SUM);
             put(Token.Type.SLASH, Precedence.PRODUCT);
             put(Token.Type.ASTERISK, Precedence.PRODUCT);
+            put(Token.Type.LPAREN, Precedence.CALL);
         }
     };
     private interface parsePrefixFunction {
@@ -56,6 +57,7 @@ public class Parser {
             put(Token.Type.NEQ, (exp) -> parseInfixExpression(exp));
             put(Token.Type.GT, (exp) -> parseInfixExpression(exp));
             put(Token.Type.LT, (exp) -> parseInfixExpression(exp));
+            put(Token.Type.LPAREN, (exp) -> parseCallExpression(exp));
         }
     };
 
@@ -170,6 +172,29 @@ public class Parser {
         nextToken();
 
         return new BinaryExpression(token.getValue(), left, parseExpression(precedence));
+    }
+
+    private Expression parseCallExpression(ASTNode function) {
+        return new CallExpression(((Identifier) function).getName(), parseCallArguments());
+    }
+
+    private ArrayList<ASTNode> parseCallArguments() {
+        ArrayList<ASTNode> arguments = new ArrayList<>();
+        if (peekTokenIs(Token.Type.RPAREN)) {
+            nextToken();
+            return arguments;
+        }
+        nextToken();
+        arguments.add(parseExpression(Precedence.LOWEST));
+        while (peekTokenIs(Token.Type.COMMA)) {
+            nextToken();
+            nextToken();
+            arguments.add(parseExpression(Precedence.LOWEST));
+        }
+        if (!expectPeek(Token.Type.RPAREN)) {
+            return null;
+        }
+        return arguments;
     }
 
     private FunctionDeclaration parseFunctionDeclaration() {

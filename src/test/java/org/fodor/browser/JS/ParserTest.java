@@ -267,4 +267,20 @@ class ParserTest {
         assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
         assertEquals("FunctionDeclaration", ((ExpressionStatement) expressionStatement).getExpression().getClass().getSimpleName());
     }
+
+    @Test
+    void parseProgram14() {
+        String input = "yo(1, 3 * 5);";
+
+        Lexer lexer = new Lexer(input);
+
+        Program result = new Parser(lexer).parseProgram();
+        result.dump(0);
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        assertEquals("CallExpression", ((ExpressionStatement) expressionStatement).getExpression().getClass().getSimpleName());
+        assertEquals("yo", ((CallExpression)((ExpressionStatement) expressionStatement).getExpression()).name());
+    }
 }
