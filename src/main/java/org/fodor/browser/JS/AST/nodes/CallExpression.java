@@ -21,11 +21,20 @@ public class CallExpression extends Expression {
 
     @Override
     public Value execute(Interpreter interpreter) {
-        Value callee = interpreter.getGlobal().get(this.name);
-        if (callee.getValue() instanceof Function) {
-            return interpreter.run(((Function) callee.getValue()).body());
+        ASTNode callee = interpreter.getGlobal().get(this.name);
+
+        // if it's a function
+        if (callee instanceof FunctionDeclaration) {
+            callee = ((FunctionDeclaration) callee).getBody();
         }
-        throw new RuntimeException("Not Function: " + callee);
+
+        // if it's a block
+        if (callee instanceof ScopeNode) {
+            return interpreter.run((ScopeNode) callee);
+        }
+
+        // or if it's just an expression
+        return callee.execute(interpreter);
     }
 
     public String name() {

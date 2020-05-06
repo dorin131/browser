@@ -323,7 +323,7 @@ public class Parser {
         }
 
         nextToken();
-        declaration.setValue(parseExpression(Precedence.LOWEST));
+        declaration.setBody(parseExpression(Precedence.LOWEST));
 
         while (!currentTokenIs(Token.Type.SEMICOLON)) {
             nextToken();

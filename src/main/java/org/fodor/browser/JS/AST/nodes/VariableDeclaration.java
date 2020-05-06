@@ -1,11 +1,14 @@
 package org.fodor.browser.JS.AST.nodes;
 
+import org.fodor.browser.JS.AST.Function;
 import org.fodor.browser.JS.AST.Token;
+import org.fodor.browser.JS.AST.Value;
+import org.fodor.browser.JS.Interpreter;
 
 public class VariableDeclaration extends ASTNode {
     private Token.Type type;
     private String name;
-    private ASTNode value;
+    private ASTNode body;
 
     public VariableDeclaration(Token token) {
         this.type = token.getType();
@@ -15,16 +18,22 @@ public class VariableDeclaration extends ASTNode {
         this.name = token.getValue();
     }
 
-    public void setValue(ASTNode value) {
-        this.value = value;
+    public void setBody(ASTNode contents) {
+        this.body = contents;
     }
 
-    public ASTNode getValue() {
-        return value;
+    public ASTNode getBody() {
+        return body;
     }
 
     public String getName() {
         return this.name;
+    }
+
+    public Value execute(Interpreter interpreter) {
+        interpreter.getGlobal().put(name, body);
+
+        return new Value(Value.Type.Undefined);
     }
 
     @Override
@@ -32,6 +41,6 @@ public class VariableDeclaration extends ASTNode {
         super.dump(indent);
         printIndent(indent + 1);
         System.out.println(name);
-        value.dump(indent + 1);
+        body.dump(indent + 1);
     }
 }

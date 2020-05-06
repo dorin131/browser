@@ -1,18 +1,20 @@
 package org.fodor.browser.JS.AST;
 
+import org.fodor.browser.JS.AST.nodes.ASTNode;
+
 import java.util.HashMap;
 
-public class JSObject {
-    private HashMap<String, Value> properties = new HashMap<>();
+public class JSObject extends ASTNode {
+    private HashMap<String, ASTNode> properties = new HashMap<>();
 
-    public Value get(String propName) {
+    public ASTNode get(String propName) {
         if (properties.containsKey(propName)) {
             return properties.get(propName);
         }
-        return Value.jsUndefined();
+        return new ASTNode();
     }
 
-    public void put(String propName, Value propValue) {
+    public void put(String propName, ASTNode propValue) {
         properties.put(propName, propValue);
     }
 }

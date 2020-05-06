@@ -3,10 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/JSObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/JSObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/JS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/JS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/JSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/JSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Function.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Function.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/JSObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/JSObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/CallExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/CallExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/JS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/JS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/JSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/JSTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/ParserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +79,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JSTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="browser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fodor.browser.JS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.JSTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSTest.evalExpressionAddition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="browser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fodor.browser.JS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.JSTest" />
+      <option name="METHOD_NAME" value="evalExpressionAddition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSTest.evalExpressionMixed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="browser" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fodor.browser.JS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.JSTest" />
+      <option name="METHOD_NAME" value="evalExpressionMixed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ParserTest.parse1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
@@ -82,61 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest.parseProgram1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="browser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fodor.browser.JS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
-      <option name="METHOD_NAME" value="parseProgram1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParserTest.parseProgram13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="browser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fodor.browser.JS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
-      <option name="METHOD_NAME" value="parseProgram13" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParserTest.parseProgram14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="browser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fodor.browser.JS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.JS" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.JS.ParserTest" />
-      <option name="METHOD_NAME" value="parseProgram14" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.ParserTest.parse1" />
-        <item itemvalue="JUnit.ParserTest.parseProgram1" />
-        <item itemvalue="JUnit.ParserTest.parseProgram14" />
-        <item itemvalue="JUnit.ParserTest.parseProgram13" />
+        <item itemvalue="JUnit.JSTest" />
+        <item itemvalue="JUnit.JSTest.evalExpressionMixed" />
+        <item itemvalue="JUnit.JSTest.evalExpressionAddition" />
       </list>
     </recent_temporary>
   </component>
@@ -186,38 +198,38 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1588623289228" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588711980721">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1588793407963">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588711980721" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588711980721">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588793407963" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1588793407963">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588711980721" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588711980720">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588793407963" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1588793407962">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588711980720" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588711980721">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588793407962" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1588793407963">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588711980721" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588623524247">
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588793407963" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588792846662">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588623524247" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1588623524246">
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588792846662" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1588792846661">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588623524246" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1588623524246">
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588792846661" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1588792846661">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588623524246" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1588623524247">
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588792846661" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1588792846662">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588623524247" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588792846662" />
     <state x="750" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587583136581">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

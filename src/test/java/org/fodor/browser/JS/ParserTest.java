@@ -26,7 +26,7 @@ class ParserTest {
         assertEquals("VariableDeclaration", sub1.getClass().getSimpleName());
         assertEquals("ExpressionStatement", sub2.getClass().getSimpleName());
         assertEquals("CallExpression", ((ExpressionStatement) sub2).getExpression().getClass().getSimpleName());
-        ASTNode sub1_1 = ((VariableDeclaration) sub1).getValue();
+        ASTNode sub1_1 = ((VariableDeclaration) sub1).getBody();
         assertEquals("FunctionDeclaration", sub1_1.getClass().getSimpleName());
         ASTNode sub1_1_1 = ((FunctionDeclaration) sub1_1).getBody();
         assertEquals("BlockStatement", sub1_1_1.getClass().getSimpleName());

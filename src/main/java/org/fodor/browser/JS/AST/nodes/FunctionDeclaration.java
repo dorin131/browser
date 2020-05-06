@@ -34,11 +34,11 @@ public class FunctionDeclaration extends ASTNode {
     }
 
     public Value execute(Interpreter interpreter) {
-        Function function = new Function(name, body);
-        Value value = new Value(Value.Type.Function, function);
-        interpreter.getGlobal().put(name, value);
+//        Function function = new Function(name, body);
+//        Value value = new Value(Value.Type.Function, function);
+        interpreter.getGlobal().put(getName(), getBody());
 
-        return value;
+        return new Value(Value.Type.Undefined);
     }
 
     @Override
