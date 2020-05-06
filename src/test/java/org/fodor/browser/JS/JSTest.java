@@ -29,20 +29,20 @@ class JSTest {
         assertEquals(7, result.getValue());
     }
 
-//    @Test
-//    void evalFunctionWithReturnValue3() {
-//        String input = "var test = function() {\n" +
-//                "\treturn 1 + 2 + 3;\n" +
-//                "};\n" +
-//                "\n" +
-//                "var test2 = function() {\n" +
-//                "\treturn 4;\n" +
-//                "};\n" +
-//                "\n" +
-//                "test2() + test();";
-//        Value result = new JS().eval(input);
-//        assertEquals(10, result.getValue());
-//    }
+    @Test
+    void evalFunctionWithReturnValue3() {
+        String input = "var test = function() {\n" +
+                "\treturn 1 + 2 + 3;\n" +
+                "};\n" +
+                "\n" +
+                "var test2 = function() {\n" +
+                "\treturn 4;\n" +
+                "};\n" +
+                "\n" +
+                "test2() + test();";
+        Value result = new JS().eval(input);
+        assertEquals(10, result.getValue());
+    }
 
     @Test
     void evalFunctionWithReturnValue4() {
@@ -54,27 +54,16 @@ class JSTest {
         assertEquals(Value.jsUndefined(), result);
     }
 
-//    @Test
-//    void evalFunctionWithMixedPrecedence1() {
-//        String input = "function test() {\n" +
-//                "\treturn 1 + 2 * 3;\n" +
-//                "}\n" +
-//                "\n" +
-//                "test();";
-//        Value result = new JS().eval(input);
-//        assertEquals(7, result.getValue());
-//    }
-
-//    @Test
-//    void evalFunctionWithReturnValueWithoutSemicolons() {
-//        String input = "var test = function() {\n" +
-//                "\treturn 1 + 2 + 3\n" +
-//                "};\n" +
-//                "\n" +
-//                "test()";
-//        Value result = new JS().eval(input);
-//        assertEquals(6, result.getValue());
-//    }
+    @Test
+    void evalFunctionWithMixedPrecedence1() {
+        String input = "var test = function() {\n" +
+                "\treturn 1 + 2 * 3;\n" +
+                "};\n" +
+                "\n" +
+                "test();";
+        Value result = new JS().eval(input);
+        assertEquals(7, result.getValue());
+    }
 
     @Test
     void evalFunctionWithReturnUndefined() {
@@ -86,17 +75,6 @@ class JSTest {
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Undefined, result.getType());
     }
-
-//    @Test
-//    void evalFunctionWithReturnUndefinedWithoutSemicolon() {
-//        String input = "function test() {\n" +
-//                "\t1 + 2 + 3\n" +
-//                "}\n" +
-//                "\n" +
-//                "test();";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Undefined, result.getType());
-//    }
 
     @Test
     void evalExpressionAddition() {

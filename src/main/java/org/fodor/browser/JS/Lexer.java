@@ -132,7 +132,7 @@ public class Lexer {
 
     private String readIdentifier() {
         int startPos = position;
-        while (this.isLetter(ch)) {
+        while (this.isLetter(ch) || this.isDigit(ch)) {
             readChar();
         }
         return code.substring(startPos, position);

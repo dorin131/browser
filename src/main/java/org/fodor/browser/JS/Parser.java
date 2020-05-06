@@ -60,9 +60,6 @@ public class Parser {
         }
     };
 
-    private ArrayList<Token> tokens;
-    private int cursor = 0;
-
     public Parser(Lexer lexer) {
         this.errors = new ArrayList<>();
         this.lexer = lexer;
