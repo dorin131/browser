@@ -109,29 +109,47 @@ class JSTest {
     }
 
     @Test
-    void evalExpressionWithoutSemicolon3() {
+    void evalExpressionWithSemicolon3() {
         String input = "666 - 66 + 1";
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(601, result.getValue());
     }
 
-    // var x = 1;
-    // x;
-    // result: 1
+    @Test
+    void evalExpression() {
+        String input = "var x = 1; x;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(1, result.getValue());
+    }
 
-    // var x = 10 + 20;
-    // x;
-    // result: 30
+    @Test
+    void evalExpression2() {
+        String input = "var x = 10 + 20; x;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(30, result.getValue());
+    }
 
-    // var a = 1;
-    // var b = a;
-    // b;
-    // result: 1
+    @Test
+    void evalExpression3() {
+        String input = "var a = 1;\n" +
+                "var b = a;\n" +
+                "b;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(1, result.getValue());
+    }
 
-    // var a = 1;
-    // var b = 2;
-    // var c = a + b;
-    // c;
-    // result: 3
+    @Test
+    void evalExpression4() {
+        String input = "var a = 1;\n" +
+                "var b = 2;\n" +
+                "var c = a + b;\n" +
+                "c;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(3, result.getValue());
+    }
 }

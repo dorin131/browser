@@ -15,8 +15,7 @@ public class Identifier extends ASTNode {
         return name;
     }
 
-    // TODO: implement
     public Value execute(Interpreter interpreter) {
-        return null;
+        return interpreter.getGlobal().get(name).execute(interpreter);
     }
 }
