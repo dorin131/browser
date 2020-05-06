@@ -14,6 +14,10 @@ public class ReturnStatement extends Statement {
         return expression;
     }
 
+    public void setExpression(ASTNode expression) {
+        this.expression = expression;
+    }
+
     @Override
     public Value execute(Interpreter i) {
         return getExpression().execute(i);

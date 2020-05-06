@@ -38,10 +38,10 @@ public class Token {
 
         /* Operators */
         ASSIGN,
-        ADD,
-        SUB,
-        DIV,
-        MUL,
+        PLUS,
+        MINUS,
+        SLASH,
+        ASTERISK,
         GT,
         LT,
         GE,

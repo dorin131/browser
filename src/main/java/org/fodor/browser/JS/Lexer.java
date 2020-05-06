@@ -81,16 +81,16 @@ public class Lexer {
                 t = new Token(Token.Type.COMMA, ch);
                 break;
             case '+':
-                t = new Token(Token.Type.ADD, ch);
+                t = new Token(Token.Type.PLUS, ch);
                 break;
             case '-':
-                t = new Token(Token.Type.SUB, ch);
+                t = new Token(Token.Type.MINUS, ch);
                 break;
             case '*':
-                t = new Token(Token.Type.MUL, ch);
+                t = new Token(Token.Type.ASTERISK, ch);
                 break;
             case '/':
-                t = new Token(Token.Type.DIV, ch);
+                t = new Token(Token.Type.SLASH, ch);
                 break;
             case '{':
                 t = new Token(Token.Type.LBRACE, ch);

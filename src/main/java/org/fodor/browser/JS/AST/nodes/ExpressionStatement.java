@@ -3,15 +3,17 @@ package org.fodor.browser.JS.AST.nodes;
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class ExpressionStatement extends ExpressionNode {
+public class ExpressionStatement extends Expression {
     ASTNode expression;
 
-    public ExpressionStatement(ASTNode node) {
-        this.expression = node;
-    }
+    public ExpressionStatement() {}
 
     public ASTNode getExpression() {
         return expression;
+    }
+
+    public void setExpression(ASTNode expression) {
+        this.expression = expression;
     }
 
     @Override

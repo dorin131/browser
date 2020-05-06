@@ -2,7 +2,7 @@ package org.fodor.browser.JS.AST;
 
 import org.fodor.browser.JS.AST.nodes.ScopeNode;
 
-public class Function extends JSObject {
+public class Function {
     private String name;
     private ScopeNode body;
 
