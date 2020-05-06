@@ -119,7 +119,6 @@ class JSTest {
         String input = "777";
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Number, result.getType());
-        // TODO: should be 601 - incorrect order
         assertEquals(777, result.getValue());
     }
 
@@ -128,7 +127,6 @@ class JSTest {
         String input = "777 + 1000";
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Number, result.getType());
-        // TODO: should be 601 - incorrect order
         assertEquals(1777, result.getValue());
     }
 

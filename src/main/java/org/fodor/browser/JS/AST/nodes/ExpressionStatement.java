@@ -8,10 +8,6 @@ public class ExpressionStatement extends Expression {
 
     public ExpressionStatement() {}
 
-    public ExpressionStatement(ASTNode node) {
-        this.expression = node;
-    }
-
     public ASTNode getExpression() {
         return expression;
     }

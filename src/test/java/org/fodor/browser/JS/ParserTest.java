@@ -16,9 +16,7 @@ class ParserTest {
                 "test();";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(2, result.getChildren().size());
         ASTNode sub1 = result.getChildren().get(0);
@@ -48,9 +46,7 @@ class ParserTest {
                 "var browser = 777;";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(2, result.getChildren().size());
         ASTNode sub1 = result.getChildren().get(0);
@@ -66,7 +62,6 @@ class ParserTest {
         String input = "dorin;";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -81,7 +76,6 @@ class ParserTest {
         String input = "7;";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -97,7 +91,6 @@ class ParserTest {
         String input = "-888;";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -112,7 +105,6 @@ class ParserTest {
         String input = "1 + 2;";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -127,7 +119,6 @@ class ParserTest {
         String input = "1 + 2";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -142,7 +133,6 @@ class ParserTest {
         String input = "1 + 2 * 3";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -161,7 +151,6 @@ class ParserTest {
         String input = "1 + 2 * 3 - 2";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -178,7 +167,6 @@ class ParserTest {
         String input = "5 > 2 == false";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
 
         assertEquals(1, result.getChildren().size());
@@ -196,9 +184,7 @@ class ParserTest {
         String input = "(1 + 2) * 3";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
@@ -218,9 +204,7 @@ class ParserTest {
                 "}";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
@@ -240,9 +224,7 @@ class ParserTest {
                 "}";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
@@ -262,9 +244,7 @@ class ParserTest {
         String input = "function(x,y) { x + y; };";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
@@ -277,9 +257,7 @@ class ParserTest {
         String input = "yo(1, 3 * 5);";
 
         Lexer lexer = new Lexer(input);
-
         Program result = new Parser(lexer).parseProgram();
-        result.dump(0);
 
         assertEquals(1, result.getChildren().size());
         ASTNode expressionStatement = result.getChildren().get(0);
