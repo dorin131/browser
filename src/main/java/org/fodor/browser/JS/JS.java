@@ -2,8 +2,9 @@ package org.fodor.browser.JS;
 
 import org.fodor.browser.JS.AST.Value;
 import org.fodor.browser.JS.AST.nodes.Program;
+import org.fodor.browser.interfaces.JSEngine;
 
-public class JS {
+public class JS implements JSEngine {
     public Value eval(String code) {
         Lexer lexer = new Lexer(code);
         Program program = new Parser(lexer).parseProgram();
