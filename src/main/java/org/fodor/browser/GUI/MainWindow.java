@@ -21,6 +21,9 @@ public class MainWindow {
     private JTextField consoleTextField;
     private JPanel canvasPanel;
     private JTextPane consoleTextPane;
+    private JTabbedPane devToolsTabbedPane;
+    private JPanel consoleTab;
+    private JScrollPane consoleScrollPane;
     private JSEngine jsEngine;
 
     public MainWindow(BrowserContext browserContext) {
