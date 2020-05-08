@@ -16,18 +16,18 @@ public class MainWindow {
     private JPanel bottomPanel;
     private JLabel statusLabel;
     private JPanel middlePanel;
-    private JTextArea consoleTextArea;
     private JPanel consolePanel;
     private JSplitPane splitPane;
     private JTextField consoleTextField;
     private JPanel canvasPanel;
+    private JTextPane consoleTextPane;
     private JSEngine jsEngine;
 
     public MainWindow(BrowserContext browserContext) {
         this.mainFrame = new JFrame("Browser");
 
         // Setting console element
-        browserContext.getConsole().setUIElement(consoleTextArea);
+        browserContext.getConsole().setUIElement(consoleTextPane);
 
         // Actions
         goButton.addActionListener(new Go());
