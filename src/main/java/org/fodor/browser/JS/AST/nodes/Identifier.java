@@ -1,7 +1,7 @@
 package org.fodor.browser.JS.AST.nodes;
 
 import org.fodor.browser.JS.AST.Token;
-import org.fodor.browser.JS.AST.Value;
+import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.Interpreter;
 
 public class Identifier extends ASTNode {

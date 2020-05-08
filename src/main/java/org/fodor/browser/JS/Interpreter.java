@@ -3,7 +3,7 @@ package org.fodor.browser.JS;
 import org.fodor.browser.JS.AST.JSObject;
 import org.fodor.browser.JS.AST.ScopeFrame;
 import org.fodor.browser.JS.AST.nodes.ASTNode;
-import org.fodor.browser.JS.AST.Value;
+import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.AST.nodes.BlockStatement;
 import org.fodor.browser.JS.AST.nodes.ReturnStatement;
 import org.fodor.browser.JS.AST.nodes.ScopeNode;

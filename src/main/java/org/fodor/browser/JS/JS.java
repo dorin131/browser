@@ -1,8 +1,8 @@
 package org.fodor.browser.JS;
 
-import org.fodor.browser.JS.AST.Value;
+import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.AST.nodes.Program;
-import org.fodor.browser.interfaces.JSEngine;
+import org.fodor.browser.shared.JSEngine;
 
 public class JS implements JSEngine {
     private Interpreter interpreter = new Interpreter();

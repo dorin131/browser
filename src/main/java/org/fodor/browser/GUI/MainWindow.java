@@ -3,7 +3,7 @@ package org.fodor.browser.GUI;
 import org.fodor.browser.BrowserContext;
 import org.fodor.browser.GUI.actions.ConsoleEnter;
 import org.fodor.browser.GUI.actions.Go;
-import org.fodor.browser.interfaces.JSEngine;
+import org.fodor.browser.shared.JSEngine;
 
 import javax.swing.*;
 

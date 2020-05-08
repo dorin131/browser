@@ -18,14 +18,15 @@ public class Console {
         StyledDocument doc = uiElement.getStyledDocument();
         SimpleAttributeSet keyWord = new SimpleAttributeSet();
 
-        // Formatting
-        msg = String.format("[%s] > %s\n", java.time.LocalTime.now(), msg);
-
         try {
-            doc.insertString(doc.getLength(), msg, keyWord);
+            doc.insertString(doc.getLength(), formatMessage(msg), keyWord);
         } catch (Exception e) {
             System.out.println("Failed to print to console");
         }
 
+    }
+
+    private String formatMessage(String msg) {
+        return String.format("[%s] > %s\n", java.time.LocalTime.now(), msg);
     }
 }

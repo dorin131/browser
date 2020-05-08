@@ -1,4 +1,4 @@
-package org.fodor.browser.JS.AST;
+package org.fodor.browser.shared;
 
 public class Value<T> {
     public enum Type {

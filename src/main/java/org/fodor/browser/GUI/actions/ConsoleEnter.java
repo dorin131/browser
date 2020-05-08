@@ -3,8 +3,8 @@ package org.fodor.browser.GUI.actions;
 import org.fodor.browser.BrowserContext;
 import org.fodor.browser.GUI.MainWindow;
 import org.fodor.browser.GUI.components.Console;
-import org.fodor.browser.JS.AST.Value;
-import org.fodor.browser.interfaces.JSEngine;
+import org.fodor.browser.shared.Value;
+import org.fodor.browser.shared.JSEngine;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

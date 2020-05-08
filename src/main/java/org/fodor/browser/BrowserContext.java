@@ -2,7 +2,7 @@ package org.fodor.browser;
 
 import org.fodor.browser.GUI.components.Console;
 import org.fodor.browser.JS.JS;
-import org.fodor.browser.interfaces.JSEngine;
+import org.fodor.browser.shared.JSEngine;
 
 public class BrowserContext {
     private JSEngine jsEngine = new JS();
