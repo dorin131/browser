@@ -1,12 +1,11 @@
 package org.fodor.browser.GUI;
 
+import org.fodor.browser.BrowserContext;
 import org.fodor.browser.GUI.actions.ConsoleEnter;
 import org.fodor.browser.GUI.actions.Go;
 import org.fodor.browser.interfaces.JSEngine;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainWindow {
     private JFrame mainFrame;
@@ -24,13 +23,15 @@ public class MainWindow {
     private JPanel canvasPanel;
     private JSEngine jsEngine;
 
-    public MainWindow(JSEngine jsEngine) {
-        this.jsEngine = jsEngine;
+    public MainWindow(BrowserContext browserContext) {
         this.mainFrame = new JFrame("Browser");
+
+        // Setting console element
+        browserContext.getConsole().setUIElement(consoleTextArea);
 
         // Actions
         goButton.addActionListener(new Go());
-        consoleTextField.addActionListener(new ConsoleEnter(jsEngine, consoleTextField));
+        consoleTextField.addActionListener(new ConsoleEnter(browserContext, this));
 
         // Make console pane of fixed height
         this.splitPane.setResizeWeight(1);
@@ -42,5 +43,9 @@ public class MainWindow {
         this.mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.mainFrame.pack();
         this.mainFrame.setVisible(true);
+    }
+
+    public JTextField getConsoleTextField() {
+        return consoleTextField;
     }
 }
