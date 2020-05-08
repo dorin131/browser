@@ -28,8 +28,8 @@ public class CallExpression extends Expression {
         }
 
         // if it's a block
-        if (callee instanceof ScopeNode) {
-            return interpreter.run((ScopeNode) callee);
+        if (callee instanceof BlockStatement) {
+            return interpreter.run((BlockStatement) callee);
         }
 
         // or if it's just an expression

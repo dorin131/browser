@@ -1,11 +1,11 @@
 package org.fodor.browser.JS.AST;
 
-import org.fodor.browser.JS.AST.nodes.ScopeNode;
+import org.fodor.browser.JS.AST.nodes.BlockStatement;
 
 public class ScopeFrame {
-    ScopeNode scopeNode;
+    BlockStatement blockStatement;
 
-    public ScopeFrame(ScopeNode scopeNode) {
-        this.scopeNode = scopeNode;
+    public ScopeFrame(BlockStatement blockStatement) {
+        this.blockStatement = blockStatement;
     }
 }

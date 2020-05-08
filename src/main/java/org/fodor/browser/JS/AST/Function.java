@@ -1,17 +1,17 @@
 package org.fodor.browser.JS.AST;
 
-import org.fodor.browser.JS.AST.nodes.ScopeNode;
+import org.fodor.browser.JS.AST.nodes.BlockStatement;
 
 public class Function {
     private String name;
-    private ScopeNode body;
+    private BlockStatement body;
 
-    public Function(String name, ScopeNode body) {
+    public Function(String name, BlockStatement body) {
         this.name = name;
         this.body = body;
     }
 
-    public ScopeNode body() {
+    public BlockStatement body() {
         return body;
     }
 
