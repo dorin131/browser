@@ -29,9 +29,15 @@ public class ConsoleEnter implements ActionListener {
         try {
             result = jsEngine.eval(input);
         } catch (Exception exception) {
-            result = new Value(Value.Type.String, exception.toString());
+            result = new Value(Value.Type.Error, exception.toString());
         }
 
-        console.print(result);
+        console.printInput(new Value(Value.Type.String, input));
+        console.printOutput(result);
+        clearInput();
+    }
+
+    private void clearInput() {
+        inputField.setText("");
     }
 }
