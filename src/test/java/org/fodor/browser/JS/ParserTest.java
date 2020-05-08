@@ -1,6 +1,10 @@
 package org.fodor.browser.JS;
 
-import org.fodor.browser.JS.AST.nodes.*;
+import org.fodor.browser.JS.AST.expressions.Literal;
+import org.fodor.browser.JS.AST.structs.ASTNode;
+import org.fodor.browser.JS.AST.expressions.BinaryExpression;
+import org.fodor.browser.JS.AST.expressions.CallExpression;
+import org.fodor.browser.JS.AST.statements.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

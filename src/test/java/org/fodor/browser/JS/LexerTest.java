@@ -1,6 +1,6 @@
 package org.fodor.browser.JS;
 
-import org.fodor.browser.JS.AST.Token;
+import org.fodor.browser.JS.AST.structs.Token;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.*;

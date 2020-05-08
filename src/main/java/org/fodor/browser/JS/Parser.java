@@ -1,9 +1,11 @@
 package org.fodor.browser.JS;
 
-import org.fodor.browser.JS.AST.Token;
+import org.fodor.browser.JS.AST.structs.ASTNode;
+import org.fodor.browser.JS.AST.structs.Token;
+import org.fodor.browser.JS.AST.expressions.*;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.AST.enums.Precedence;
-import org.fodor.browser.JS.AST.nodes.*;
+import org.fodor.browser.JS.AST.statements.*;
 
 import java.util.*;
 

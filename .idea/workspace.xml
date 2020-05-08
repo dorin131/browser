@@ -20,16 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Identifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/IfStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Function.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/JSObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/JSObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/ScopeFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/ScopeFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/structs/ASTNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BlockStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/BlockStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/expressions/CallExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/expressions/Expression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/ExpressionStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/FunctionDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/expressions/Identifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/Literal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/PrefixExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/expressions/PrefixExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ReturnStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/ReturnStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Statement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/Statement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/statements/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/JS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/JS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/InterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/InterpreterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Identifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Identifier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/IfStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/IfStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,22 +236,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1588623289228" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1588962661393">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1588962901708">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661393" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1588962661393">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588962901708" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1588962901707">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661393" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1588962661392">
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588962901707" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1588962901706">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661392" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1588962661393">
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588962901706" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1588962901708">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661393" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588962901708" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588961997708">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -271,16 +284,5 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1588345890458" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

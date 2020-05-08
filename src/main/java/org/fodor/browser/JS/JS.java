@@ -1,7 +1,7 @@
 package org.fodor.browser.JS;
 
 import org.fodor.browser.shared.Value;
-import org.fodor.browser.JS.AST.nodes.Program;
+import org.fodor.browser.JS.AST.statements.Program;
 import org.fodor.browser.shared.JSEngine;
 
 public class JS implements JSEngine {
