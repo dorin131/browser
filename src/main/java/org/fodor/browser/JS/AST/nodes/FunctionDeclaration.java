@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class FunctionDeclaration extends ASTNode {
     private String name = "anonymous";
     private ArrayList<ASTNode> parameters = new ArrayList<>();
-    private ScopeNode body;
+    private BlockStatement body;
 
-    public FunctionDeclaration(String name, ScopeNode body) {
+    public FunctionDeclaration(String name, BlockStatement body) {
         this.name = name;
         this.body = body;
     }
 
-    public FunctionDeclaration(ScopeNode body, ArrayList<ASTNode> parameters) {
+    public FunctionDeclaration(BlockStatement body, ArrayList<ASTNode> parameters) {
         this.body = body;
         this.parameters = parameters;
     }
@@ -24,14 +24,14 @@ public class FunctionDeclaration extends ASTNode {
         return this.name;
     }
 
-    public ScopeNode getBody() {
+    public BlockStatement getBody() {
         return body;
     }
 
     public Value execute(Interpreter interpreter) {
         interpreter.getGlobal().put(getName(), getBody());
 
-        return new Value(Value.Type.Undefined);
+        return new Value(Value.Type.Function);
     }
 
     @Override

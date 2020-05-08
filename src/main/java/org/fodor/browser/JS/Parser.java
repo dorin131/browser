@@ -204,7 +204,7 @@ public class Parser {
             return null;
         }
 
-        ScopeNode body = parseBlockStatement();
+        BlockStatement body = parseBlockStatement();
 
         return new FunctionDeclaration(body, parameters);
     }
