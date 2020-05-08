@@ -25,15 +25,13 @@ public class ConsoleEnter implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String input = inputField.getText();
         Value result;
-        String printable;
 
         try {
             result = jsEngine.eval(input);
-            printable = result.toString();
         } catch (Exception exception) {
-            printable = exception.toString();
+            result = new Value(Value.Type.String, exception.toString());
         }
 
-        console.print(printable);
+        console.print(result);
     }
 }
