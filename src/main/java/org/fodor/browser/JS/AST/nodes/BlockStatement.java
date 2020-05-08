@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /*
 A node that has children, basically a shell or {}
  */
-public class BlockStatement extends ASTNode {
+public class BlockStatement extends Statement {
     private ArrayList<ASTNode> children = new ArrayList<>();
 
     public ASTNode append(ASTNode node) {

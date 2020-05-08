@@ -20,7 +20,7 @@ class ParserTest {
 
         assertEquals(2, result.getChildren().size());
         ASTNode sub1 = result.getChildren().get(0);
-        Expression sub2 = (Expression) result.getChildren().get(1);
+        Statement sub2 = (Statement) result.getChildren().get(1);
         assertEquals("VariableDeclaration", sub1.getClass().getSimpleName());
         assertEquals("ExpressionStatement", sub2.getClass().getSimpleName());
         assertEquals("CallExpression", ((ExpressionStatement) sub2).getExpression().getClass().getSimpleName());

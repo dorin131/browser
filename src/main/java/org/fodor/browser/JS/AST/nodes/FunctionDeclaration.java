@@ -5,7 +5,7 @@ import org.fodor.browser.JS.Interpreter;
 
 import java.util.ArrayList;
 
-public class FunctionDeclaration extends ASTNode {
+public class FunctionDeclaration extends Statement {
     private String name = "anonymous";
     private ArrayList<ASTNode> parameters = new ArrayList<>();
     private BlockStatement body;

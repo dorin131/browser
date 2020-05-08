@@ -1,6 +1,6 @@
 package org.fodor.browser.JS.AST.nodes;
 
-public class IfStatement extends Expression {
+public class IfStatement extends Statement {
     ASTNode test;
     ASTNode consequent;
     ASTNode alternate;

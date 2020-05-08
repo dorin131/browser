@@ -4,7 +4,7 @@ import org.fodor.browser.JS.AST.Token;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class VariableDeclaration extends ASTNode {
+public class VariableDeclaration extends Statement {
     private Token.Type type;
     private String name;
     private ASTNode body;

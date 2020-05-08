@@ -20,22 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/ScopeFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/ScopeFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/CallExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ScopeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/BlockStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Function.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/Function.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/ScopeFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/ScopeFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BlockStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/BlockStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/CallExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/CallExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/ScopeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Interpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/Interpreter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/JS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/JS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/InterpreterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/JS/InterpreterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/ExpressionStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/Identifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/nodes/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/JS/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/FunctionDeclaration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Identifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/Identifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/IfStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/IfStatement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/JS/AST/nodes/VariableDeclaration.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +82,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in browser">
+  <component name="RunManager" selected="Application.Browser">
     <configuration name="Browser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.fodor.browser.Browser" />
       <module name="browser" />
@@ -160,9 +154,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Browser" />
         <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.JSTest.evalExpressionWithSemicolon3" />
-        <item itemvalue="Application.Browser" />
         <item itemvalue="JUnit.JSTest.evalFunctionWithReturnValue" />
         <item itemvalue="JUnit.JSTest.evalExpression3" />
       </list>
@@ -229,22 +223,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1588623289228" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1588962101602">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1588962661393">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588962101602" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1588962101601">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661393" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1588962661393">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588962101601" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1588962101598">
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661393" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1588962661392">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588962101598" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1588962101602">
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661392" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1588962661393">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588962101602" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1588962661393" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1588961997708">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

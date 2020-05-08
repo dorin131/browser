@@ -4,7 +4,7 @@ import org.fodor.browser.JS.AST.Token;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class Identifier extends ASTNode {
+public class Identifier extends Expression {
     String name;
 
     public Identifier(Token token) {
