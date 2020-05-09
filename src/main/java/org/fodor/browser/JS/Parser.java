@@ -110,6 +110,8 @@ public class Parser {
                 return parseReturnStatement();
             case IF:
                 return parseIfStatement();
+            case ILLEGAL:
+                return new ErrorLiteral("Illegal token: " + currentToken.getValue());
             default:
                 return parseExpressionStatement();
         }

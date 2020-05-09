@@ -152,4 +152,11 @@ class JSTest {
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(3, result.getValue());
     }
+
+    @Test
+    void evalIllegal1() {
+        String input = "\"";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Error, result.getType());
+    }
 }
