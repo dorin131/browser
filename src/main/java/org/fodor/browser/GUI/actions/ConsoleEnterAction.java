@@ -11,9 +11,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConsoleEnterAction implements ActionListener {
+    private Console console;
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        Console console = BrowserContext.getConsole();
+        console = BrowserContext.getConsole();
         JTextField inputField = console.getTextField();
         String input = inputField.getText();
         Value result;
@@ -26,13 +28,15 @@ public class ConsoleEnterAction implements ActionListener {
 
         console.printInput(new Value(Value.Type.String, input));
         console.printOutput(result);
+        setLastCommand(input);
         clearInput();
     }
 
+    private void setLastCommand(String input) {
+        console.setLastCommand(input);
+    }
+
     private void clearInput() {
-        Console console = BrowserContext.getConsole();
-        JTextField inputField = console.getTextField();
-        console.setLastCommand(inputField.getText());
-        inputField.setText("");
+        console.getTextField().setText("");
     }
 }

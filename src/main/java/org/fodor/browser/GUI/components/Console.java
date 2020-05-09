@@ -7,11 +7,13 @@ import org.fodor.browser.shared.Value;
 import javax.swing.*;
 import javax.swing.text.*;
 import java.awt.*;
+import java.util.EmptyStackException;
+import java.util.Stack;
 
 public class Console {
     private static final char in = '←';
     private static final char out = '→';
-    private String lastCommand = "";
+    private Stack<String> commandHistory = new Stack<>();
     private String prefix;
     private JTextPane textPane;
     private JTextField textField;
@@ -83,10 +85,16 @@ public class Console {
     }
 
     public String getLastCommand() {
-        return lastCommand;
+        try {
+            return commandHistory.pop();
+        } catch (EmptyStackException e) {
+            return "";
+        }
     }
 
     public void setLastCommand(String lastCommand) {
-        this.lastCommand = lastCommand;
+        if (lastCommand.length() > 0) {
+            commandHistory.push(lastCommand);
+        }
     }
 }

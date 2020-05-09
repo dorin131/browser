@@ -7,15 +7,17 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class ConsoleKeyUpAction extends KeyAdapter {
+    final int ARROW_UP = 38;
+    Console console;
+
     @Override
     public void keyReleased(KeyEvent e) {
-        final int ARROW_UP = 38;
-        Console console = BrowserContext.getConsole();
-        String lastCommand = console.getLastCommand();
+        console = BrowserContext.getConsole();
 
         super.keyReleased(e);
-        
+
         if (e.getKeyCode() == ARROW_UP && e.getID() == KeyEvent.KEY_RELEASED) {
+            String lastCommand = console.getLastCommand();
             console.getTextField().setText(lastCommand);
         }
     }
