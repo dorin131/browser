@@ -202,7 +202,7 @@ public class Parser {
             return null;
         }
 
-        ArrayList<ASTNode> parameters = parseFunctionParameters();
+        ArrayList<Identifier> parameters = parseFunctionParameters();
 
         if (!expectPeek(Token.Type.LBRACE)) {
             return null;
@@ -213,8 +213,8 @@ public class Parser {
         return new FunctionDeclaration(body, parameters);
     }
 
-    private ArrayList<ASTNode> parseFunctionParameters() {
-        ArrayList<ASTNode> identifiers = new ArrayList<>();
+    private ArrayList<Identifier> parseFunctionParameters() {
+        ArrayList<Identifier> identifiers = new ArrayList<>();
 
         if (peekTokenIs(Token.Type.RPAREN)) {
             nextToken();
@@ -223,7 +223,7 @@ public class Parser {
 
         nextToken();
 
-        ASTNode ident = new Identifier(currentToken);
+        Identifier ident = new Identifier(currentToken);
         identifiers.add(ident);
 
         while (peekTokenIs(Token.Type.COMMA)) {

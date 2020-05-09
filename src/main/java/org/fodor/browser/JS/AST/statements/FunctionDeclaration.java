@@ -1,5 +1,6 @@
 package org.fodor.browser.JS.AST.statements;
 
+import org.fodor.browser.JS.AST.expressions.Identifier;
 import org.fodor.browser.JS.AST.structs.ASTNode;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.Interpreter;
@@ -8,17 +9,18 @@ import java.util.ArrayList;
 
 public class FunctionDeclaration extends Statement {
     private String name = "anonymous";
-    private ArrayList<ASTNode> parameters = new ArrayList<>();
     private BlockStatement body;
 
+    // Used when function declared as "function name() {};"
+    // TODO: Add parameters
     public FunctionDeclaration(String name, BlockStatement body) {
         this.name = name;
         this.body = body;
     }
-
-    public FunctionDeclaration(BlockStatement body, ArrayList<ASTNode> parameters) {
+    // Used when function declared as "var name = function() {};"
+    public FunctionDeclaration(BlockStatement body, ArrayList<Identifier> parameters) {
         this.body = body;
-        this.parameters = parameters;
+        this.body.addParameters(parameters);
     }
 
     public String getName() {

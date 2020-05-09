@@ -159,4 +159,28 @@ class JSTest {
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Error, result.getType());
     }
+
+    @Test
+    void evalParams1() {
+        String input = "var dorin = function(x) { return x; }; dorin(10);";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(10, result.getValue());
+    }
+
+    @Test
+    void evalParams2() {
+        String input = "var dorin = function(x, y) { return x + y; }; dorin(10, 20);";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(30, result.getValue());
+    }
+
+    @Test
+    void evalParams3() {
+        String input = "var dorin = function(x, y) { return x + y; }; var yo = function() { return 3; }; dorin(10, yo());";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(13, result.getValue());
+    }
 }

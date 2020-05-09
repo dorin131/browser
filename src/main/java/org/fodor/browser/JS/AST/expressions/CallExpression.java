@@ -10,15 +10,15 @@ import java.util.ArrayList;
 
 public class CallExpression extends Expression {
     private String name;
-    private ArrayList<ASTNode> parameters = new ArrayList<>();
+    private ArrayList<ASTNode> arguments = new ArrayList<>();
 
     public CallExpression(String name) {
         this.name = name;
     }
 
-    public CallExpression(String name, ArrayList<ASTNode> parameters) {
+    public CallExpression(String name, ArrayList<ASTNode> arguments) {
         this.name = name;
-        this.parameters = parameters;
+        this.arguments = arguments;
     }
 
     @Override
@@ -27,16 +27,17 @@ public class CallExpression extends Expression {
 
         // if it's a function
         if (callee instanceof FunctionDeclaration) {
-            callee = ((FunctionDeclaration) callee).getBody();
-        }
-
-        // if it's a block
-        if (callee instanceof BlockStatement) {
-            return interpreter.run((BlockStatement) callee);
+            BlockStatement body = ((FunctionDeclaration) callee).getBody();
+            body.associateArguments(getArguments());
+            return interpreter.run(body);
         }
 
         // or if it's just an expression
         return callee.execute(interpreter);
+    }
+
+    public ArrayList<ASTNode> getArguments() {
+        return arguments;
     }
 
     public String name() {
@@ -48,10 +49,10 @@ public class CallExpression extends Expression {
         printIndent(indent);
         System.out.printf("%s \"%s\"\n", this.getClass().getSimpleName(), name());
         printIndent(indent + 1);
-        if (parameters != null && parameters.size() > 0) {
+        if (arguments != null && arguments.size() > 0) {
             System.out.println("Arguments");
-            for (ASTNode p : parameters) {
-                p.dump(indent + 2);
+            for (ASTNode arg : arguments) {
+                arg.dump(indent + 2);
             }
         }
     }

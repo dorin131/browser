@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class Interpreter {
     private JSObject global;
     private ArrayList<ScopeFrame> scopeStack = new ArrayList<>();
+    private ArrayList<JSObject> localScopes = new ArrayList<>();
 
     public Interpreter() {
         this.global = new JSObject();
@@ -52,13 +53,19 @@ public class Interpreter {
 
     public void enterScope(BlockStatement blockStatement) {
         scopeStack.add(new ScopeFrame(blockStatement));
+        localScopes.add(blockStatement.getLocalScope());
     }
 
     public void exitScope(BlockStatement blockStatement) {
         scopeStack.remove(scopeStack.size() - 1);
+        localScopes.remove(localScopes.size() - 1);
     }
 
     public JSObject getGlobal() {
         return global;
+    }
+
+    public ArrayList<JSObject> getLocalScopes() {
+        return localScopes;
     }
 }
