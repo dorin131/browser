@@ -1,11 +1,15 @@
 package org.fodor.browser.GUI;
 
 import org.fodor.browser.BrowserContext;
-import org.fodor.browser.GUI.actions.ConsoleEnter;
-import org.fodor.browser.GUI.actions.Go;
+import org.fodor.browser.GUI.actions.ConsoleEnterAction;
+import org.fodor.browser.GUI.actions.ConsoleKeyUpAction;
+import org.fodor.browser.GUI.actions.GoAction;
+import org.fodor.browser.GUI.components.Console;
 import org.fodor.browser.shared.JSEngine;
 
 import javax.swing.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class MainWindow {
     private JFrame mainFrame;
@@ -30,11 +34,10 @@ public class MainWindow {
         this.mainFrame = new JFrame("Browser");
 
         // Setting console element
-        browserContext.getConsole().setUIElement(consoleTextPane);
+        browserContext.setConsole(new Console(consoleTextPane, consoleTextField));
 
         // Actions
-        goButton.addActionListener(new Go());
-        consoleTextField.addActionListener(new ConsoleEnter(browserContext, this));
+        goButton.addActionListener(new GoAction());
 
         // Make console pane of fixed height
         this.splitPane.setResizeWeight(1);

@@ -1,5 +1,7 @@
 package org.fodor.browser.GUI.components;
 
+import org.fodor.browser.GUI.actions.ConsoleEnterAction;
+import org.fodor.browser.GUI.actions.ConsoleKeyUpAction;
 import org.fodor.browser.shared.Value;
 
 import javax.swing.*;
@@ -9,13 +11,23 @@ import java.awt.*;
 public class Console {
     private static final char in = '←';
     private static final char out = '→';
+    private String lastCommand = "";
     private String prefix;
-    private JTextPane uiElement;
+    private JTextPane textPane;
+    private JTextField textField;
     private StyledDocument doc;
 
-    public void setUIElement(JTextPane el) {
-        this.uiElement = el;
-        this.doc = uiElement.getStyledDocument();
+    public Console(JTextPane textPane, JTextField textField) {
+        this.textPane = textPane;
+        this.textField = textField;
+        this.doc = this.textPane.getStyledDocument();
+
+        registerActions();
+    }
+
+    private void registerActions() {
+        textField.addActionListener(new ConsoleEnterAction());
+        textField.addKeyListener(new ConsoleKeyUpAction());
     }
 
     public void printOutput(Value value) {
@@ -43,7 +55,7 @@ public class Console {
     }
 
     private void checkConsoleIsSet() {
-        if (uiElement == null) {
+        if (textPane == null) {
             throw new RuntimeException("Console element not set");
         }
     }
@@ -57,12 +69,24 @@ public class Console {
     }
 
     private void printFormatted(Color color, String msg) {
-        Style style = uiElement.addStyle(null, null);
+        Style style = textPane.addStyle(null, null);
         StyleConstants.setForeground(style, color);
 
         try {
             doc.insertString(doc.getLength(), getPrefix(), null);
             doc.insertString(doc.getLength(), msg + "\n", style);
         } catch (BadLocationException e) {};
+    }
+
+    public JTextField getTextField() {
+        return textField;
+    }
+
+    public String getLastCommand() {
+        return lastCommand;
+    }
+
+    public void setLastCommand(String lastCommand) {
+        this.lastCommand = lastCommand;
     }
 }

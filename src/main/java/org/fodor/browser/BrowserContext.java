@@ -5,14 +5,18 @@ import org.fodor.browser.JS.JS;
 import org.fodor.browser.shared.JSEngine;
 
 public class BrowserContext {
-    private JSEngine jsEngine = new JS();
-    private Console console = new Console();
+    private static final JSEngine jsEngine = new JS();
+    private static Console console;
 
-    public JSEngine getJSEngine() {
+    public static JSEngine getJSEngine() {
         return jsEngine;
     }
 
-    public Console getConsole() {
+    public static Console getConsole() {
         return console;
+    }
+
+    public static void setConsole(Console c) {
+        console = c;
     }
 }

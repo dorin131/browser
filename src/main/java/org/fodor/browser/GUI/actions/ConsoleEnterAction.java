@@ -10,24 +10,16 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ConsoleEnter implements ActionListener {
-    private JSEngine jsEngine;
-    private Console console;
-    private JTextField inputField;
-
-    public ConsoleEnter(BrowserContext browserContext, MainWindow mainWindow) {
-        this.jsEngine = browserContext.getJSEngine();
-        this.console = browserContext.getConsole();
-        this.inputField = mainWindow.getConsoleTextField();
-    }
-
+public class ConsoleEnterAction implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
+        Console console = BrowserContext.getConsole();
+        JTextField inputField = console.getTextField();
         String input = inputField.getText();
         Value result;
 
         try {
-            result = jsEngine.eval(input);
+            result = BrowserContext.getJSEngine().eval(input);
         } catch (Exception exception) {
             result = new Value(Value.Type.Error, exception.toString());
         }
@@ -38,6 +30,9 @@ public class ConsoleEnter implements ActionListener {
     }
 
     private void clearInput() {
+        Console console = BrowserContext.getConsole();
+        JTextField inputField = console.getTextField();
+        console.setLastCommand(inputField.getText());
         inputField.setText("");
     }
 }
