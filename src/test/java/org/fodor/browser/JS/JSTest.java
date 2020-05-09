@@ -183,4 +183,20 @@ class JSTest {
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(13, result.getValue());
     }
+
+    @Test
+    void evalParams4() {
+        String input = "var a = 1; var www = function(a,b) {return a*b;}; www(9,9);";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(81, result.getValue());
+    }
+
+    @Test
+    void evalParams5() {
+        String input = "var a = 1; var www = function(b) {return a*b;}; www(9,9);";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(9, result.getValue());
+    }
 }
