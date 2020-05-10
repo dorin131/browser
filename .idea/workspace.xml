@@ -21,13 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/BrowserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/BrowserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/actions/GoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/BrowserContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/BrowserContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/MainWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Canvas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in browser">
+  <component name="RunManager" selected="Application.Browser">
     <configuration name="Browser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.fodor.browser.Browser" />
       <module name="browser" />
@@ -152,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in browser" />
         <item itemvalue="Application.Browser" />
+        <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.JSTest.evalParams5" />
         <item itemvalue="JUnit.JSTest.evalParams4" />
         <item itemvalue="JUnit.JSTest.evalExpression" />
@@ -226,38 +220,38 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589053574728" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589131443326">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589133884552">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589131443326" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589131443324">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589133884552" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589133884549">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589131443324" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589131443322">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589133884549" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589133884548">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589131443322" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589131443325">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589133884548" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589133884551">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589131443325" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589064393298">
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589133884551" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589133823633">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589064393298" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589064393297">
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589133823633" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589133823632">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589064393297" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589064393296">
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589133823632" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589133823632">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589064393296" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589064393297">
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589133823632" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589133823633">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589064393297" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589133823633" />
     <state x="570" y="133" width="770" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589049948907">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

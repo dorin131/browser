@@ -16,6 +16,7 @@ public class Canvas extends JPanel {
     public void draw(String text) {
         this.setContent(text);
         this.repaint();
+        this.getParent().revalidate(); // to update scroll bars
     }
 
     private void setContent(String text) {
@@ -30,8 +31,20 @@ public class Canvas extends JPanel {
     }
 
     private void drawContent(Graphics2D g2d, int x, int y) {
-        for (String line : content.split("\n")) {
+        var dimension = new Dimension();
+        var lines = content.split("\n");
+        var preferredWidth = 0;
+        var preferredHeight = lines.length * g2d.getFontMetrics().getHeight();
+
+        for (String line : lines) {
             g2d.drawString(line, x, y += g2d.getFontMetrics().getHeight());
+
+            var lineWidth = g2d.getFontMetrics().stringWidth(line);
+            if (lineWidth > preferredWidth) {
+                preferredWidth = lineWidth;
+                dimension.setSize(preferredWidth, preferredHeight);
+            }
+            setPreferredSize(dimension);
         }
     }
 }
