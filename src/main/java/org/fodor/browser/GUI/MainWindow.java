@@ -1,6 +1,7 @@
 package org.fodor.browser.GUI;
 
 import org.fodor.browser.BrowserContext;
+import org.fodor.browser.Context;
 import org.fodor.browser.GUI.actions.ConsoleEnterAction;
 import org.fodor.browser.GUI.actions.ConsoleKeyUpAction;
 import org.fodor.browser.GUI.actions.GoAction;
@@ -30,11 +31,12 @@ public class MainWindow {
     private JScrollPane consoleScrollPane;
     private JSEngine jsEngine;
 
-    public MainWindow(BrowserContext browserContext) {
+    public MainWindow(Context browserContext) {
         this.mainFrame = new JFrame("Browser");
 
-        // Setting console element
-        browserContext.setConsole(new Console(consoleTextPane, consoleTextField));
+        // Setting up the console elements
+        browserContext.getConsole().setTextField(consoleTextField);
+        browserContext.getConsole().setTextPane(consoleTextPane);
 
         // Actions
         goButton.addActionListener(new GoAction());
@@ -49,9 +51,5 @@ public class MainWindow {
         this.mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.mainFrame.pack();
         this.mainFrame.setVisible(true);
-    }
-
-    public JTextField getConsoleTextField() {
-        return consoleTextField;
     }
 }

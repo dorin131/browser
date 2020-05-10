@@ -1,6 +1,7 @@
 package org.fodor.browser.GUI.actions;
 
 import org.fodor.browser.BrowserContext;
+import org.fodor.browser.Context;
 import org.fodor.browser.GUI.MainWindow;
 import org.fodor.browser.GUI.components.Console;
 import org.fodor.browser.shared.Value;
@@ -11,17 +12,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConsoleEnterAction implements ActionListener {
+    private Context browserContext;
     private Console console;
+
+    public ConsoleEnterAction(Context browserContext) {
+        this.browserContext = browserContext;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        console = BrowserContext.getConsole();
+        console = browserContext.getConsole();
         JTextField inputField = console.getTextField();
         String input = inputField.getText();
         Value result;
 
         try {
-            result = BrowserContext.getJSEngine().eval(input);
+            result = browserContext.getJSEngine().eval(input);
         } catch (Exception exception) {
             result = new Value(Value.Type.Error, exception.toString());
         }

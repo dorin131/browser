@@ -1,5 +1,6 @@
 package org.fodor.browser.GUI.components;
 
+import org.fodor.browser.Context;
 import org.fodor.browser.GUI.actions.ConsoleEnterAction;
 import org.fodor.browser.GUI.actions.ConsoleKeyUpAction;
 import org.fodor.browser.shared.Value;
@@ -18,18 +19,15 @@ public class Console {
     private JTextPane textPane;
     private JTextField textField;
     private StyledDocument doc;
+    private Context browserContext;
 
-    public Console(JTextPane textPane, JTextField textField) {
-        this.textPane = textPane;
-        this.textField = textField;
-        this.doc = this.textPane.getStyledDocument();
-
-        registerActions();
+    public Console(Context browserContext) {
+        this.browserContext = browserContext;
     }
 
-    private void registerActions() {
-        textField.addActionListener(new ConsoleEnterAction());
-        textField.addKeyListener(new ConsoleKeyUpAction());
+    private void registerTextFieldActions() {
+        textField.addActionListener(new ConsoleEnterAction(browserContext));
+        textField.addKeyListener(new ConsoleKeyUpAction(browserContext));
     }
 
     public void printOutput(Value value) {
@@ -96,5 +94,15 @@ public class Console {
         if (lastCommand.length() > 0) {
             commandHistory.push(lastCommand);
         }
+    }
+
+    public void setTextPane(JTextPane textPane) {
+        this.textPane = textPane;;
+        this.doc = this.textPane.getStyledDocument();
+    }
+
+    public void setTextField(JTextField textField) {
+        this.textField = textField;
+        registerTextFieldActions();
     }
 }
