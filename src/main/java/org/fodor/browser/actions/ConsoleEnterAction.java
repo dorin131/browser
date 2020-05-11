@@ -1,33 +1,33 @@
-package org.fodor.browser.GUI.actions;
+package org.fodor.browser.actions;
 
-import org.fodor.browser.BrowserContext;
-import org.fodor.browser.Context;
 import org.fodor.browser.GUI.MainWindow;
 import org.fodor.browser.GUI.components.Console;
-import org.fodor.browser.shared.Value;
 import org.fodor.browser.shared.JSEngine;
+import org.fodor.browser.shared.Value;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConsoleEnterAction implements ActionListener {
-    private Context browserContext;
+    private JSEngine jsEngine;
     private Console console;
+    private MainWindow GUI;
 
-    public ConsoleEnterAction(Context browserContext) {
-        this.browserContext = browserContext;
+    public ConsoleEnterAction(Console console, JSEngine jsEngine, MainWindow GUI) {
+        this.console = console;
+        this.jsEngine = jsEngine;
+        this.GUI = GUI;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        console = browserContext.getConsole();
-        JTextField inputField = console.getTextField();
+        JTextField inputField = GUI.getConsoleTextField();
         String input = inputField.getText();
         Value result;
 
         try {
-            result = browserContext.getJSEngine().eval(input);
+            result = jsEngine.eval(input);
         } catch (Exception exception) {
             result = new Value(Value.Type.Error, exception.toString());
         }
@@ -43,6 +43,6 @@ public class ConsoleEnterAction implements ActionListener {
     }
 
     private void clearInput() {
-        console.getTextField().setText("");
+        GUI.getConsoleTextField().setText("");
     }
 }

@@ -1,17 +1,10 @@
 package org.fodor.browser.GUI.components;
 
-import org.fodor.browser.Context;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class Canvas extends JPanel {
-    private Context browserContext;
-    private String content = "";
-
-    public Canvas(Context browserContext) {
-        this.browserContext = browserContext;
-    }
+    private String content = "hello";
 
     public void draw(String text) {
         this.setContent(text);

@@ -1,11 +1,28 @@
 package org.fodor.browser;
 
 import org.fodor.browser.GUI.MainWindow;
+import org.fodor.browser.GUI.components.Canvas;
+import org.fodor.browser.GUI.components.Console;
+import org.fodor.browser.JS.JS;
+import org.fodor.browser.actions.ConsoleEnterAction;
+import org.fodor.browser.actions.ConsoleKeyUpAction;
+import org.fodor.browser.actions.GoAction;
+import org.fodor.browser.shared.JSEngine;
 
 public class Browser {
-    public static void main(String[] args) {
-        System.out.println("Browser started");
+    JSEngine jsEngine;
+    Console console;
+    MainWindow GUI;
 
-        new MainWindow(new BrowserContext()).show();
+    public Browser() {
+        GUI = MainWindow.getInstance();
+        jsEngine = new JS();
+        console = new Console(GUI);
+
+        GUI.getConsoleTextField().addActionListener(new ConsoleEnterAction(console, jsEngine, GUI));
+        GUI.getConsoleTextField().addKeyListener(new ConsoleKeyUpAction(console, GUI));
+        GUI.getGoButton().addActionListener(new GoAction(GUI));
+
+        GUI.show();
     }
 }

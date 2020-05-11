@@ -1,20 +1,13 @@
 package org.fodor.browser.GUI;
 
-import org.fodor.browser.BrowserContext;
-import org.fodor.browser.Context;
-import org.fodor.browser.GUI.actions.ConsoleEnterAction;
-import org.fodor.browser.GUI.actions.ConsoleKeyUpAction;
-import org.fodor.browser.GUI.actions.GoAction;
 import org.fodor.browser.GUI.components.Canvas;
-import org.fodor.browser.GUI.components.Console;
+import org.fodor.browser.actions.GoAction;
 import org.fodor.browser.shared.JSEngine;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 public class MainWindow {
+    private static MainWindow uniqueInstance = new MainWindow();
     private JFrame mainFrame;
     private JPanel mainPanel;
     private JTextField addressField;
@@ -34,18 +27,9 @@ public class MainWindow {
     private JScrollPane contentScrollPane;
     private JPanel canvasPanel;
     private JSEngine jsEngine;
-    private Context browserContext;
 
-    public MainWindow(Context browserContext) {
-        this.browserContext = browserContext;
+    private MainWindow() {
         this.mainFrame = new JFrame("Browser");
-
-        // Setting up the console elements
-        browserContext.getConsole().setTextField(consoleTextField);
-        browserContext.getConsole().setTextPane(consoleTextPane);
-
-        // Actions
-        goButton.addActionListener(new GoAction(browserContext, addressField));
 
         // Make console pane of fixed height
         this.splitPane.setResizeWeight(1);
@@ -61,6 +45,30 @@ public class MainWindow {
 
     private void createUIComponents() {
         // https://www.jetbrains.com/help/idea/creating-form-initialization-code.html
-        canvasPanel = browserContext.getCanvas();
+        canvasPanel = new Canvas();
+    }
+
+    public JTextField getConsoleTextField() {
+        return consoleTextField;
+    }
+
+    public JTextPane getConsoleTextPane() {
+        return consoleTextPane;
+    }
+
+    public static MainWindow getInstance() {
+        return uniqueInstance;
+    }
+
+    public JButton getGoButton() {
+        return goButton;
+    }
+
+    public JTextField getAddressField() {
+        return addressField;
+    }
+
+    public JPanel getCanvasPanel() {
+        return canvasPanel;
     }
 }

@@ -1,8 +1,6 @@
 package org.fodor.browser.GUI.components;
 
-import org.fodor.browser.Context;
-import org.fodor.browser.GUI.actions.ConsoleEnterAction;
-import org.fodor.browser.GUI.actions.ConsoleKeyUpAction;
+import org.fodor.browser.GUI.MainWindow;
 import org.fodor.browser.shared.Value;
 
 import javax.swing.*;
@@ -17,17 +15,10 @@ public class Console {
     private Stack<String> commandHistory = new Stack<>();
     private String prefix;
     private JTextPane textPane;
-    private JTextField textField;
     private StyledDocument doc;
-    private Context browserContext;
 
-    public Console(Context browserContext) {
-        this.browserContext = browserContext;
-    }
-
-    private void registerTextFieldActions() {
-        textField.addActionListener(new ConsoleEnterAction(browserContext));
-        textField.addKeyListener(new ConsoleKeyUpAction(browserContext));
+    public Console(MainWindow GUI) {
+        setTextPane(GUI.getConsoleTextPane());
     }
 
     public void printOutput(Value value) {
@@ -78,10 +69,6 @@ public class Console {
         } catch (BadLocationException e) {};
     }
 
-    public JTextField getTextField() {
-        return textField;
-    }
-
     public String getLastCommand() {
         try {
             return commandHistory.pop();
@@ -96,13 +83,8 @@ public class Console {
         }
     }
 
-    public void setTextPane(JTextPane textPane) {
-        this.textPane = textPane;;
+    private void setTextPane(JTextPane textPane) {
+        this.textPane = textPane;
         this.doc = this.textPane.getStyledDocument();
-    }
-
-    public void setTextField(JTextField textField) {
-        this.textField = textField;
-        registerTextFieldActions();
     }
 }

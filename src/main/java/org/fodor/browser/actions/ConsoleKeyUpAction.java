@@ -1,17 +1,19 @@
-package org.fodor.browser.GUI.actions;
+package org.fodor.browser.actions;
 
-import org.fodor.browser.Context;
+import org.fodor.browser.GUI.MainWindow;
 import org.fodor.browser.GUI.components.Console;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class ConsoleKeyUpAction extends KeyAdapter {
-    final int ARROW_UP = 38;
-    Console console;
+    private final int ARROW_UP = 38;
+    private Console console;
+    private MainWindow GUI;
 
-    public ConsoleKeyUpAction(Context browserContext) {
-        console = browserContext.getConsole();
+    public ConsoleKeyUpAction(Console console, MainWindow GUI) {
+        this.console = console;
+        this.GUI = GUI;
     }
 
     @Override
@@ -20,7 +22,7 @@ public class ConsoleKeyUpAction extends KeyAdapter {
 
         if (e.getKeyCode() == ARROW_UP && e.getID() == KeyEvent.KEY_RELEASED) {
             String lastCommand = console.getLastCommand();
-            console.getTextField().setText(lastCommand);
+            GUI.getConsoleTextField().setText(lastCommand);
         }
     }
 }
