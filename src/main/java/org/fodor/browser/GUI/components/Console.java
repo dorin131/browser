@@ -10,6 +10,7 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class Console {
+    private static Console uniqueInstance;
     private static final char in = '←';
     private static final char out = '→';
     private Stack<String> commandHistory = new Stack<>();
@@ -17,8 +18,15 @@ public class Console {
     private JTextPane textPane;
     private StyledDocument doc;
 
-    public Console(MainWindow GUI) {
+    private Console(MainWindow GUI) {
         setTextPane(GUI.getConsoleTextPane());
+    }
+
+    public synchronized static Console getInstance(MainWindow GUI) {
+        if (uniqueInstance == null) {
+            uniqueInstance = new Console(GUI);
+        }
+        return uniqueInstance;
     }
 
     public void printOutput(Value value) {

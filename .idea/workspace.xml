@@ -21,13 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/structs/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/structs/ASTNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/GoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/networking/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/networking/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/actions/GoAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/actions/GoAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Console.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,22 +225,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589053574728" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589313224768">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589313845202">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224768" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589313224767">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589313845202" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589313845201">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224767" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589313224766">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589313845201" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589313845200">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224766" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589313224767">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589313845200" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589313845201">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224767" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589313845201" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589236908051">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

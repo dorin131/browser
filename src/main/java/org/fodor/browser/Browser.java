@@ -16,8 +16,8 @@ public class Browser {
 
     public Browser() {
         GUI = MainWindow.getInstance();
+        console = Console.getInstance(GUI);
         jsEngine = new JS();
-        console = new Console(GUI);
 
         GUI.getConsoleTextField().addActionListener(new ConsoleEnterAction(console, jsEngine, GUI));
         GUI.getConsoleTextField().addKeyListener(new ConsoleKeyUpAction(console, GUI));
