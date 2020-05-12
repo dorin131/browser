@@ -3,7 +3,7 @@ package org.fodor.browser.JS.AST.structs;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.JS.Interpreter;
 
-public class ASTNode {
+public abstract class ASTNode {
     public Value execute(Interpreter i) {
         return Value.jsUndefined();
     }

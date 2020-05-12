@@ -20,18 +20,11 @@ public class GoAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String address = GUI.getAddressField().getText();
-        Request request = new Request();
-        CompletableFuture<HttpResponse<String>> response = new CompletableFuture<>();
-        try {
-            response = request.http(Request.Method.GET, address);
-        } catch (URISyntaxException ex) {
-            JOptionPane.showMessageDialog(null, "Invalid address: " + address);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error: " + ex.getLocalizedMessage());
-        }
-        response.thenAccept(res -> {
-            ((Canvas) GUI.getCanvasPanel()).draw(res.body());
+        var request = new Request();
+        var address = GUI.getAddressField().getText();
+
+        request.makeGetRequest(address).thenAccept(res -> {
+            GUI.getSourceTextArea().setText(res.body());
         });
     }
 }

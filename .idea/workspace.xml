@@ -21,24 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/BrowserContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Context.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/actions/ConsoleEnterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/ConsoleEnterAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/actions/ConsoleKeyUpAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/ConsoleKeyUpAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/GoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/BrowserContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/structs/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/JS/AST/structs/ASTNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/actions/GoAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/networking/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/networking/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/actions/ConsoleEnterAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/actions/ConsoleKeyUpAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/actions/GoAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/components/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/components/Canvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/components/Console$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/components/Console$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/components/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/GUI/components/Console.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/actions/GoAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/actions/GoAction.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587833963779" />
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589236981977">
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589313155786">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589236981977" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589313155786" />
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589233994998">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -241,22 +230,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589053574728" />
-    <state width="1874" height="340" key="GridCell.Tab.0.bottom" timestamp="1589236908046">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589313224768">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908046" />
-    <state width="1874" height="340" key="GridCell.Tab.0.center" timestamp="1589236908045">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224768" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589313224767">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908045" />
-    <state width="1874" height="340" key="GridCell.Tab.0.left" timestamp="1589236908045">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224767" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589313224766">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908045" />
-    <state width="1874" height="340" key="GridCell.Tab.0.right" timestamp="1589236908046">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224766" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589313224767">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908046" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589313224767" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589236908051">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -293,16 +282,5 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1588345890458" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/fodor/browser/GUI/components/Canvas.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -26,6 +26,10 @@ public class MainWindow {
     private JScrollPane consoleScrollPane;
     private JScrollPane contentScrollPane;
     private JPanel canvasPanel;
+    private JPanel sourceTab;
+    private JPanel networkTab;
+    private JTextArea sourceTextArea;
+    private JList networkList;
     private JSEngine jsEngine;
 
     private MainWindow() {
@@ -33,6 +37,10 @@ public class MainWindow {
 
         // Make console pane of fixed height
         this.splitPane.setResizeWeight(1);
+    }
+
+    public synchronized static MainWindow getInstance() {
+        return uniqueInstance;
     }
 
     public void show() {
@@ -56,10 +64,6 @@ public class MainWindow {
         return consoleTextPane;
     }
 
-    public static MainWindow getInstance() {
-        return uniqueInstance;
-    }
-
     public JButton getGoButton() {
         return goButton;
     }
@@ -70,5 +74,9 @@ public class MainWindow {
 
     public JPanel getCanvasPanel() {
         return canvasPanel;
+    }
+
+    public JTextArea getSourceTextArea() {
+        return sourceTextArea;
     }
 }

@@ -1,8 +1,6 @@
 package org.fodor.browser.networking;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.swing.*;
 import java.net.*;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -24,5 +22,17 @@ public class Request {
                 .headers("Foo", "foovalue", "Bar", "barvalue")
                 .build();
         return client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+    }
+
+    public CompletableFuture<HttpResponse<String>> makeGetRequest(String address) {
+        CompletableFuture<HttpResponse<String>> response = new CompletableFuture<>();
+        try {
+            response = http(Request.Method.GET, address);
+        } catch (URISyntaxException ex) {
+            JOptionPane.showMessageDialog(null, "Invalid address: " + address);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getLocalizedMessage());
+        }
+        return response;
     }
 }
