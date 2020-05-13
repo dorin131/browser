@@ -1,12 +1,11 @@
 package org.fodor.browser;
 
-import org.fodor.browser.GUI.MainWindow;
-import org.fodor.browser.GUI.components.Canvas;
-import org.fodor.browser.GUI.components.Console;
-import org.fodor.browser.JS.JS;
-import org.fodor.browser.actions.ConsoleEnterAction;
-import org.fodor.browser.actions.ConsoleKeyUpAction;
-import org.fodor.browser.actions.GoAction;
+import org.fodor.browser.gui.MainWindow;
+import org.fodor.browser.gui.components.Console;
+import org.fodor.browser.js.JS;
+import org.fodor.browser.gui.actions.ConsoleEnterAction;
+import org.fodor.browser.gui.actions.ConsoleKeyUpAction;
+import org.fodor.browser.gui.actions.GoAction;
 import org.fodor.browser.shared.JSEngine;
 
 public class Browser {

@@ -12,7 +12,7 @@ public class Value<T> {
         Function
     }
 
-    private Type type = Type.Undefined;
+    private Type type;
     private T value;
 
     public Value(Type type) {
@@ -34,10 +34,6 @@ public class Value<T> {
 
     static public Value jsUndefined() {
         return new Value(Type.Undefined);
-    }
-
-    static public Value jsNull() {
-        return new Value(Type.Null);
     }
 
     @Override
