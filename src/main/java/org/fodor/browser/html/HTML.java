@@ -1,4 +1,13 @@
 package org.fodor.browser.html;
 
-public class HTML {
+import org.fodor.browser.shared.Renderer;
+
+import javax.swing.*;
+
+public class HTML implements Renderer {
+    public void render(JPanel canvas, String html) {
+        var lexer = new Lexer(html);
+        var dom = new Parser(lexer).parse();
+        new Interpreter().run(dom);
+    }
 }

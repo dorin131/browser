@@ -1,8 +1,11 @@
 package org.fodor.browser.html.elements;
 
+import javax.swing.*;
+
 public abstract class Element {
     ElementType type;
-    String contents;
+    Integer width = 0;
+    Integer height = 0;
 
     public void setType(ElementType type) {
         this.type = type;
@@ -12,11 +15,21 @@ public abstract class Element {
         return this.type;
     }
 
-    public void setContents(String contents) {
-        this.contents = contents;
+    public Integer getWidth() {
+        return width;
     }
 
-    public String getContents() {
-        return this.contents;
+    public void setWidth(Integer width) {
+        this.width = width;
     }
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
+
+    public abstract void draw(JPanel canvas);
 }

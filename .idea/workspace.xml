@@ -21,6 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/GoAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/DOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/DivElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ElementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ElementType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/NormalElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/RawElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/VoidElement.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +42,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -191,10 +202,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587833963779" />
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589313155786">
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589485157861">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589313155786" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589485157861" />
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589397889069">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -211,10 +222,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="712" y="149" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589050815559" />
-    <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587412968543">
+    <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589483867969">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587412968543" />
+    <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589483867969" />
     <state x="718" y="265" key="#xdebugger.evaluate" timestamp="1588623398234">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -223,22 +234,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589053574728" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589397940925">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589485106684">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589397940925" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589397940924">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589485106684" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589485106683">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589397940924" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589397940924">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589485106683" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589485106682">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589397940924" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589397940925">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589485106682" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589485106684">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589397940925" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589485106684" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589236908051">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

@@ -1,4 +1,14 @@
 package org.fodor.browser.html.elements;
 
-public class DivElement extends NormalElement {
+import javax.swing.*;
+
+public class DivElement extends Element {
+    public DivElement() {
+        setType(ElementType.DIV);
+    }
+
+    @Override
+    public void draw(JPanel canvas) {
+        // TODO: implement
+    }
 }
