@@ -16,10 +16,6 @@ public class Lexer {
         this.readChar();
     }
 
-    public ArrayList<Token> parse() {
-        return null;
-    }
-
     private void readChar() {
         if (readPosition >= code.length()) {
             ch = 0;
@@ -28,6 +24,13 @@ public class Lexer {
         }
         position = readPosition;
         readPosition++;
+    }
+
+    private char peekChar() {
+        if (readPosition >= code.length()) {
+            return 0;
+        }
+        return code.charAt(readPosition);
     }
 
     public Token nextToken() {
@@ -144,12 +147,5 @@ public class Lexer {
             readChar();
         }
         return code.substring(startPos, position);
-    }
-
-    private char peekChar() {
-        if (readPosition >= code.length()) {
-            return 0;
-        }
-        return code.charAt(readPosition);
     }
 }

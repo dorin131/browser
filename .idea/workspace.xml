@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/DOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/DOM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Tokenizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Lexer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -64,6 +66,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.fodor.browser.html" />
       <recent name="org.fodor.browser.JS.AST.utils" />
       <recent name="org.fodor.browser.JS" />
     </key>
@@ -113,33 +116,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTest.evalParams4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TokenizerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fodor.browser.js.*" />
+          <option name="PATTERN" value="org.fodor.browser.html.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
-      <option name="METHOD_NAME" value="evalParams4" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.fodor.browser.html" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.html.TokenizerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTest.evalParams5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TokenizerTest.run3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fodor.browser.js.*" />
+          <option name="PATTERN" value="org.fodor.browser.html.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
-      <option name="METHOD_NAME" value="evalParams5" />
+      <option name="PACKAGE_NAME" value="org.fodor.browser.html" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.html.TokenizerTest" />
+      <option name="METHOD_NAME" value="run3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,9 +151,9 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in browser" />
+        <item itemvalue="JUnit.TokenizerTest.run3" />
+        <item itemvalue="JUnit.TokenizerTest" />
         <item itemvalue="Application.Browser" />
-        <item itemvalue="JUnit.JSTest.evalParams5" />
-        <item itemvalue="JUnit.JSTest.evalParams4" />
       </list>
     </recent_temporary>
   </component>
@@ -189,14 +191,14 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="713" y="385" width="473" height="264" key="#Updates/0.0.1920.1041@0.0.1920.1041" timestamp="1588877344323" />
-    <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587833963779">
+    <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589547359989">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1587833963779" />
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589489887113">
+    <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589547359989" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589541602872">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589489887113" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589541602872" />
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589397889069">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -209,10 +211,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="748" y="402" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1041@0.0.1920.1041" timestamp="1589233996669" />
-    <state x="712" y="149" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589050815559">
+    <state x="712" y="149" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589538542370">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="712" y="149" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589050815559" />
+    <state x="712" y="149" width="476" height="738" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589538542370" />
     <state x="693" y="269" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589483867969">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -225,38 +227,38 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589053574728" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589487323462">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589551234978">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589487323462" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589487323460">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589551234978" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589551234977">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589487323460" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589487323460">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589551234977" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589551234976">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589487323460" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589487323461">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589551234976" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589551234977">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589487323461" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589236908051">
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589551234977" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589550600528">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908051" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589236908050">
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589550600528" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589550600527">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908050" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589236908046">
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589550600527" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589550600526">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908046" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589236908051">
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589550600526" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589550600527">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589236908051" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589550600527" />
     <state x="570" y="133" width="770" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589049948907">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -265,10 +267,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="750" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1041@0.0.1920.1041" timestamp="1588880563093" />
-    <state x="734" y="240" width="452" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588353223450">
+    <state x="734" y="240" width="452" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589538589585">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="734" y="240" width="452" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1588353223450" />
+    <state x="734" y="240" width="452" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589538589585" />
     <state x="646" y="141" width="628" height="756" key="find.popup" timestamp="1587934242540">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
