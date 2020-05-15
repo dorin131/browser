@@ -15,6 +15,10 @@ public class TextElement extends Element {
         this.content = content;
     }
 
+    public String getContent() {
+        return content;
+    }
+
     @Override
     public void draw(JPanel canvas) {
 
