@@ -1,7 +1,7 @@
 package org.fodor.browser.shared;
 
-import javax.swing.*;
+import org.fodor.browser.gui.custom.Canvas;
 
 public interface Renderer {
-    void render(JPanel canvas, String html);
+    void render(Canvas canvas, String html);
 }

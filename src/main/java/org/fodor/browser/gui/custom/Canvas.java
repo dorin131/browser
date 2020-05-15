@@ -1,19 +1,33 @@
 package org.fodor.browser.gui.custom;
 
+import org.fodor.browser.html.elements.DOM;
+import org.fodor.browser.html.elements.Element;
+import org.fodor.browser.html.elements.ElementType;
+import org.fodor.browser.html.elements.TextElement;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Canvas extends JPanel {
-    private String content = "hello";
+    private DOM dom;
+    private String text = "";
 
-    public void draw(String text) {
-        this.setContent(text);
+    private void refresh() {
         this.repaint();
         this.getParent().revalidate(); // to update scroll bars
     }
 
-    private void setContent(String text) {
-        this.content = text;
+    public void paint(DOM dom) {
+        setDom(dom);
+        refresh();
+    }
+
+    public void setDom(DOM dom) {
+        this.dom = dom;
+    }
+
+    private String getText() {
+        return this.text;
     }
 
     @Override
@@ -24,8 +38,14 @@ public class Canvas extends JPanel {
     }
 
     private void drawContent(Graphics2D g2d, int x, int y) {
+        if (dom == null) {
+            return;
+        }
+        resetText();
+        getTextFromDOM(dom);
+
         var dimension = new Dimension();
-        var lines = content.split("\n");
+        var lines = getText().split("\n");
         var preferredWidth = 0;
         var preferredHeight = lines.length * g2d.getFontMetrics().getHeight();
 
@@ -38,6 +58,20 @@ public class Canvas extends JPanel {
                 dimension.setSize(preferredWidth, preferredHeight);
             }
             setPreferredSize(dimension);
+        }
+    }
+
+    private void resetText() {
+        this.text = "";
+    }
+
+    private void getTextFromDOM(Element dom) {
+        for (Element el : dom.getChildren()) {
+            if (el.getType() == ElementType.TEXT) {
+                text += ((TextElement) el).getContent() + '\n';
+            } else {
+                getTextFromDOM(el);
+            }
         }
     }
 }

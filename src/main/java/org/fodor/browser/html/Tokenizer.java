@@ -85,7 +85,8 @@ public class Tokenizer {
         } else if (ch == 0) {
             return new Token(Token.Type.EOF, null);
         }
-        return new Token(Token.Type.ILLEGAL, "invalid-first-character-of-tag-name");
+        consume();
+        return new Token(Token.Type.ILLEGAL, "invalid-first-character-of-tag-name: " + ch);
     }
 
     private Token endTagOpenState() {
@@ -95,7 +96,8 @@ public class Tokenizer {
         } else if (ch == 0) {
             return new Token(Token.Type.EOF, null);
         }
-        return new Token(Token.Type.ILLEGAL, "invalid-first-character-of-tag-name");
+        consume();
+        return new Token(Token.Type.ILLEGAL, "invalid-first-character-of-tag-name: " + ch);
     }
 
     private Token tagNameState(boolean isEndTag) {
@@ -112,7 +114,8 @@ public class Tokenizer {
         } else if (ch == 0) {
             return new Token(Token.Type.EOF, null);
         }
-        return new Token(Token.Type.ILLEGAL, "invalid-character-in-tag-name");
+        consume();
+        return new Token(Token.Type.ILLEGAL, "invalid-character-in-tag-name: " + ch);
     }
 
     private Token textState() {

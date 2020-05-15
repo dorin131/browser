@@ -23,7 +23,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="https://news.ycombinator.com/"/>
+              <text value="https://fodor.org/"/>
             </properties>
           </component>
           <component id="4776d" class="javax.swing.JButton" binding="goButton">

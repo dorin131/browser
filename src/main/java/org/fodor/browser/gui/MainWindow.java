@@ -71,8 +71,8 @@ public class MainWindow {
         return addressField;
     }
 
-    public JPanel getCanvasPanel() {
-        return canvasPanel;
+    public Canvas getCanvasPanel() {
+        return (Canvas) canvasPanel;
     }
 
     public JTextArea getSourceTextArea() {

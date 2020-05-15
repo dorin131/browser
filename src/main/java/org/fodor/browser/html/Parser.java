@@ -41,6 +41,9 @@ public class Parser {
             case CLOSE_TAG:
                 parseCloseTag();
                 break;
+            case ILLEGAL:
+                System.out.println("Parser error: " + currentToken.getContent());
+                nextToken();
             case EOF:
             default:
         }
