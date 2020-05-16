@@ -19,24 +19,11 @@ public class Identifier extends Expression {
     }
 
     public Value execute(Interpreter interpreter) {
-        ASTNode value = findValue(interpreter);
+        ASTNode value = findValueInScope(interpreter, this);
         if (value == null) {
             return Value.jsUndefined();
         }
         return value.execute(interpreter);
-    }
-
-    private ASTNode findValue(Interpreter interpreter) {
-        ArrayList<ObjectExpression> localScopes = interpreter.getLocalScopes();
-        // Walking the local scopes in reverse order
-        for (int i = localScopes.size() - 1; i >= 0; i--) {
-            ASTNode value = localScopes.get(i).get(this);
-            if (value != null) {
-                return value;
-            }
-        }
-        // if nothing found in local scopes, check global scope
-        return interpreter.getGlobal().get(this);
     }
 
     @Override

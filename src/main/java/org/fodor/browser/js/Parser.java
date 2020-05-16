@@ -260,8 +260,25 @@ public class Parser {
         return identifiers;
     }
 
-    private Identifier parseIdentifier() {
+    private Expression parseIdentifier() {
+        if (peekTokenIs(Token.Type.DOT)) {
+            return parseMemberExpression();
+        }
         return new Identifier(currentToken);
+    }
+
+    private MemberExpression parseMemberExpression() {
+        if (!currentTokenIs(Token.Type.IDENT)) {
+            return null;
+        }
+        var object = new Identifier(currentToken);
+        if (!expectPeek(Token.Type.DOT)) {
+            return null;
+        }
+        if (!expectPeek(Token.Type.IDENT)) {
+            return null;
+        }
+        return new MemberExpression(object, parseIdentifier());
     }
 
     private Literal parseIntegerLiteral() {

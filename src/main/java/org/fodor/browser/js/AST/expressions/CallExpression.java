@@ -23,7 +23,7 @@ public class CallExpression extends Expression {
 
     @Override
     public Value execute(Interpreter interpreter) {
-        ASTNode callee = interpreter.getGlobal().get(this.identifier);
+        ASTNode callee = findValueInScope(interpreter, identifier);
 
         if (callee == null) {
             // TODO: not defined
