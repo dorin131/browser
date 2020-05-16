@@ -207,13 +207,13 @@ class JSTest {
         assertEquals(Value.Type.Undefined, result.getType());
     }
 
-//    @Test
-//    void evalObject01() {
-//        String input = "var a = {}; a;";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Object, result.getType());
-//        assertEquals("{}", result.getValue());
-//    }
+    @Test
+    void evalObject01() {
+        String input = "var a = {}; a;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Object, result.getType());
+        assertEquals("{}", result.getValue());
+    }
 
 //    @Test
 //    void evalObject1() {
