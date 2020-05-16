@@ -24,7 +24,8 @@ public class ObjectExpression extends Expression {
 
     @Override
     public void dump(int indent) {
-        super.dump(indent);
+        printIndent(indent);
+        System.out.println(this.getClass().getSimpleName());
         printIndent(indent + 1);
         System.out.println(this.toString());
     }

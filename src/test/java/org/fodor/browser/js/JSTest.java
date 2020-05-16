@@ -261,4 +261,12 @@ class JSTest {
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(13, result.getValue());
     }
+
+//    @Test
+//    void evalObject6() {
+//        String input = "var a = { b: { c: 3 } }; a.b.c;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Number, result.getType());
+//        assertEquals(3, result.getValue());
+//    }
 }
