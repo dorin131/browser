@@ -4,8 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.fodor.browser.js.AST.expressions.BinaryExpression;
 import org.fodor.browser.js.AST.expressions.CallExpression;
+import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.expressions.Literal;
 import org.fodor.browser.js.AST.statements.*;
+import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.shared.Value;
 import org.junit.jupiter.api.Test;
 
@@ -94,11 +96,11 @@ class InterpreterTest {
                 )
         );
         blockStatement.append(returnStatement);
-        FunctionDeclaration functionDeclaration = new FunctionDeclaration("foo", blockStatement);
+        FunctionDeclaration functionDeclaration = new FunctionDeclaration(new Identifier(new Token(Token.Type.IDENT, "foo")), blockStatement);
 
         Program program = new Program();
         program.append(functionDeclaration);
-        program.append(new CallExpression("foo"));
+        program.append(new CallExpression(new Identifier(new Token(Token.Type.IDENT, "foo"))));
 
         Value result = new Interpreter().run(program);
 

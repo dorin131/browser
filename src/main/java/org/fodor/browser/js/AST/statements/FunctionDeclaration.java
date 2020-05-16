@@ -1,18 +1,19 @@
 package org.fodor.browser.js.AST.statements;
 
 import org.fodor.browser.js.AST.expressions.Identifier;
+import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.js.Interpreter;
 
 import java.util.ArrayList;
 
 public class FunctionDeclaration extends Statement {
-    private String name = "anonymous";
+    private Identifier name = new Identifier(new Token(Token.Type.IDENT, "anonymous"));
     private BlockStatement body;
 
     // Used when function declared as "function name() {};"
     // TODO: Add parameters
-    public FunctionDeclaration(String name, BlockStatement body) {
+    public FunctionDeclaration(Identifier name, BlockStatement body) {
         this.name = name;
         this.body = body;
     }
@@ -22,7 +23,7 @@ public class FunctionDeclaration extends Statement {
         this.body.addParameters(parameters);
     }
 
-    public String getName() {
+    public Identifier getIdentifier() {
         return this.name;
     }
 
@@ -31,7 +32,7 @@ public class FunctionDeclaration extends Statement {
     }
 
     public Value execute(Interpreter interpreter) {
-        interpreter.getGlobal().put(getName(), getBody());
+        interpreter.getGlobal().put(getIdentifier(), getBody());
 
         return new Value(Value.Type.Function);
     }

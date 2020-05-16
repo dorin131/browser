@@ -5,13 +5,18 @@ import org.fodor.browser.js.AST.structs.ASTNode;
 import java.util.HashMap;
 
 public class ObjectExpression extends Expression {
-    private HashMap<String, ASTNode> properties = new HashMap<>();
+    private HashMap<Identifier, ASTNode> properties = new HashMap<>();
 
-    public ASTNode get(String propName) {
-        return properties.get(propName);
+    public ASTNode get(Identifier identifier) {
+        return properties.get(identifier);
     }
 
-    public void put(String propName, ASTNode propValue) {
-        properties.put(propName, propValue);
+    public void put(Identifier identifier, ASTNode propValue) {
+        properties.put(identifier, propValue);
+    }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
     }
 }

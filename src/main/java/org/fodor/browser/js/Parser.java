@@ -177,7 +177,7 @@ public class Parser {
     }
 
     private Expression parseCallExpression(ASTNode function) {
-        return new CallExpression(((Identifier) function).getName(), parseCallArguments());
+        return new CallExpression(((Identifier) function), parseCallArguments());
     }
 
     private ArrayList<ASTNode> parseCallArguments() {
@@ -326,7 +326,7 @@ public class Parser {
             return null;
         }
 
-        declaration.setName(currentToken);
+        declaration.setIdentifier(new Identifier(currentToken));
 
         if (!expectPeek(Token.Type.ASSIGN)) {
             return null;

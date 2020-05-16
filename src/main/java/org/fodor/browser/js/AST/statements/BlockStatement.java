@@ -36,7 +36,7 @@ public class BlockStatement extends Statement {
 
     public void associateArguments(ArrayList<ASTNode> arguments) {
         for (int i = 0; i < this.parameters.size(); i++) {
-            localScope.put(this.parameters.get(i).getName(), arguments.get(i));
+            localScope.put(this.parameters.get(i), arguments.get(i));
         }
     }
 

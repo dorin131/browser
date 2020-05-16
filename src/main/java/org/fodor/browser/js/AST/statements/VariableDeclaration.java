@@ -1,5 +1,6 @@
 package org.fodor.browser.js.AST.statements;
 
+import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.structs.ASTNode;
 import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.shared.Value;
@@ -7,15 +8,15 @@ import org.fodor.browser.js.Interpreter;
 
 public class VariableDeclaration extends Statement {
     private Token.Type type;
-    private String name;
+    private Identifier identifier;
     private ASTNode body;
 
     public VariableDeclaration(Token token) {
         this.type = token.getType();
     }
 
-    public void setName(Token token) {
-        this.name = token.getValue();
+    public void setIdentifier(Identifier token) {
+        this.identifier = token;
     }
 
     public void setBody(ASTNode contents) {
@@ -26,12 +27,12 @@ public class VariableDeclaration extends Statement {
         return body;
     }
 
-    public String getName() {
-        return this.name;
+    public Identifier getIdentifier() {
+        return this.identifier;
     }
 
     public Value execute(Interpreter interpreter) {
-        interpreter.getGlobal().put(name, body);
+        interpreter.getGlobal().put(identifier, body);
 
         return new Value(Value.Type.Undefined);
     }
@@ -40,7 +41,7 @@ public class VariableDeclaration extends Statement {
     public void dump(int indent) {
         super.dump(indent);
         printIndent(indent + 1);
-        System.out.println(name);
+        System.out.println(identifier.getName());
         body.dump(indent + 1);
     }
 }

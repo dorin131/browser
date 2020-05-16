@@ -57,8 +57,8 @@ class ParserTest {
         ASTNode sub2 = result.getChildren().get(1);
         assertEquals("VariableDeclaration", sub1.getClass().getSimpleName());
         assertEquals("VariableDeclaration", sub2.getClass().getSimpleName());
-        assertEquals("dorin", ((VariableDeclaration) sub1).getName());
-        assertEquals("browser", ((VariableDeclaration) sub2).getName());
+        assertEquals("dorin", ((VariableDeclaration) sub1).getIdentifier().getName());
+        assertEquals("browser", ((VariableDeclaration) sub2).getIdentifier().getName());
     }
 
     @Test
