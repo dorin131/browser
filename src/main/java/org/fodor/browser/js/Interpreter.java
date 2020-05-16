@@ -1,6 +1,6 @@
 package org.fodor.browser.js;
 
-import org.fodor.browser.js.AST.structs.JSObject;
+import org.fodor.browser.js.AST.expressions.ObjectExpression;
 import org.fodor.browser.js.AST.structs.ScopeFrame;
 import org.fodor.browser.js.AST.structs.ASTNode;
 import org.fodor.browser.js.AST.statements.Program;
@@ -11,12 +11,12 @@ import org.fodor.browser.js.AST.statements.BlockStatement;
 import java.util.ArrayList;
 
 public class Interpreter {
-    private JSObject global;
+    private ObjectExpression global;
     private ArrayList<ScopeFrame> scopeStack = new ArrayList<>();
-    private ArrayList<JSObject> localScopes = new ArrayList<>();
+    private ArrayList<ObjectExpression> localScopes = new ArrayList<>();
 
     public Interpreter() {
-        this.global = new JSObject();
+        this.global = new ObjectExpression();
     }
 
     public Value run(BlockStatement blockStatement) {
@@ -61,11 +61,11 @@ public class Interpreter {
         localScopes.remove(localScopes.size() - 1);
     }
 
-    public JSObject getGlobal() {
+    public ObjectExpression getGlobal() {
         return global;
     }
 
-    public ArrayList<JSObject> getLocalScopes() {
+    public ArrayList<ObjectExpression> getLocalScopes() {
         return localScopes;
     }
 }

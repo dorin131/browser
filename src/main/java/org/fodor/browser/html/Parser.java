@@ -42,7 +42,7 @@ public class Parser {
                 parseCloseTag();
                 break;
             case ILLEGAL:
-                System.out.println("Parser error: " + currentToken.getContent());
+                //System.out.println("Parser error: " + currentToken.getContent());
                 nextToken();
             case EOF:
             default:

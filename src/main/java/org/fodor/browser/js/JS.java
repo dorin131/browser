@@ -9,7 +9,7 @@ public class JS implements JSEngine {
     public Value eval(String code) {
         var lexer = new Lexer(code);
         var program = new Parser(lexer).parseProgram();
-        // program.dump(0);
+        program.dump(0);
         return interpreter.run(program);
     }
 }

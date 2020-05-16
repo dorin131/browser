@@ -1,8 +1,10 @@
-package org.fodor.browser.js.AST.structs;
+package org.fodor.browser.js.AST.expressions;
+
+import org.fodor.browser.js.AST.structs.ASTNode;
 
 import java.util.HashMap;
 
-public class JSObject extends ASTNode {
+public class ObjectExpression extends Expression {
     private HashMap<String, ASTNode> properties = new HashMap<>();
 
     public ASTNode get(String propName) {

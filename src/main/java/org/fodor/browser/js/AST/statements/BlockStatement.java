@@ -2,7 +2,7 @@ package org.fodor.browser.js.AST.statements;
 
 import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.structs.ASTNode;
-import org.fodor.browser.js.AST.structs.JSObject;
+import org.fodor.browser.js.AST.expressions.ObjectExpression;
 import org.fodor.browser.shared.Value;
 import org.fodor.browser.js.Interpreter;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 A node that has children, basically a shell or {}
  */
 public class BlockStatement extends Statement {
-    private JSObject localScope = new JSObject();
+    private ObjectExpression localScope = new ObjectExpression();
     private ArrayList<Identifier> parameters = new ArrayList<>();
     private ArrayList<ASTNode> children = new ArrayList<>();
 
@@ -40,7 +40,7 @@ public class BlockStatement extends Statement {
         }
     }
 
-    public JSObject getLocalScope() {
+    public ObjectExpression getLocalScope() {
         return localScope;
     }
 

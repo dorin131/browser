@@ -1,6 +1,7 @@
 package org.fodor.browser.js;
 
 import org.fodor.browser.js.AST.structs.ASTNode;
+import org.fodor.browser.js.AST.expressions.ObjectExpression;
 import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.js.AST.expressions.*;
 import org.fodor.browser.shared.Value;
@@ -45,6 +46,7 @@ public class Parser {
             put(Token.Type.MINUS, () -> parsePrefixExpression());
             put(Token.Type.IF, () -> parseIfStatement());
             put(Token.Type.FUNCTION, () -> parseFunctionDeclaration());
+            put(Token.Type.LBRACE, () -> parseObjectExpression());
         }
     };
 
@@ -211,6 +213,14 @@ public class Parser {
         BlockStatement body = parseBlockStatement();
 
         return new FunctionDeclaration(body, parameters);
+    }
+
+    private ObjectExpression parseObjectExpression() {
+        var object = new ObjectExpression();
+        if (peekTokenIs(Token.Type.RBRACE)) {
+            return object;
+        }
+        return null;
     }
 
     private ArrayList<Identifier> parseFunctionParameters() {

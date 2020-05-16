@@ -199,4 +199,57 @@ class JSTest {
         assertEquals(Value.Type.Number, result.getType());
         assertEquals(9, result.getValue());
     }
+
+    @Test
+    void evalObject0() {
+        String input = "var a = {};";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Undefined, result.getType());
+    }
+
+//    @Test
+//    void evalObject01() {
+//        String input = "var a = {}; a;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Undefined, result.getType());
+//    }
+//
+//    @Test
+//    void evalObject1() {
+//        String input = "var a = { b: 1 };";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Undefined, result.getType());
+//    }
+//
+//    @Test
+//    void evalObject2() {
+//        String input = "var a = { b: 1 }; a;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Object, result.getType());
+//        assertEquals("{ b: 1 }", result.getValue());
+//    }
+//
+//    @Test
+//    void evalObject3() {
+//        String input = "var a = { b: 1 }; a.b;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Number, result.getType());
+//        assertEquals(1, result.getValue());
+//    }
+//
+//    @Test
+//    void evalObject4() {
+//        String input = "var a = { b: 1 + 2 }; a.b;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Number, result.getType());
+//        assertEquals(3, result.getValue());
+//    }
+//
+//    @Test
+//    void evalObject5() {
+//        String input = "var d = function() { return 5; }; var a = { b: 1 + 2, c: d() * 2 }; a.b + a.c;";
+//        Value result = new JS().eval(input);
+//        assertEquals(Value.Type.Number, result.getType());
+//        assertEquals(13, result.getValue());
+//    }
 }
