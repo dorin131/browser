@@ -49,6 +49,7 @@ public class Token {
         EQ,
         NEQ,
         BANG,
+        DOT,
 
         /* Separators */
         COLON,

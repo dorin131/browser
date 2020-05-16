@@ -230,6 +230,14 @@ class JSTest {
         assertEquals("{ b: 1, }", result.getValue());
     }
 
+    @Test
+    void evalObject2_1() {
+        String input = "var a = { b: 1, c: 1 + 2 }; a;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Object, result.getType());
+        assertEquals("{ b: 1, c: 1 + 2, }", result.getValue());
+    }
+
 //    @Test
 //    void evalObject3() {
 //        String input = "var a = { b: 1 }; a.b;";
@@ -237,7 +245,7 @@ class JSTest {
 //        assertEquals(Value.Type.Number, result.getType());
 //        assertEquals(1, result.getValue());
 //    }
-//
+
 //    @Test
 //    void evalObject4() {
 //        String input = "var a = { b: 1 + 2 }; a.b;";

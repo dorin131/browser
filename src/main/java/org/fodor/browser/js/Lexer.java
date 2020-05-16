@@ -104,6 +104,9 @@ public class Lexer {
             case '}':
                 t = new Token(Token.Type.RBRACE, ch);
                 break;
+            case '.':
+                t = new Token(Token.Type.DOT, ch);
+                break;
             case 0:
                 t = new Token(Token.Type.EOF, ch);
                 break;

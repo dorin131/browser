@@ -60,6 +60,11 @@ public class BinaryExpression extends Expression {
     }
 
     @Override
+    public String toString() {
+        return String.format("%s %s %s", lhs.toString(), getOp(), getRhs().toString());
+    }
+
+    @Override
     public void dump(int indent) {
         super.dump(indent);
         printIndent(indent + 1);

@@ -13,7 +13,7 @@ class LexerTest {
                 "\t== != <= >=" +
                 "}\n" +
                 "\n" +
-                "test();";
+                "test(); a.b;";
 
         Token[] expected = {
                 new Token(Token.Type.FUNCTION, "function"),
@@ -46,6 +46,10 @@ class LexerTest {
                 new Token(Token.Type.IDENT, "test"),
                 new Token(Token.Type.LPAREN, "("),
                 new Token(Token.Type.RPAREN, ")"),
+                new Token(Token.Type.SEMICOLON, ";"),
+                new Token(Token.Type.IDENT, "a"),
+                new Token(Token.Type.DOT, "."),
+                new Token(Token.Type.IDENT, "b"),
                 new Token(Token.Type.SEMICOLON, ";"),
         };
 
