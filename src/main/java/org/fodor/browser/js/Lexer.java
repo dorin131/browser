@@ -71,6 +71,9 @@ public class Lexer {
                     t = new Token(Token.Type.BANG, ch);
                 }
                 break;
+            case ':':
+                t = new Token(Token.Type.COLON, ch);
+                break;
             case ';':
                 t = new Token(Token.Type.SEMICOLON, ch);
                 break;

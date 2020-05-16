@@ -42,6 +42,8 @@ public class VariableDeclaration extends Statement {
         super.dump(indent);
         printIndent(indent + 1);
         System.out.println(identifier.getName());
-        body.dump(indent + 1);
+        if (body != null) {
+            body.dump(indent + 1);
+        }
     }
 }

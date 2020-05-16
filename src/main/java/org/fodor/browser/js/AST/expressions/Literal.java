@@ -10,6 +10,10 @@ public class Literal extends Expression {
         this.value = value;
     }
 
+    public Value getValue() {
+        return value;
+    }
+
     public Value execute(Interpreter interpreter) {
         return value;
     }
@@ -18,5 +22,10 @@ public class Literal extends Expression {
     public void dump(int indent) {
         printIndent(indent);
         System.out.println(value.getValue());
+    }
+
+    @Override
+    public String toString() {
+        return getValue().getValue().toString();
     }
 }

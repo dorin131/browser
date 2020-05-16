@@ -19,16 +19,23 @@ public class ObjectExpression extends Expression {
 
     @Override
     public Value execute(Interpreter i) {
-        String obj = "{";
-        for (Identifier key : properties.keySet()) {
-            obj += String.format("\t%s : %s\n", key.getName(), properties.get(key));
-        }
-        obj += "}";
-        return new Value(Value.Type.Object, obj);
+        return new Value(Value.Type.Object, this.toString());
     }
 
     @Override
     public void dump(int indent) {
         super.dump(indent);
+        printIndent(indent + 1);
+        System.out.println(this.toString());
+    }
+
+    @Override
+    public String toString() {
+        String obj = "{ ";
+        for (Identifier key : properties.keySet()) {
+            obj += String.format("%s: %s, ", key.getName(), properties.get(key));
+        }
+        obj += "}";
+        return obj;
     }
 }

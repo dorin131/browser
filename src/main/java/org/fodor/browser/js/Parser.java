@@ -139,7 +139,7 @@ public class Parser {
         }
         ASTNode left = prefixFn.parse();
 
-        while (!peekTokenIs(Token.Type.SEMICOLON) && precedence.ordinal() < peekPrecedence().ordinal()) {
+        while (!peekTokenIs(Token.Type.COMMA) && !peekTokenIs(Token.Type.SEMICOLON) && precedence.ordinal() < peekPrecedence().ordinal()) {
             parseInfixFunction infixFn = parseInfixFunctions.get(peekToken.getType());
             if (infixFn == null) {
                 return left;
@@ -220,7 +220,17 @@ public class Parser {
         if (peekTokenIs(Token.Type.RBRACE)) {
             return object;
         }
-        return null;
+        while (!currentTokenIs(Token.Type.RBRACE)) {
+            if (currentTokenIs(Token.Type.IDENT) && peekTokenIs(Token.Type.COLON)) {
+                var key = new Identifier(currentToken);
+                nextToken();
+                nextToken();
+                var value = parseExpression(Precedence.LOWEST);
+                object.put(key, value);
+            }
+            nextToken();
+        }
+        return object;
     }
 
     private ArrayList<Identifier> parseFunctionParameters() {

@@ -212,24 +212,24 @@ class JSTest {
         String input = "var a = {}; a;";
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Object, result.getType());
-        assertEquals("{}", result.getValue());
+        assertEquals("{ }", result.getValue());
     }
 
-//    @Test
-//    void evalObject1() {
-//        String input = "var a = { b: 1 };";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Undefined, result.getType());
-//    }
-//
-//    @Test
-//    void evalObject2() {
-//        String input = "var a = { b: 1 }; a;";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Object, result.getType());
-//        assertEquals("{ b: 1 }", result.getValue());
-//    }
-//
+    @Test
+    void evalObject1() {
+        String input = "var a = { b: 1 };";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Undefined, result.getType());
+    }
+
+    @Test
+    void evalObject2() {
+        String input = "var a = { b: 1 }; a;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Object, result.getType());
+        assertEquals("{ b: 1, }", result.getValue());
+    }
+
 //    @Test
 //    void evalObject3() {
 //        String input = "var a = { b: 1 }; a.b;";

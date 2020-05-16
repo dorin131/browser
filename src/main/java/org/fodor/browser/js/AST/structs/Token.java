@@ -51,6 +51,7 @@ public class Token {
         BANG,
 
         /* Separators */
+        COLON,
         SEMICOLON,
         LPAREN,
         RPAREN,
