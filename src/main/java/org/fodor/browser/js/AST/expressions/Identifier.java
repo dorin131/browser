@@ -62,4 +62,9 @@ public class Identifier extends Expression {
     public int hashCode() {
         return 53 * 3 + this.getName().hashCode();
     }
+
+    @Override
+    public String toString() {
+        return String.format("{ Identifier: %s }", this.getName());
+    }
 }

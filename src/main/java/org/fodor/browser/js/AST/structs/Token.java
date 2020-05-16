@@ -92,14 +92,35 @@ public class Token {
 
     @Override
     public boolean equals(Object o) {
-        if (o instanceof Token) {
-            return ((Token) o).type.toString().equals(type.toString()) && ((Token) o).value.equals(value);
+        if (o == this) {
+            return true;
         }
-        return false;
+        if (o == null) {
+            return false;
+        }
+        if (!(o instanceof Token)) {
+            return false;
+        }
+        final Token token = (Token) o;
+        if (!token.getType().toString().equals(getType().toString())) {
+            return false;
+        }
+        if (!token.getValue().equals(getValue())) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + getType().toString().hashCode();
+        hash = 53 * hash + getValue().hashCode();
+        return hash;
     }
 
     @Override
     public String toString() {
-        return String.format("{ Type: %s, Value: \"%s\" }", type.toString(), value);
+        return String.format("{ Type: %s, Value: \"%s\" }", getType().toString(), getValue());
     }
 }

@@ -1,5 +1,7 @@
 package org.fodor.browser.shared;
 
+import org.fodor.browser.js.AST.structs.Token;
+
 public class Value<T> {
     public enum Type {
         Error,
@@ -38,16 +40,40 @@ public class Value<T> {
 
     @Override
     public boolean equals(Object o) {
-        if (o instanceof Value) {
-            if (((Value) o).value != null && value != null) {
-                return ((Value) o).type.toString().equals(type.toString()) &&
-                        ((Value) o).value.equals(value);
-            } else if (((Value) o).value == null && value == null) {
-                return ((Value) o).type.toString().equals(type.toString());
-            }
+        if (o == this) {
+            return true;
+        }
+        if (o == null) {
             return false;
         }
-        return false;
+        if (!(o instanceof Value)) {
+            return false;
+        }
+        final Value value = (Value) o;
+        if (!value.getType().toString().equals(getType().toString())) {
+            return false;
+        }
+        if (getValue() == null && value.getValue() != null) {
+            return false;
+        }
+        if (getValue() != null && value.getValue() == null) {
+            return false;
+        }
+        if (getValue() == null && value.getValue() == null) {
+            return true;
+        }
+        if (!value.getValue().equals(getValue())) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + (getType() == null ? 0 : getType().toString().hashCode());
+        hash = 53 * hash + (getValue() == null ? 0 : getValue().hashCode());
+        return hash;
     }
 
     @Override
