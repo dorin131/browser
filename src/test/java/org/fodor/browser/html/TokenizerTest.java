@@ -60,4 +60,25 @@ class TokenizerTest {
             assertEquals(expected[i].getContent(), token.getContent());
         }
     }
+
+    @Test
+    void run4() {
+        String input = "<div>Hello<script>1+2</script></div>";
+        Token[] expected = {
+                new Token(Token.Type.OPEN_TAG, "div"),
+                new Token(Token.Type.TEXT, "Hello"),
+                new Token(Token.Type.OPEN_TAG, "script"),
+                new Token(Token.Type.TEXT, "1+2"),
+                new Token(Token.Type.CLOSE_TAG, "script"),
+                new Token(Token.Type.CLOSE_TAG, "div"),
+        };
+
+        var tokenizer = new Tokenizer(input);
+
+        for (int i = 0; i < expected.length; i++) {
+            var token = tokenizer.next();
+            assertEquals(expected[i].getType(), token.getType());
+            assertEquals(expected[i].getContent(), token.getContent());
+        }
+    }
 }

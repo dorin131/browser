@@ -36,15 +36,7 @@ public class Tokenizer {
         next++;
     }
 
-    private void consumeWhitespace() {
-        while (ch == ' ' || ch == '\n' || ch == '\t' || ch == '\r') {
-            consume();
-        }
-    }
-
     public Token next() {
-        consumeWhitespace();
-
         switch(getState()) {
             case DATA:
                 return dataState();

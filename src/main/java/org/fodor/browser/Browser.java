@@ -20,7 +20,7 @@ public class Browser {
         GUI = MainWindow.getInstance();
         console = Console.getInstance(GUI);
         jsEngine = new JS();
-        renderer = new HTML();
+        renderer = new HTML(jsEngine);
 
         GUI.getConsoleTextField().addActionListener(new ConsoleEnterAction(console, jsEngine, GUI));
         GUI.getConsoleTextField().addKeyListener(new ConsoleKeyUpAction(console, GUI));

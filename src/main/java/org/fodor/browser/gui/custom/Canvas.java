@@ -1,15 +1,14 @@
 package org.fodor.browser.gui.custom;
 
-import org.fodor.browser.html.elements.DOM;
-import org.fodor.browser.html.elements.Element;
-import org.fodor.browser.html.elements.ElementType;
-import org.fodor.browser.html.elements.TextElement;
+import org.fodor.browser.html.elements.*;
+import org.fodor.browser.shared.JSEngine;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Canvas extends JPanel {
     private DOM dom;
+    private JSEngine js;
     private String text = "";
 
     private void refresh() {
@@ -17,7 +16,8 @@ public class Canvas extends JPanel {
         this.getParent().revalidate(); // to update scroll bars
     }
 
-    public void paint(DOM dom) {
+    public void paint(DOM dom, JSEngine js) {
+        setJs(js);
         setDom(dom);
         refresh();
     }
@@ -67,11 +67,22 @@ public class Canvas extends JPanel {
 
     private void getTextFromDOM(Element dom) {
         for (Element el : dom.getChildren()) {
-            if (el.getType() == ElementType.TEXT) {
+            if (assertElementType(el, ElementType.TEXT)) {
                 text += ((TextElement) el).getContent() + '\n';
+            } else if (assertElementType(el, ElementType.SCRIPT)) {
+                var out = js.eval(((ScriptContentElement) el).getJsContents());
+                System.out.println(out);
             } else {
                 getTextFromDOM(el);
             }
         }
+    }
+
+    private boolean assertElementType(Element e, ElementType t) {
+        return e.getType() == t;
+    }
+
+    public void setJs(JSEngine js) {
+        this.js = js;
     }
 }

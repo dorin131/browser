@@ -57,10 +57,12 @@ public class Parser {
     private void parseOpenTag() {
         switch (currentToken.getContent()) {
             case "div":
-                var lastElement = elementStack.peek();
-                var newElement = new DivElement();
-                lastElement.appendChild(newElement);
-                elementStack.push(newElement);
+                pushToElementStack(new DivElement());
+                break;
+            case "script":
+                pushToElementStack(new ScriptContentElement(getTagContent()));
+                break;
+            default:
         }
         nextToken();
     }
@@ -68,11 +70,29 @@ public class Parser {
     private void parseCloseTag() {
         switch (currentToken.getContent()) {
             case "div":
-                var lastElement = elementStack.peek();
-                if (lastElement.getType() == ElementType.DIV) {
-                    elementStack.pop();
-                }
+                popOffStackIfMatchesType(ElementType.DIV);
+                break;
+            default:
         }
         nextToken();
+    }
+
+    private void popOffStackIfMatchesType(ElementType type) {
+        var lastElement = elementStack.peek();
+        if (lastElement.getType() == type) {
+            elementStack.pop();
+        }
+    }
+
+    private void pushToElementStack(Element el) {
+        var lastElement = elementStack.peek();
+        var newElement = el;
+        lastElement.appendChild(newElement);
+        elementStack.push(newElement);
+    }
+
+    private String getTagContent() {
+        nextToken();
+        return currentToken.getContent();
     }
 }

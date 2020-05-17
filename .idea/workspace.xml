@@ -20,7 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/JSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/JSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/GoAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/custom/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/custom/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/Tokenizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/html/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/html/ParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/html/TokenizerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/html/TokenizerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/gui/actions/GoAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/gui/actions/GoAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/gui/custom/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/gui/custom/Canvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/html/HTML.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/html/HTML.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/html/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/html/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/html/ParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/html/ParserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,27 +91,24 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JSTest.evalObject11">
-    <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in browser">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.Main" />
       <module name="browser" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fodor.browser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTest.evalObject10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.fodor.browser.js.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
-      <option name="METHOD_NAME" value="evalObject10" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,33 +129,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTest.evalObject9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParserTest.parse4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fodor.browser.js.*" />
+          <option name="PATTERN" value="org.fodor.browser.html.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
-      <option name="METHOD_NAME" value="evalObject9" />
+      <option name="PACKAGE_NAME" value="org.fodor.browser.html" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.html.ParserTest" />
+      <option name="METHOD_NAME" value="parse4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTest.evalString3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TokenizerTest.run4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fodor.browser.js.*" />
+          <option name="PATTERN" value="org.fodor.browser.html.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
-      <option name="METHOD_NAME" value="evalString3" />
+      <option name="PACKAGE_NAME" value="org.fodor.browser.html" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.html.TokenizerTest" />
+      <option name="METHOD_NAME" value="run4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JSTest.evalObject11" />
-        <item itemvalue="JUnit.JSTest.evalObject10" />
         <item itemvalue="JUnit.All in browser" />
-        <item itemvalue="JUnit.JSTest.evalObject9" />
-        <item itemvalue="JUnit.JSTest.evalString3" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ParserTest.parse4" />
+        <item itemvalue="JUnit.TokenizerTest.run4" />
+        <item itemvalue="JUnit.JSTest.evalObject11" />
       </list>
     </recent_temporary>
   </component>
@@ -198,10 +209,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589547359989" />
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589721335293">
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589726840952">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589721335293" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589726840952" />
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589397889069">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -230,38 +241,38 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589723995905" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589724788343">
+    <state width="1874" height="340" key="GridCell.Tab.0.bottom" timestamp="1589727171142">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589724788343" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589724788342">
+    <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589727171142" />
+    <state width="1874" height="340" key="GridCell.Tab.0.center" timestamp="1589727171141">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589724788342" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589724788341">
+    <state width="1874" height="340" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589727171141" />
+    <state width="1874" height="340" key="GridCell.Tab.0.left" timestamp="1589727171140">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589724788341" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589724788342">
+    <state width="1874" height="340" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589727171140" />
+    <state width="1874" height="340" key="GridCell.Tab.0.right" timestamp="1589727171141">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589724788342" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589724355269">
+    <state width="1874" height="340" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589727171141" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589727175798">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589724355269" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589724355268">
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589727175798" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589727175798">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589724355268" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589724355268">
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589727175798" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589727175797">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589724355268" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589724355269">
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589727175797" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589727175798">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589724355269" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589727175798" />
     <state x="570" y="133" width="770" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589049948907">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -274,10 +285,10 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="734" y="240" width="452" height="557" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589551627414" />
-    <state x="646" y="141" width="628" height="756" key="find.popup" timestamp="1589628013350">
+    <state x="646" y="141" width="628" height="756" key="find.popup" timestamp="1589726741579">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="646" y="141" width="628" height="756" key="find.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1589628013350" />
+    <state x="646" y="141" width="628" height="756" key="find.popup/0.0.1920.1041@0.0.1920.1041" timestamp="1589726741579" />
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1588345890458">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -295,6 +306,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/Identifier.java</url>
           <line>22</line>
           <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/fodor/browser/html/ParserTest.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/fodor/browser/js/JS.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

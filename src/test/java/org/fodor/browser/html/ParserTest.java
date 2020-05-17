@@ -2,13 +2,14 @@ package org.fodor.browser.html;
 
 import org.fodor.browser.html.elements.DOM;
 import org.fodor.browser.html.elements.ElementType;
+import org.fodor.browser.html.elements.ScriptContentElement;
 import org.fodor.browser.html.elements.TextElement;
+import org.fodor.browser.html.stucts.Token;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ParserTest {
-
     @Test
     void parse() {
         String input = "<div>Hello</div>";
@@ -73,5 +74,31 @@ class ParserTest {
         var text = dom.getChildren().get(0);
         assertEquals(ElementType.TEXT, text.getType());
         assertEquals("Dorin", ((TextElement) text).getContent());
+    }
+
+    @Test
+    void parse4() {
+        String input = "<div>Hello<script>1+2</script></div>";
+//        Token[] expected = {
+//                new Token(Token.Type.OPEN_TAG, "div"),
+//                new Token(Token.Type.TEXT, "Hello"),
+//                new Token(Token.Type.OPEN_TAG, "script"),
+//                new Token(Token.Type.TEXT, "1+2"),
+//                new Token(Token.Type.CLOSE_TAG, "script"),
+//                new Token(Token.Type.CLOSE_TAG, "div"),
+//        };
+
+        Tokenizer tokenizer = new Tokenizer(input);
+        DOM dom = new Parser(tokenizer).parse();
+
+        assertEquals(1, dom.getChildren().size());
+        var div = dom.getChildren().get(0);
+        assertEquals(ElementType.DIV, div.getType());
+        var text = div.getChildren().get(0);
+        assertEquals(ElementType.TEXT, text.getType());
+        assertEquals("Hello", ((TextElement) text).getContent());
+        var script = div.getChildren().get(1);
+        assertEquals(ElementType.SCRIPT, script.getType());
+        assertEquals("1+2", ((ScriptContentElement) script).getJsContents());
     }
 }

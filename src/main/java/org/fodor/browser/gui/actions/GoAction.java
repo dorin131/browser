@@ -23,6 +23,7 @@ public class GoAction implements ActionListener {
 
         request.makeGetRequest(address).thenAccept(res -> {
             String source = res.body();
+//            String source = "<div>hello!<div><script>var a = 2; a * 2;</script>";
             GUI.getSourceTextArea().setText(source);
             renderer.render(GUI.getCanvasPanel(), source);
         });
