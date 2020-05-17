@@ -286,19 +286,19 @@ class JSTest {
         assertTrue(result.getValue().equals("hello"));
     }
 
-//    @Test
-//    void evalString2() {
-//        String input = "\"hello \" + \"world\"";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.String, result.getType());
-//        assertTrue(result.getValue().equals("hello world"));
-//    }
-//
-//    @Test
-//    void evalString3() {
-//        String input = "\"number \" + 1";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.String, result.getType());
-//        assertTrue(result.getValue().equals("number 1"));
-//    }
+    @Test
+    void evalString2() {
+        String input = "\"hello \" + \"world\"";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.String, result.getType());
+        assertTrue(result.getValue().equals("hello world"));
+    }
+
+    @Test
+    void evalString3() {
+        String input = "\"number \" + 1";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.String, result.getType());
+        assertTrue(result.getValue().equals("number 1"));
+    }
 }

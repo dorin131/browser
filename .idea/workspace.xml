@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/structs/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/structs/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/BinaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/JSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/JSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/LexerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/ParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/js/JSTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/fodor/browser/js/JSTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +80,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in browser">
+  <component name="RunManager" selected="JUnit.JSTest.evalString3">
     <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <option name="PACKAGE_NAME" value="" />
@@ -108,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest.parseString1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JSTest.evalString2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
@@ -117,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.ParserTest" />
-      <option name="METHOD_NAME" value="parseString1" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
+      <option name="METHOD_NAME" value="evalString2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest.parseString2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JSTest.evalString3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
@@ -133,8 +130,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.ParserTest" />
-      <option name="METHOD_NAME" value="parseString2" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
+      <option name="METHOD_NAME" value="evalString3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JSTest.evalString3" />
         <item itemvalue="JUnit.All in browser" />
+        <item itemvalue="JUnit.JSTest.evalString2" />
         <item itemvalue="JUnit.JSTest.evalString1" />
         <item itemvalue="JUnit.ParserTest.parseString3" />
-        <item itemvalue="JUnit.ParserTest.parseString2" />
-        <item itemvalue="JUnit.ParserTest.parseString1" />
       </list>
     </recent_temporary>
   </component>
@@ -236,22 +233,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589653082623" />
-    <state width="1874" height="340" key="GridCell.Tab.0.bottom" timestamp="1589705418514">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589705881706">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589705418514" />
-    <state width="1874" height="340" key="GridCell.Tab.0.center" timestamp="1589705418513">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589705881706" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589705881705">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589705418513" />
-    <state width="1874" height="340" key="GridCell.Tab.0.left" timestamp="1589705418513">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589705881705" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589705881705">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589705418513" />
-    <state width="1874" height="340" key="GridCell.Tab.0.right" timestamp="1589705418513">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589705881705" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589705881706">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589705418513" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589705881706" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589705418516">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

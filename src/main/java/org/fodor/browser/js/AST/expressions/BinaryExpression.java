@@ -31,20 +31,36 @@ public class BinaryExpression extends Expression {
     public Value execute(Interpreter i) {
         Value left = lhs.execute(i);
         Value right = rhs.execute(i);
-        int leftValue;
-        int rightValue;
 
-        if (left.getValue() instanceof Integer) {
-            leftValue = (Integer) left.getValue();
-        } else {
-            leftValue = Integer.parseInt((String) left.getValue());
-        }
-        if (right.getValue() instanceof Integer) {
-            rightValue = (Integer) right.getValue();
-        } else {
-            rightValue = Integer.parseInt((String) right.getValue());
+        // Coerce right to String
+        if (left.getType() == Value.Type.String && right.getType() == Value.Type.Number) {
+            right = new Value(Value.Type.String, right.getValue().toString());
+            return stringArithmetic(op, left, right);
         }
 
+        // Coerce left to String
+        if (left.getType() == Value.Type.Number && right.getType() == Value.Type.String) {
+            left = new Value(Value.Type.String, left.getValue().toString());
+            return stringArithmetic(op, left, right);
+        }
+
+        if (left.getType() == Value.Type.String && right.getType() == Value.Type.String) {
+            return stringArithmetic(op, left, right);
+        }
+
+        return integerArithmetic(op, left, right);
+    }
+
+    private Value stringArithmetic(String op, Value left, Value right) {
+        if (!op.equals("+")) {
+            throw new RuntimeException("Invalid operator");
+        }
+        return new Value(Value.Type.String, String.format("%s%s", left.getValue(), right.getValue()));
+    }
+
+    private Value integerArithmetic(String op, Value left, Value right) {
+        int leftValue = (int) left.getValue();
+        int rightValue = (int) right.getValue();
         switch (op) {
             case "+":
                 return new Value(Value.Type.Number, leftValue + rightValue);
