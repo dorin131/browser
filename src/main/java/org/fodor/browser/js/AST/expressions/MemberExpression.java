@@ -30,7 +30,8 @@ public class MemberExpression extends Expression {
             currentProperty = ((MemberExpression) currentProperty).property;
             scopeObject = (ObjectExpression) scopeObject.get(currentObject);
         }
-        return scopeObject.get((Identifier) currentProperty).execute(i);
+        var res = scopeObject.get((Identifier) currentProperty).execute(i);
+        return res;
     }
 
     @Override

@@ -9,21 +9,30 @@ import org.fodor.browser.js.Interpreter;
 import java.util.ArrayList;
 
 public class CallExpression extends Expression {
-    private Identifier identifier;
+    private Expression expression;
     private ArrayList<ASTNode> arguments = new ArrayList<>();
 
-    public CallExpression(Identifier identifier) {
-        this.identifier = identifier;
+    public CallExpression(Identifier expression) {
+        this.expression = expression;
     }
 
-    public CallExpression(Identifier identifier, ArrayList<ASTNode> arguments) {
-        this.identifier = identifier;
+    public CallExpression(Expression expression, ArrayList<ASTNode> arguments) {
+        this.expression = expression;
         this.arguments = arguments;
     }
 
     @Override
     public Value execute(Interpreter interpreter) {
-        ASTNode callee = findValueInScope(interpreter, identifier);
+        ASTNode callee;
+
+        if (expression instanceof Identifier) {
+            callee = findValueInScope(interpreter, (Identifier) expression);
+        } else if (expression instanceof MemberExpression) {
+            callee = expression;
+        } else {
+            throw new RuntimeException("Cannot call expression: " + expression.toString());
+        }
+
 
         if (callee == null) {
             // TODO: not defined
@@ -36,22 +45,28 @@ public class CallExpression extends Expression {
             return interpreter.run(body);
         }
 
-        // or if it's just an expression
-        return callee.execute(interpreter);
+        // We execute the expression
+        var res = callee.execute(interpreter);
+
+        // If the result is a Function, we execute the function
+        if (res.getType() == Value.Type.Function) {
+            var body = (BlockStatement) res.getValue();
+            body.associateArguments(getArguments());
+            return interpreter.run(body);
+        }
+
+        // Otherwise we return the value
+        return res;
     }
 
     public ArrayList<ASTNode> getArguments() {
         return arguments;
     }
 
-    public String name() {
-        return this.identifier.getName();
-    }
-
     @Override
     public void dump(int indent) {
-        printIndent(indent);
-        System.out.printf("%s \"%s\"\n", this.getClass().getSimpleName(), name());
+        super.dump(indent);
+        this.expression.dump(indent + 1);
         printIndent(indent + 1);
         if (arguments != null && arguments.size() > 0) {
             System.out.println("Arguments");

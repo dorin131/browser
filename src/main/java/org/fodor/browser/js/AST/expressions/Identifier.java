@@ -54,4 +54,11 @@ public class Identifier extends Expression {
     public String toString() {
         return String.format("{ Identifier: %s }", this.getName());
     }
+
+    @Override
+    public void dump(int indent) {
+        super.dump(indent);
+        printIndent(indent + 1);
+        System.out.println(name);
+    }
 }

@@ -286,13 +286,13 @@ class JSTest {
         assertEquals(4, result.getValue());
     }
 
-//    @Test
-//    void evalObject9() {
-//        String input = "var double = function(n) { return n*2; }; var a = { b: double }; a.b(2);";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.Number, result.getType());
-//        assertEquals(4, result.getValue());
-//    }
+    @Test
+    void evalObject9() {
+        String input = "var double = function(n) { return n*2; }; var a = { b: double }; a.b(2);";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(4, result.getValue());
+    }
 
     @Test
     void evalString1() {

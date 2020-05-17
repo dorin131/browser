@@ -177,7 +177,7 @@ public class Parser {
     }
 
     private Expression parseCallExpression(ASTNode function) {
-        return new CallExpression(((Identifier) function), parseCallArguments());
+        return new CallExpression(((Expression) function), parseCallArguments());
     }
 
     private ArrayList<ASTNode> parseCallArguments() {

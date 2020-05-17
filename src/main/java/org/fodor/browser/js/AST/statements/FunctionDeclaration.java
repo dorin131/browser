@@ -34,7 +34,7 @@ public class FunctionDeclaration extends Statement {
     public Value execute(Interpreter interpreter) {
         interpreter.getGlobal().put(getIdentifier(), getBody());
 
-        return new Value(Value.Type.Function);
+        return new Value(Value.Type.Function, getBody());
     }
 
     @Override
