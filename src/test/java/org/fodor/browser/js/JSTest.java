@@ -295,6 +295,22 @@ class JSTest {
     }
 
     @Test
+    void evalObject10() {
+        String input = "var double = function(n) { return n*2; }; var a = { b: double, c: double }; a.b(2) + a.c(4);";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(12, result.getValue());
+    }
+
+    @Test
+    void evalObject11() {
+        String input = "var mul = function(n, m) { return n*m; }; var x = 3; var a = { b: { c: mul } }; a.b.c(2,5) + x;";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.Number, result.getType());
+        assertEquals(13, result.getValue());
+    }
+
+    @Test
     void evalString1() {
         String input = "\"hello\"";
         Value result = new JS().eval(input);
