@@ -51,9 +51,9 @@ public class Tokenizer {
             case TAG_OPEN:
                 return tagOpenState();
             case TAG_NAME:
-                return tagNameState(false);
+                return tagNameState();
             case END_TAG_NAME:
-                return tagNameState(true);
+                return endTagNameState();
             case END_TAG_OPEN:
                 return endTagOpenState();
             case TEXT:
@@ -100,7 +100,7 @@ public class Tokenizer {
         return new Token(Token.Type.ILLEGAL, "invalid-first-character-of-tag-name: " + ch);
     }
 
-    private Token tagNameState(boolean isEndTag) {
+    private Token tagNameState() {
         if (isAlphaNumeric()) {
             currentTagName += ch;
             consume();
@@ -110,7 +110,25 @@ public class Tokenizer {
             currentTagName = "";
             consume();
             setState(State.DATA);
-            return new Token(isEndTag ? Token.Type.CLOSE_TAG : Token.Type.OPEN_TAG, tagName);
+            return new Token(Token.Type.OPEN_TAG, tagName);
+        } else if (ch == 0) {
+            return new Token(Token.Type.EOF, null);
+        }
+        consume();
+        return new Token(Token.Type.ILLEGAL, "invalid-character-in-tag-name: " + ch);
+    }
+
+    private Token endTagNameState() {
+        if (isAlphaNumeric()) {
+            currentTagName += ch;
+            consume();
+            return next();
+        } else if (ch == '>') {
+            var tagName = currentTagName;
+            currentTagName = "";
+            consume();
+            setState(State.DATA);
+            return new Token(Token.Type.CLOSE_TAG, tagName);
         } else if (ch == 0) {
             return new Token(Token.Type.EOF, null);
         }
