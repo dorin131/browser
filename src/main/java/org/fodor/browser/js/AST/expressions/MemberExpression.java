@@ -25,13 +25,18 @@ public class MemberExpression extends Expression {
         var currentProperty = this.property;
         var currentObject = this.object;
         var scopeObject = (ObjectExpression) findValueInScope(i, object);
+        if (scopeObject == null) {
+            return Value.jsUndefined();
+        }
         while (!(currentProperty instanceof Identifier)) {
             currentObject = ((MemberExpression) currentProperty).object;
             currentProperty = ((MemberExpression) currentProperty).property;
             scopeObject = (ObjectExpression) scopeObject.get(currentObject);
+            if (scopeObject == null) {
+                return Value.jsUndefined();
+            }
         }
-        var res = scopeObject.get((Identifier) currentProperty).execute(i);
-        return res;
+        return scopeObject.get((Identifier) currentProperty).execute(i);
     }
 
     @Override

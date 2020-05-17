@@ -68,4 +68,8 @@ public class Interpreter {
     public ArrayList<ObjectExpression> getLocalScopes() {
         return localScopes;
     }
+
+    public void addToGlobal(ObjectExpression object) {
+        getGlobal();
+    }
 }

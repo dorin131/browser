@@ -23,7 +23,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="https://fodor.org/"/>
+              <text value="http://127.0.0.1:8080"/>
             </properties>
           </component>
           <component id="4776d" class="javax.swing.JButton" binding="goButton">
