@@ -80,7 +80,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JSTest.evalString3">
+  <component name="RunManager" selected="JUnit.All in browser">
     <configuration name="All in browser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <option name="PACKAGE_NAME" value="" />
@@ -155,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JSTest.evalString3" />
         <item itemvalue="JUnit.All in browser" />
+        <item itemvalue="JUnit.JSTest.evalString3" />
         <item itemvalue="JUnit.JSTest.evalString2" />
         <item itemvalue="JUnit.JSTest.evalString1" />
         <item itemvalue="JUnit.ParserTest.parseString3" />
