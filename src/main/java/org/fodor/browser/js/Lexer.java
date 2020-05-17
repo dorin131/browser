@@ -107,6 +107,12 @@ public class Lexer {
             case '.':
                 t = new Token(Token.Type.DOT, ch);
                 break;
+            case '"':
+                t = new Token(Token.Type.STR, readStringDoubleQuote());
+                break;
+            case '\'':
+                t = new Token(Token.Type.STR, readStringSingleQuote());
+                break;
             case 0:
                 t = new Token(Token.Type.EOF, ch);
                 break;
@@ -129,6 +135,14 @@ public class Lexer {
         return ch >= '0' && ch <= '9';
     }
 
+    private boolean isSingleQuote(char ch) {
+        return ch == '\'';
+    }
+
+    private boolean isDoubleQuote(char ch) {
+        return ch == '"';
+    }
+
     private void skipWhitespace() {
         while (ch == ' ' || ch == '\n' || ch == '\t' || ch == '\r') {
             readChar();
@@ -145,6 +159,28 @@ public class Lexer {
             readChar();
         }
         return code.substring(startPos, position);
+    }
+
+    private String readStringSingleQuote() {
+        readChar();
+        int startPos = position;
+        while (!isSingleQuote(ch)) {
+            readChar();
+        }
+        String result = code.substring(startPos, position);
+        readChar();
+        return result;
+    }
+
+    private String readStringDoubleQuote() {
+        readChar();
+        int startPos = position;
+        while (!isDoubleQuote(ch)) {
+            readChar();
+        }
+        String result = code.substring(startPos, position);
+        readChar();
+        return result;
     }
 
     private String readNumber() {

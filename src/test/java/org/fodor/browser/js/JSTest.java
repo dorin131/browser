@@ -155,7 +155,7 @@ class JSTest {
 
     @Test
     void evalIllegal1() {
-        String input = "\"";
+        String input = "£";
         Value result = new JS().eval(input);
         assertEquals(Value.Type.Error, result.getType());
     }
@@ -278,14 +278,14 @@ class JSTest {
         assertEquals(18, result.getValue());
     }
 
-//    @Test
-//    void evalString1() {
-//        String input = "\"hello\"";
-//        Value result = new JS().eval(input);
-//        assertEquals(Value.Type.String, result.getType());
-//        assertTrue(result.getValue().equals("hello"));
-//    }
-//
+    @Test
+    void evalString1() {
+        String input = "\"hello\"";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.String, result.getType());
+        assertTrue(result.getValue().equals("hello"));
+    }
+
 //    @Test
 //    void evalString2() {
 //        String input = "\"hello \" + \"world\"";

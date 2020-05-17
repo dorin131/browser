@@ -27,6 +27,10 @@ public class Token {
         NUM,
         STR,
 
+        /* Quotes */
+        SINGLEQUOTE,
+        DOUBLEQUOTE,
+
         /* Keywords */
         FUNCTION,
         VAR,

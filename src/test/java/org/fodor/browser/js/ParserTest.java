@@ -269,4 +269,49 @@ class ParserTest {
         assertEquals("CallExpression", ((ExpressionStatement) expressionStatement).getExpression().getClass().getSimpleName());
         assertEquals("yo", ((CallExpression)((ExpressionStatement) expressionStatement).getExpression()).name());
     }
+
+    @Test
+    void parseString1() {
+        String input = "'dorin';";
+
+        Lexer lexer = new Lexer(input);
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("Literal", literal.getClass().getSimpleName());
+        assertEquals("dorin", ((Literal) literal).getValue().getValue());
+    }
+
+    @Test
+    void parseString2() {
+        String input = "'dorin'";
+
+        Lexer lexer = new Lexer(input);
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("Literal", literal.getClass().getSimpleName());
+        assertEquals("dorin", ((Literal) literal).getValue().getValue());
+    }
+
+    @Test
+    void parseString3() {
+        String input = "\"dorin\"";
+
+        Lexer lexer = new Lexer(input);
+        Program result = new Parser(lexer).parseProgram();
+
+        assertEquals(1, result.getChildren().size());
+        ASTNode expressionStatement = result.getChildren().get(0);
+        assertEquals("ExpressionStatement", expressionStatement.getClass().getSimpleName());
+        ASTNode literal = ((ExpressionStatement) expressionStatement).getExpression();
+        assertEquals("Literal", literal.getClass().getSimpleName());
+        assertEquals("dorin", ((Literal) literal).getValue().getValue());
+    }
 }
