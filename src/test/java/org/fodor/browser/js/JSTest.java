@@ -333,4 +333,20 @@ class JSTest {
         assertEquals(Value.Type.String, result.getType());
         assertTrue(result.getValue().equals("number 1"));
     }
+
+    @Test
+    void consoleLog1() {
+        String input = "var f = function(msg){return msg;}; var console = { log: f }; console.log('hello world');";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.String, result.getType());
+        assertTrue(result.getValue().equals("hello world"));
+    }
+
+    @Test
+    void consoleLog2() {
+        String input = "var console = { log: function(msg){return msg;} }; console.log('hello world');";
+        Value result = new JS().eval(input);
+        assertEquals(Value.Type.String, result.getType());
+        assertTrue(result.getValue().equals("hello world"));
+    }
 }

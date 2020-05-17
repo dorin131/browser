@@ -167,9 +167,7 @@ public class Lexer {
         while (!isSingleQuote(ch)) {
             readChar();
         }
-        String result = code.substring(startPos, position);
-        readChar();
-        return result;
+        return code.substring(startPos, position);
     }
 
     private String readStringDoubleQuote() {
@@ -178,9 +176,7 @@ public class Lexer {
         while (!isDoubleQuote(ch)) {
             readChar();
         }
-        String result = code.substring(startPos, position);
-        readChar();
-        return result;
+        return code.substring(startPos, position);
     }
 
     private String readNumber() {

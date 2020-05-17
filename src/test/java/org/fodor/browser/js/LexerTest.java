@@ -52,7 +52,9 @@ class LexerTest {
                 new Token(Token.Type.IDENT, "b"),
                 new Token(Token.Type.SEMICOLON, ";"),
                 new Token(Token.Type.STR, "abc"),
+                new Token(Token.Type.SEMICOLON, ";"),
                 new Token(Token.Type.STR, "def"),
+                new Token(Token.Type.SEMICOLON, ";"),
         };
 
         Lexer l = new Lexer(input);
