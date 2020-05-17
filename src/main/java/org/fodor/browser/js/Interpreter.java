@@ -32,7 +32,7 @@ public class Interpreter {
             }
         }
 
-        exitScope(blockStatement);
+        exitScope();
 
         if (!isTopLevelBlockStatement(blockStatement) && !hasReturned) {
             return Value.jsUndefined();
@@ -56,7 +56,7 @@ public class Interpreter {
         localScopes.add(blockStatement.getLocalScope());
     }
 
-    public void exitScope(BlockStatement blockStatement) {
+    public void exitScope() {
         scopeStack.remove(scopeStack.size() - 1);
         localScopes.remove(localScopes.size() - 1);
     }
