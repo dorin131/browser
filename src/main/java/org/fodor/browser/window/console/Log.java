@@ -20,7 +20,7 @@ public class Log extends ASTNode {
     @Override
     public Value execute(Interpreter i) {
         var message = blockStatement.getLocalScope().get(new Identifier(new Token(Token.Type.IDENT, "message")));
-        var value = new Value(Value.Type.String, message);
+        var value = message.execute(i);
         this.console.printOutput(value);
         return value;
     }

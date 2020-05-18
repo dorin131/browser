@@ -26,13 +26,14 @@ public class ConsoleEnterAction implements ActionListener {
         String input = inputField.getText();
         Value result;
 
+        console.printInput(new Value(Value.Type.String, input));
+
         try {
             result = jsEngine.eval(input);
         } catch (Exception exception) {
             result = new Value(Value.Type.Error, exception.toString());
         }
 
-        console.printInput(new Value(Value.Type.String, input));
         console.printOutput(result);
         setLastCommand(input);
         clearInput();
