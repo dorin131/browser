@@ -1,4 +1,4 @@
-package org.fodor.browser.window;
+package org.fodor.browser.window.console;
 
 import org.fodor.browser.gui.components.Console;
 import org.fodor.browser.js.AST.expressions.Identifier;
@@ -18,6 +18,7 @@ public class ConsoleObject extends ObjectExpression {
         var blockStatement = new BlockStatement();
         blockStatement.append(new Log(blockStatement, console));
 
+        // TODO: console.log will take only one argument
         var parameters = new ArrayList<Identifier>();
         parameters.add(new Identifier(new Token(Token.Type.IDENT, "message")));
 

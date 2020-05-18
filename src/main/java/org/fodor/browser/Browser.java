@@ -3,20 +3,13 @@ package org.fodor.browser;
 import org.fodor.browser.gui.MainWindow;
 import org.fodor.browser.gui.components.Console;
 import org.fodor.browser.html.HTML;
-import org.fodor.browser.js.AST.expressions.Identifier;
-import org.fodor.browser.js.AST.expressions.ObjectExpression;
-import org.fodor.browser.js.AST.statements.BlockStatement;
-import org.fodor.browser.js.AST.statements.FunctionDeclaration;
-import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.js.JS;
 import org.fodor.browser.gui.actions.ConsoleEnterAction;
 import org.fodor.browser.gui.actions.ConsoleKeyUpAction;
 import org.fodor.browser.gui.actions.GoAction;
 import org.fodor.browser.interfaces.JSEngine;
 import org.fodor.browser.interfaces.Renderer;
-import org.fodor.browser.window.ConsoleObject;
-
-import java.util.ArrayList;
+import org.fodor.browser.window.console.ConsoleObject;
 
 public class Browser {
     JSEngine jsEngine;
