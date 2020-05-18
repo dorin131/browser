@@ -1,6 +1,6 @@
 package org.fodor.browser.js.AST.expressions;
 
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 import org.fodor.browser.js.Interpreter;
 
 public class Literal extends Expression {

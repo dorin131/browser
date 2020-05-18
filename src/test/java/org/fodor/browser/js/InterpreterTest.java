@@ -8,7 +8,7 @@ import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.expressions.Literal;
 import org.fodor.browser.js.AST.statements.*;
 import org.fodor.browser.js.AST.structs.Token;
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 import org.junit.jupiter.api.Test;
 
 class InterpreterTest {

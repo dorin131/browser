@@ -21,8 +21,42 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/ConsoleEnterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/ConsoleEnterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/GoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/GoAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/components/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/components/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/custom/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/custom/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/HTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptContentElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptContentElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptVoidElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/html/elements/ScriptVoidElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/CallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/CallExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/ErrorLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/ErrorLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/Identifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/Literal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/MemberExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/MemberExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/ObjectExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/ObjectExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/BlockStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/BlockStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/ExpressionStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/ExpressionStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/FunctionDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/ReturnStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/ReturnStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/structs/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/structs/ASTNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/JS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/JS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/shared/JSEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/interfaces/JSEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/shared/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/interfaces/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/shared/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/structs/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/InterpreterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/InterpreterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/JSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/fodor/browser/js/JSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/js/Interpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/js/Interpreter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/js/JS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/js/JS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/shared/JSEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/shared/JSEngine.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +113,7 @@
       <recent name="org.fodor.browser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in browser">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.fodor.browser.Main" />
       <module name="browser" />
@@ -133,7 +167,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LexerTest.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JSTest.evalObject8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="browser" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +176,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.fodor.browser.js" />
-      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.LexerTest" />
-      <option name="METHOD_NAME" value="run" />
+      <option name="MAIN_CLASS_NAME" value="org.fodor.browser.js.JSTest" />
+      <option name="METHOD_NAME" value="evalObject8" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in browser" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.JSTest.consoleLog2" />
+        <item itemvalue="JUnit.JSTest.evalObject8" />
+        <item itemvalue="JUnit.All in browser" />
         <item itemvalue="JUnit.JSTest.consoleLog1" />
-        <item itemvalue="JUnit.LexerTest.run" />
       </list>
     </recent_temporary>
   </component>
@@ -185,6 +219,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="749" y="409" width="402" height="216" key="#Chrome_Settings" timestamp="1589831669971">
+      <screen x="0" y="0" width="1920" height="1041" />
+    </state>
+    <state x="749" y="409" width="402" height="216" key="#Chrome_Settings/0.0.1920.1041@0.0.1920.1041" timestamp="1589831669971" />
     <state x="555" y="181" width="800" height="675" key="#Project_Structure" timestamp="1587295200669">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -193,14 +231,18 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="713" y="385" width="473" height="264" key="#Updates/0.0.1920.1041@0.0.1920.1041" timestamp="1588877344323" />
+    <state x="759" y="307" width="392" height="423" key="#Web_Browsers" timestamp="1589831674739">
+      <screen x="0" y="0" width="1920" height="1041" />
+    </state>
+    <state x="759" y="307" width="392" height="423" key="#Web_Browsers/0.0.1920.1041@0.0.1920.1041" timestamp="1589831674739" />
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589547359989">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589547359989" />
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589739472671">
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589830294563">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589739472671" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589830294563" />
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589397889069">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -229,38 +271,38 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589723995905" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589740476632">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589832175243">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589740476632" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589740476631">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589832175243" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589832175243">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589740476631" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589740476631">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589832175243" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589832175242">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589740476631" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589740476632">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589832175242" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589832175243">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589740476632" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589740304024">
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589832175243" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589830088262">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589740304024" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589740304024">
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589830088262" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1589830088261">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589740304024" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589740304023">
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589830088261" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1589830088261">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589740304023" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589740304024">
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589830088261" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1589830088262">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589740304024" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589830088262" />
     <state x="570" y="133" width="770" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589049948907">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -289,11 +331,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/fodor/browser/html/ParserTest.java</url>
           <line>93</line>
           <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/statements/BlockStatement.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/fodor/browser/js/AST/expressions/CallExpression.java</url>

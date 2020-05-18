@@ -2,8 +2,8 @@ package org.fodor.browser.gui.actions;
 
 import org.fodor.browser.gui.MainWindow;
 import org.fodor.browser.gui.components.Console;
-import org.fodor.browser.shared.JSEngine;
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.interfaces.JSEngine;
+import org.fodor.browser.js.AST.structs.Value;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

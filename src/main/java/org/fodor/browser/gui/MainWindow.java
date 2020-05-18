@@ -1,7 +1,7 @@
 package org.fodor.browser.gui;
 
 import org.fodor.browser.gui.custom.Canvas;
-import org.fodor.browser.shared.JSEngine;
+import org.fodor.browser.interfaces.JSEngine;
 
 import javax.swing.*;
 

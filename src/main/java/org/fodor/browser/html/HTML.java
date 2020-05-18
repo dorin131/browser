@@ -1,8 +1,8 @@
 package org.fodor.browser.html;
 
 import org.fodor.browser.gui.custom.Canvas;
-import org.fodor.browser.shared.JSEngine;
-import org.fodor.browser.shared.Renderer;
+import org.fodor.browser.interfaces.JSEngine;
+import org.fodor.browser.interfaces.Renderer;
 
 public class HTML implements Renderer {
     private JSEngine js;

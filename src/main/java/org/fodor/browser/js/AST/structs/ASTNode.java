@@ -1,6 +1,5 @@
 package org.fodor.browser.js.AST.structs;
 
-import org.fodor.browser.shared.Value;
 import org.fodor.browser.js.Interpreter;
 
 public abstract class ASTNode {

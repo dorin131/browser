@@ -1,6 +1,6 @@
 package org.fodor.browser.js;
 
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

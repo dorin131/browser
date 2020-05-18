@@ -2,7 +2,7 @@ package org.fodor.browser.gui.actions;
 
 import org.fodor.browser.gui.MainWindow;
 import org.fodor.browser.networking.Request;
-import org.fodor.browser.shared.Renderer;
+import org.fodor.browser.interfaces.Renderer;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

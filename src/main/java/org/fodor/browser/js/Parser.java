@@ -4,7 +4,7 @@ import org.fodor.browser.js.AST.structs.ASTNode;
 import org.fodor.browser.js.AST.expressions.ObjectExpression;
 import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.js.AST.expressions.*;
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 import org.fodor.browser.js.AST.enums.Precedence;
 import org.fodor.browser.js.AST.statements.*;
 

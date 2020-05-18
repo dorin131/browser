@@ -1,6 +1,4 @@
-package org.fodor.browser.shared;
-
-import org.fodor.browser.js.AST.structs.Token;
+package org.fodor.browser.js.AST.structs;
 
 public class Value<T> {
     public enum Type {

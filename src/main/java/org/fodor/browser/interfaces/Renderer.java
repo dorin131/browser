@@ -1,4 +1,4 @@
-package org.fodor.browser.shared;
+package org.fodor.browser.interfaces;
 
 import org.fodor.browser.gui.custom.Canvas;
 

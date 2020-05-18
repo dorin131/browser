@@ -2,7 +2,7 @@ package org.fodor.browser.js.AST.statements;
 
 import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.structs.Token;
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 import org.fodor.browser.js.Interpreter;
 
 import java.util.ArrayList;

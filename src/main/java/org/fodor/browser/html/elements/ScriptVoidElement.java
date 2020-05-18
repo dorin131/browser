@@ -1,6 +1,6 @@
 package org.fodor.browser.html.elements;
 
-import org.fodor.browser.shared.JSEngine;
+import org.fodor.browser.interfaces.JSEngine;
 
 public class ScriptVoidElement extends ScriptElement {
     String src;

@@ -1,7 +1,7 @@
 package org.fodor.browser.gui.components;
 
 import org.fodor.browser.gui.MainWindow;
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 
 import javax.swing.*;
 import javax.swing.text.*;

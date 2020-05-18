@@ -4,7 +4,7 @@ import org.fodor.browser.js.AST.expressions.ObjectExpression;
 import org.fodor.browser.js.AST.structs.ScopeFrame;
 import org.fodor.browser.js.AST.structs.ASTNode;
 import org.fodor.browser.js.AST.statements.Program;
-import org.fodor.browser.shared.Value;
+import org.fodor.browser.js.AST.structs.Value;
 import org.fodor.browser.js.AST.statements.ReturnStatement;
 import org.fodor.browser.js.AST.statements.BlockStatement;
 
@@ -67,9 +67,5 @@ public class Interpreter {
 
     public ArrayList<ObjectExpression> getLocalScopes() {
         return localScopes;
-    }
-
-    public void addToGlobal(ObjectExpression object) {
-        getGlobal();
     }
 }
