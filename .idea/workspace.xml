@@ -21,9 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a65be9f4-8704-4045-8690-c7ab0aa12d3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/ConsoleEnterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/gui/actions/ConsoleEnterAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/window/console/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/window/console/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/window/console/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/window/console/Log.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fodor/browser/Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fodor/browser/window/console/Log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fodor/browser/Browser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fodor/browser/window/console/Log.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,18 +207,18 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="100" y="99" width="1720" height="841" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589547359989" />
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589830294563">
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1589842505138">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589830294563" />
+    <state x="1355" y="166" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1041@0.0.1920.1041" timestamp="1589842505138" />
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589397889069">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state x="604" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1041@0.0.1920.1041" timestamp="1589397889069" />
-    <state x="743" y="389" width="433" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589123066428">
+    <state x="743" y="389" width="433" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589841856966">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state x="743" y="389" width="433" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1041@0.0.1920.1041" timestamp="1589123066428" />
+    <state x="743" y="389" width="433" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1041@0.0.1920.1041" timestamp="1589841856966" />
     <state x="748" y="402" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1589233996669">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
@@ -238,22 +239,22 @@
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
     <state width="487" height="485" key="DebuggerActiveHint/0.0.1920.1041@0.0.1920.1041" timestamp="1589723995905" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589839983336">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1589842593804">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589839983336" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589839983335">
+    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1041@0.0.1920.1041" timestamp="1589842593804" />
+    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1589842593802">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589839983335" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589839983334">
+    <state width="1874" height="263" key="GridCell.Tab.0.center/0.0.1920.1041@0.0.1920.1041" timestamp="1589842593802" />
+    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1589842593801">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589839983334" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589839983335">
+    <state width="1874" height="263" key="GridCell.Tab.0.left/0.0.1920.1041@0.0.1920.1041" timestamp="1589842593801" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1589842593803">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589839983335" />
+    <state width="1874" height="263" key="GridCell.Tab.0.right/0.0.1920.1041@0.0.1920.1041" timestamp="1589842593803" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1589839961169">
       <screen x="0" y="0" width="1920" height="1041" />
     </state>

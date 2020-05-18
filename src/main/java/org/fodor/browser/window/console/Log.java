@@ -5,8 +5,8 @@ import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.statements.BlockStatement;
 import org.fodor.browser.js.AST.structs.ASTNode;
 import org.fodor.browser.js.AST.structs.Token;
-import org.fodor.browser.js.Interpreter;
 import org.fodor.browser.js.AST.structs.Value;
+import org.fodor.browser.js.Interpreter;
 
 public class Log extends ASTNode {
     private BlockStatement blockStatement;
@@ -16,7 +16,6 @@ public class Log extends ASTNode {
         this.blockStatement = blockStatement;
         this.console = console;
     }
-
     @Override
     public Value execute(Interpreter i) {
         var message = blockStatement.getLocalScope().get(new Identifier(new Token(Token.Type.IDENT, "message")));

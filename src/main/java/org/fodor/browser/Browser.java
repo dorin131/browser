@@ -7,7 +7,6 @@ import org.fodor.browser.js.AST.expressions.Identifier;
 import org.fodor.browser.js.AST.expressions.ObjectExpression;
 import org.fodor.browser.js.AST.statements.BlockStatement;
 import org.fodor.browser.js.AST.statements.FunctionDeclaration;
-import org.fodor.browser.js.AST.structs.ASTNode;
 import org.fodor.browser.js.AST.structs.Token;
 import org.fodor.browser.js.JS;
 import org.fodor.browser.gui.actions.ConsoleEnterAction;
@@ -15,7 +14,7 @@ import org.fodor.browser.gui.actions.ConsoleKeyUpAction;
 import org.fodor.browser.gui.actions.GoAction;
 import org.fodor.browser.interfaces.JSEngine;
 import org.fodor.browser.interfaces.Renderer;
-import org.fodor.browser.window.console.Log;
+import org.fodor.browser.window.ConsoleObject;
 
 import java.util.ArrayList;
 
@@ -41,14 +40,6 @@ public class Browser {
     }
 
     private void addBuiltInFunctions() {
-        var console = new ObjectExpression();
-        var parameters = new ArrayList<Identifier>();
-        parameters.add(new Identifier(new Token(Token.Type.IDENT, "message")));
-        var blockStatement = new BlockStatement();
-        blockStatement.append(new Log(blockStatement, this.console));
-        var log = new FunctionDeclaration(blockStatement, parameters);
-
-        console.put(new Identifier(new Token(Token.Type.IDENT, "log")), log);
-        jsEngine.addGlobalObject("console", console);
+        jsEngine.addGlobalObject("console", new ConsoleObject(console));
     }
 }
