@@ -3,6 +3,8 @@ package org.fodor.browser.html;
 import org.fodor.browser.html.stucts.Token;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TokenizerTest {
@@ -77,6 +79,33 @@ class TokenizerTest {
 
         for (int i = 0; i < expected.length; i++) {
             var token = tokenizer.next();
+            assertEquals(expected[i].getType(), token.getType());
+            assertEquals(expected[i].getContent(), token.getContent());
+        }
+    }
+
+    @Test
+    void withAttributes() {
+        String input = "<div hello=\"world\" hey=\"ho\">Hello</div>";
+        Token[] expected = {
+                new Token(Token.Type.OPEN_TAG, "div", new HashMap<String, String>() {
+                    {
+                        put("hello", "world");
+                        put("hey", "ho");
+                    }
+                }),
+                new Token(Token.Type.TEXT, "Hello"),
+                new Token(Token.Type.CLOSE_TAG, "div"),
+        };
+
+        var tokenizer = new Tokenizer(input);
+
+        for (int i = 0; i < expected.length; i++) {
+            var token = tokenizer.next();
+            if (i == 0) {
+                assertTrue(expected[i].getAttributes().get("hello").equals("world"));
+                assertTrue(expected[i].getAttributes().get("hey").equals("ho"));
+            }
             assertEquals(expected[i].getType(), token.getType());
             assertEquals(expected[i].getContent(), token.getContent());
         }

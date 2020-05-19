@@ -1,5 +1,7 @@
 package org.fodor.browser.html.stucts;
 
+import java.util.HashMap;
+
 public class Token {
     public enum Type {
         OPEN_TAG,
@@ -12,10 +14,17 @@ public class Token {
     }
     private Type type;
     private String content;
+    private HashMap<String, String> attributes;
 
     public Token(Type type, String content) {
         this.type = type;
         this.content = content;
+    }
+
+    public Token(Type type, String content, HashMap<String, String> attributes) {
+        this.type = type;
+        this.content = content;
+        this.attributes = attributes;
     }
 
     public Type getType() {
@@ -24,5 +33,9 @@ public class Token {
 
     public String getContent() {
         return content;
+    }
+
+    public HashMap<String, String> getAttributes() {
+        return attributes;
     }
 }

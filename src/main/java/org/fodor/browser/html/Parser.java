@@ -3,6 +3,7 @@ package org.fodor.browser.html;
 import org.fodor.browser.html.elements.*;
 import org.fodor.browser.html.stucts.Token;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 public class Parser {
@@ -57,7 +58,7 @@ public class Parser {
     private void parseOpenTag() {
         switch (currentToken.getContent()) {
             case "div":
-                pushToElementStack(new DivElement());
+                pushToElementStack(new DivElement(getTagAttributes()));
                 break;
             case "script":
                 pushToElementStack(new ScriptContentElement(getTagContent()));
@@ -94,5 +95,9 @@ public class Parser {
     private String getTagContent() {
         nextToken();
         return currentToken.getContent();
+    }
+
+    private HashMap<String, String> getTagAttributes() {
+        return currentToken.getAttributes();
     }
 }

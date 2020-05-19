@@ -101,4 +101,26 @@ class ParserTest {
         assertEquals(ElementType.SCRIPT, script.getType());
         assertEquals("1+2", ((ScriptContentElement) script).getJsContents());
     }
+
+    @Test
+    void parse5() {
+        String input = "<div hello=\"world\" hey=\"ho\">Hello</div>";
+//        Token[] input = {
+//                new Token(Token.Type.OPEN_TAG, "div"),
+//                new Token(Token.Type.TEXT, "Hello"),
+//                new Token(Token.Type.CLOSE_TAG, "div"),
+//        };
+
+        Tokenizer tokenizer = new Tokenizer(input);
+        DOM dom = new Parser(tokenizer).parse();
+
+        assertEquals(1, dom.getChildren().size());
+        var div = dom.getChildren().get(0);
+        assertEquals(ElementType.DIV, div.getType());
+        assertTrue(div.getAttributes().get("hello").equals("world"));
+        assertTrue(div.getAttributes().get("hey").equals("ho"));
+        var text = div.getChildren().get(0);
+        assertEquals(ElementType.TEXT, text.getType());
+        assertEquals("Hello", ((TextElement) text).getContent());
+    }
 }

@@ -2,12 +2,26 @@ package org.fodor.browser.html.elements;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public abstract class Element {
     ElementType type;
     Integer width = 0;
     Integer height = 0;
     ArrayList<Element> children = new ArrayList<>();
+    HashMap<String, String> attributes = new HashMap<>();
+
+    public Element() {
+
+    }
+
+    public Element(HashMap<String, String> attributes) {
+        this.attributes = attributes;
+    }
+
+    public HashMap<String, String> getAttributes() {
+        return attributes;
+    }
 
     public void setType(ElementType type) {
         this.type = type;
